@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>List of projects</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/projects.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/jquery.dataTables.min.css">
+    <!-- Scripts -->
+    <!-- <script src="./assets/js/bootstrap.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/common.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery.dataTables.min.js"></script>
+  </head>
+  <body class="theme-bg-color">
+    <div class="container-fluid">
+      <div class="row top-menu-bg-color">
+        <div class="col-md-6">
+          <div class="top-menu-bar">
+            <img src="./assets/images/group-212.png"
+                  srcset="./assets/images/group-212@2x.png 2x,
+                  ./assets/images/group-212@3x.png 3x"
+                  class="Group-212">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <ul id="menuItems">
+            <li>
+              <div>
+                <a href="#">
+                  <img src="./assets/images/home.png"
+                  srcset="./assets/images/home@2x.png 2x,
+                  ./assets/images/home@3x.png 3x"
+                  class="home">
+                </a>
+              </div>
+            </li>
+            <!-- <li class="menu-devider"></li> -->
+            <li>
+              <a href="#">
+                <div class="li-with-background">Projects</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="li-item">Definitions</div>
+              </a>
+            </li>
+            <li style="border: none">
+              <a href="#">
+                <div class="li-item">Help</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 marg-top-10">
+          <img src="./assets/images/mask-group-4.png"
+               srcset="./assets/images/mask-group-4@2x.png 2x,
+                       ./assets/images/mask-group-4@3x.png 3x"
+               class="avatar-icon">
+          <div class="avatar-info">
+            Vinay
+          </div>
+          <div class="pull-right">
+            <a href="#">
+              <i class="fas fa-ellipsis-v setting-menu"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="container-fluid">
+      <!-- Card header section -->
+      <div class="row">
+        <div class="col-md-1 no-row-left-marg">
+          <div class="sidebar-theme padd-top-10">
+            <div class="marg-t-b-15">
+              <a href="#">
+                <img src="./assets/images/square-add-button.png"
+                srcset="./assets/images/square-add-button@2x.png 2x,
+                ./assets/images/square-add-button@3x.png 3x"
+                class="square-add-button">
+              </a>
+            </div>
+            <div class="sidebar-text">Reques Therap Area Access</div>
+            <div class="sidebar-devider marg-t-b-15"></div>
+            <a href="#">
+              <div class="sidebar-selected-item">ALL</div>
+            </a>
+            <a href="#">
+              <div class="sidebar-item">GCO</div>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-11">
+          <div class="content-card marg-top-15">
+            <div class="row middle-align">
+              <div class="col-md-3">
+                <input type="text" id="search" name="search" value="" placeholder="Search" class="search-box">
+                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+              </div>
+              <div class="col-md-7">
+                <span class="card-head-text">Show All Projects</span>
+                <label class="switch">
+                  <input type="checkbox" id="switchToogle" name="switchToogle" checked>
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="col-md-2">
+                <div class="pull-right">
+                  <a href="./project-setup.html" class="btn btn-sm btn-project"><i class="fas fa-plus"></i> &nbsp;&nbsp;Add Project</a>
+                </div>
+              </div>
+            </div>
+            <!-- Datatable content -->
+            <div class="marg-top-15">
+              <div id="example_wrapper" class="dataTables_wrapper">
+                <!-- https://bootsnipp.com/snippets/O58ZZ // Reference datatable link-->
+                <table id="myexample" class="display nowrap dataTable dtr-inline" cellspacing="0" width="100%" role="grid" aria-describedby="example_info" style="width: 100%;">
+                  <thead class="bg-gray">
+                    <tr role="row" style="border-radius: 4px;background-color: #0063c3;color: #fff;">
+                      <th class="sorting_desc" tabindex="0" aria-controls="example" aria-label="" style="width: 20%;" aria-sort="descending">Project Name</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" aria-label="" style="width: 20%;">Project Group</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" aria-label="" style="width: 11%;">Therapy Area</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" aria-label="" style="width: 30%;">Description</th>
+                      <th class="sorting" tabindex="0" aria-controls="example" aria-label="" style="width: 12%;">Created By</th>
+                      <th class="" tabindex="0" aria-controls="example" aria-label="" style="width: 7%; background-image: none">My Access</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr role="row" class="odd tr-show">
+                      <td class="">Rapath Level 3 - US</td>
+                      <td class="">Cardio Vascular</td>
+                      <td class="text-center">000000</td>
+                      <td class="">Lorem ipsum dolor sit amet consetetur...</td>
+                      <td class="">John</td>
+                      <td class="text-center"><button type="button" name="button" class="btn btn-sm btn-project"><i class="fas fa-plus"></i></button></td>
+                    </tr>
+                    <tr role="row" class="odd tr-show">
+                      <td class="">Rapath Level 3 - US</td>
+                      <td class="">Cardio Vascular</td>
+                      <td class="text-center">333333</td>
+                      <td class="">Lorem ipsum dolor sit amet consetetur...</td>
+                      <td class="">Vinay</td>
+                      <td class="text-center"><button type="button" name="button" class="btn btn-sm btn-project"><i class="fas fa-plus"></i></button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#myexample').DataTable({
+    "searching": false,
+    paging: false
+  });
+
+ $(".tr-show").click(function(){
+      // $("#myexample > tbody").append('<tr><td scope="col" colspan="13" rowspan="1">Rozwinięcie / dodanie dodatkowej treśći</td></tr>');
+      $("#updated_contacts").append($(".addElement span").clone());
+  });
+});
+</script>
