@@ -1,0 +1,56 @@
+.sidebar-theme {
+  height: calc(100vh - 52.12px);
+  box-shadow: 0 6px 45px 0 rgba(0, 102, 152, 0.15);
+  background-color: #00204a;
+  text-align: center;
+  margin: 0 auto;
+}
+.square-add-button {
+  width: 18px;
+  object-fit: contain;
+}
+.sidebar-text {
+  font-family: HelveticaNeue;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding: 0px 10px;
+}
+.sidebar-devider {
+  border-top: 2px solid #fff;
+  width: 70%;
+  margin: 0 auto;
+}
+.sidebar-selected-item {
+  height: auto;
+  padding: 35px 0px;
+  background-color: #002d67;
+  color: #ffffff;
+}
+.sidebar-item {
+  height: auto;
+  padding: 35px 0px;
+  color: #ffffff;
+}
+/* Datatable styles start */
+table {
+  background-color: #ffffff;
+}
+#example_wrapper {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  min-height: calc(100vh - 157.11px);
+  height: auto;
+}
+.thead-bg-styles {
+  border-radius: 4px !important;
+  background-color: #0063c3 !important;
+  color: #fff !important;
+}
+/* Datatable styles end */
