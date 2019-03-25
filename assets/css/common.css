@@ -5,6 +5,12 @@ a {
 a:hover {
   text-decoration: none !important;
 }
+.no-left-marg {
+  margin-left: -15px;
+}
+.no-right-marg {
+  margin-right: -15px;
+}
 .marg-top-30 {
   margin-top: 30px
 }
@@ -19,6 +25,9 @@ a:hover {
 }
 .marg-right-10 {
   margin-right: 10px;
+}
+.marg-a-15 {
+  margin: 15px
 }
 .marg-a-10 {
   margin: 10px;
@@ -38,6 +47,9 @@ a:hover {
 }
 .padd-top-10 {
   padding-top: 10px;
+}
+.padd-a-15 {
+  padding: 15px
 }
 .text-center {
   text-align: center;
@@ -238,3 +250,95 @@ input:checked + .slider:before {
   color: #606060;
 }
 /* Content card styles end */
+.white-bg {
+  box-shadow: 0 3px 6px 0 rgba(0, 99, 195, 0.4);
+  background-color: #ffffff;
+}
+/* Project setup header start */
+.project-setup-header {
+  height: 40px;
+  box-shadow: 0 6px 45px 0 rgba(0, 102, 152, 0.15);
+  background-color: #00204a;
+  display: flex;
+  align-items: center;
+}
+.project-setup-header .sub-title {
+  font-family: HelveticaNeue;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.project-stpes {
+  margin-bottom: -12px;
+}
+ul#projectSteps {
+  list-style-type: none;
+  /* margin-top: 16px; */
+  padding: 0;
+  overflow: hidden;
+  text-align: center
+}
+ul#projectSteps li {
+  display: inline-block;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  font-family: HelveticaNeue;
+  /* font-size: 22px; */
+  /* font-weight: bold; */
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+.active-project {
+  font-weight: bold;
+}
+/* Project setup progress bar */
+.status-bar {
+  display: inline-flex;
+  margin-top: 3px;
+  align-items: center;
+}
+.ellipse-active {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #0063c3;
+}
+.ellipse-common {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+}
+.ellipse-line-1 {
+  width: 95px;
+  height: 5px;
+  background-image: linear-gradient(89deg, #0063c3, #ffffff);
+}
+.ellipse-line-2 {
+  width: 95px;
+  height: 5px;
+  background-color: #ffffff;
+}
+.ellipse-line-3 {
+  width: 201px;
+  height: 5px;
+  background-color: #ffffff;
+}
+.ellipse-line-1-active-left {
+  width: 95px;
+  height: 5px;
+  background-image: linear-gradient(to right, #ffffff, #0063c3);
+}
+/* Project setup header end */

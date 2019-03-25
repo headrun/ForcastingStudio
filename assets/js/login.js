@@ -20,7 +20,7 @@ $(document).ready(function() {
       }, 3000);
     } else if ($('#username').val() == 'studio' || $('#password').val() == '123456789') {
       // var porjectsUrl = window.location.href+'projects.html';
-      window.document.location.href = 'projects.html';
+      window.location = '{{url()}}/projects.html';
       // return true;
     }
   })

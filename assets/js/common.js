@@ -10,4 +10,14 @@ $(document).ready(function() {
   setTimeout(function(){
     $('.dataTables_info').remove();
   }, 200);
+
+  $("#datetimepickerStartDate").datepicker({
+        autoclose: true,
+        todayHighlight: true
+  }).datepicker('update', new Date());
+
+  $("#datetimepickerEndDate").datepicker({
+        autoclose: true,
+        todayHighlight: true
+  }).datepicker('update', new Date());
 })
