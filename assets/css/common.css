@@ -1,4 +1,12 @@
 @import url("font-awesome.min.css");
+body {
+  font-family: HelveticaNeue;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
 a {
   text-decoration: none !important;
 }
