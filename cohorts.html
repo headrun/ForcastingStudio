@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="./assets/css/cohorts.css">
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" /> -->
+    <link href="./assets/css/datepicker.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> -->
+    <link href="./assets/css/jquery-ui.css" rel="stylesheet">
     <!-- Scripts -->
-    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script src = "https://code.jquery.com/jquery-1.10.2.js"></script> -->
+    <!-- <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src = "./assets/js/jquery-1.10.2.js"></script>
+    <script src = "./assets/js/jquery-ui.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="./assets/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="./assets/js/common.js"></script>
     <script type="text/javascript" src="./assets/js/cohorts.js"></script>
   </head>
@@ -103,7 +109,13 @@
               <div class="ellipse-common"></div>
             </div>
           </div>
-          <div class="col-md-2"></div>
+          <div class="col-md-2">
+            <div class="alert alert-danger hide" id="danger-alert">
+              <!-- <button type="button" class="close" data-dismiss="alert">x</button> -->
+              <strong>Warning! </strong>
+              <span class="alert-content"></span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row marg-top-15">
@@ -177,6 +189,11 @@
                         <button type="button" name="summary" class="btn btn-sm sub-cohort-result-btn">Results</button>
                       </div>
                     </div>
+                    <!-- <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 160 }'>
+  <div class="grid-item"></div> -->
+                    <div class="sel-cohort-cards-list">
+                      <div id="showListOfCohortsCards" class="masonry-grid hide"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -234,54 +251,95 @@
               <div class="sub-title-cohorts text-center">Cohort Constructors</div>
             </div>
             <!-- Popover template -->
-            <div id="showListOfCohortsCards" class="hide"></div>
+            <!-- <div id="showListOfCohortsCards" class="hide"></div> -->
             <!-- Clinical parameters -->
-            <div class="cohort-constuctor-elem-title marg-top-15">Clinical Parameters <i class="fas fa-caret-right pull-right icon-margin"></i></div>
-            <button type="button" class="cohort-constuctor-elem-list-btn marg-top-10" onclick="getCohortConstructElements('Clinical Parameters', 'Diagnosis', 'showDiagnosisPopover')" id="showDiagnosisPopover">
-              <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
-            </button>
-            <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Procedures', 'showProceduresPopover')" id="showProceduresPopover">
-              <div class="cohort-constuctor-elem-list-text">Procedures</div>
-            </button>
-            <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Treatment', 'showTreatmentPopover')" id="showTreatmentPopover">
-              <div class="cohort-constuctor-elem-list-text">Treatment</div>
-            </button>
-            <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Clinical Notes', 'showClinicalNotesPopover')" id="showClinicalNotesPopover">
-              <div class="cohort-constuctor-elem-list-text">Clinical Notes</div>
-            </button>
-            <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Disease State', 'showDiseaseStatePopover')" id="showDiseaseStatePopover">
-              <div class="cohort-constuctor-elem-list-text">Disease State</div>
-            </button>
-            <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Vitals', 'showVitalsPopover')" id="showVitalsPopover">
-              <div class="cohort-constuctor-elem-list-text">Vitals</div>
-            </button>
-
-            <!-- Demographics -->
-            <div class="cohort-constuctor-elem-title marg-top-15">Demographics <i class="fas fa-caret-right pull-right icon-margin"></i></div>
-            <button type="button" class="cohort-constuctor-elem-list-btn marg-top-10" onclick="getCohortConstructElements('Demographics', 'Current Age', 'showCurrentAgePopover')" id="showCurrentAgePopover">
-              <div class="cohort-constuctor-elem-list-text">Current Age</div>
-            </button>
-            <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Demographics', 'Gender', 'showGenderPopover')" id="showGenderPopover">
-              <div class="cohort-constuctor-elem-list-text">Gender</div>
-            </button>
-            <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Demographics', 'Race', 'showRacePopover')" id="showRacePopover">
-              <div class="cohort-constuctor-elem-list-text">Race</div>
-            </button>
-            <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Demographics', 'Ethnicity', 'showEthnicityPopover')" id="showEthnicityPopover">
-              <div class="cohort-constuctor-elem-list-text">Ethnicity</div>
-            </button>
-
-            <!-- Constraints -->
-            <div class="cohort-constuctor-elem-title marg-top-15">Constraints <i class="fas fa-caret-right pull-right icon-margin"></i></div>
-            <button type="button" class="cohort-constuctor-elem-list-btn marg-top-10" onclick="getCohortConstructElements('Constraints', 'Related Events', 'showRelatedEventsPopover')" id="showRelatedEventsPopover">
-              <div class="cohort-constuctor-elem-list-text">Related Events</div>
-            </button>
-
-            <!-- Miscellaneous -->
-            <div class="cohort-constuctor-elem-title marg-top-15">Miscellaneous <i class="fas fa-caret-right pull-right icon-margin"></i></div>
+            <div class="panel-group marg-top-15" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#ClinicalParameters" aria-expanded="true" aria-controls="ClinicalParameters">
+                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingOne">
+                      <h4 class="panel-title">Clinical Parameters</h4>
+                  </div>
+                </a>
+                <div id="ClinicalParameters" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <button type="button" class="cohort-constuctor-elem-list-btn marg-top-10" onclick="getCohortConstructElements('Clinical Parameters', 'Diagnosis', 'showDiagnosisPopover')" id="showDiagnosisPopover">
+                      <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Procedures', 'showProceduresPopover')" id="showProceduresPopover">
+                      <div class="cohort-constuctor-elem-list-text">Procedures</div>
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Treatment', 'showTreatmentPopover')" id="showTreatmentPopover">
+                      <div class="cohort-constuctor-elem-list-text">Treatment</div>
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Clinical Notes', 'showClinicalNotesPopover')" id="showClinicalNotesPopover">
+                      <div class="cohort-constuctor-elem-list-text">Clinical Notes</div>
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Disease State', 'showDiseaseStatePopover')" id="showDiseaseStatePopover">
+                      <div class="cohort-constuctor-elem-list-text">Disease State</div>
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Vitals', 'showVitalsPopover')" id="showVitalsPopover">
+                      <div class="cohort-constuctor-elem-list-text">Vitals</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Demographics -->
+              <div class="panel panel-default">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Demographics" aria-expanded="false" aria-controls="Demographics">
+                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingDemographics">
+                      <h4 class="panel-title">Demographics</h4>
+                  </div>
+                </a>
+                <div id="Demographics" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDemographics">
+                  <div class="panel-body">
+                    <button type="button" class="cohort-constuctor-elem-list-btn marg-top-10" onclick="getCohortConstructElements('Demographics', 'Current Age', 'showCurrentAgePopover')" id="showCurrentAgePopover">
+                      <div class="cohort-constuctor-elem-list-text">Current Age</div>
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Demographics', 'Gender', 'showGenderPopover')" id="showGenderPopover">
+                      <div class="cohort-constuctor-elem-list-text">Gender</div>
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Demographics', 'Race', 'showRacePopover')" id="showRacePopover">
+                      <div class="cohort-constuctor-elem-list-text">Race</div>
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Demographics', 'Ethnicity', 'showEthnicityPopover')" id="showEthnicityPopover">
+                      <div class="cohort-constuctor-elem-list-text">Ethnicity</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Constraints -->
+              <div class="panel panel-default">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Constraints" aria-expanded="false" aria-controls="Constraints">
+                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingConstraints">
+                      <h4 class="panel-title">Constraints</h4>
+                  </div>
+                </a>
+                <div id="Constraints" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingConstraints">
+                  <div class="panel-body">
+                    <button type="button" class="cohort-constuctor-elem-list-btn marg-top-10" onclick="getCohortConstructElements('Constraints', 'Related Events', 'showRelatedEventsPopover')" id="showRelatedEventsPopover">
+                      <div class="cohort-constuctor-elem-list-text">Related Events</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Miscellaneous -->
+              <div class="panel panel-default">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Miscellaneous" aria-expanded="false" aria-controls="Miscellaneous">
+                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingMiscellaneous">
+                      <h4 class="panel-title">Miscellaneous</h4>
+                  </div>
+                </a>
+                <div id="Miscellaneous" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMiscellaneous">
+                  <div class="panel-body">
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
