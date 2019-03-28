@@ -93,8 +93,9 @@
           <div class="col-md-8 text-center">
             <div class="project-stpes">
               <ul id="projectSteps">
-                <li class="active-project">Project Setup</li>
-                <li>Cohorts</li>
+                <li>Project Setup</li>
+                <li class="active-project">Cohorts</li>
+                <!-- <li>Cohorts</li> -->
                 <li>Point Estimate</li>
                 <li>Projection and Forecasting</li>
               </ul>
@@ -119,7 +120,7 @@
         </div>
       </div>
       <div class="row marg-top-15">
-        <div class="col-md-12">
+        <div class="col-md-12" style="height: auto">
           <div class="col-md-2 white-bg cohorts-auto-height" style="height: calc(100vh - 72px);">
             <div class="sub-title-bg marg-top-6">
               <div class="sub-title-cohorts text-center">Versions & Cohorts</div>
@@ -127,7 +128,7 @@
             <div class="verstion-desc-text marg-top-15">V0 - Description Text</div>
             <div class="cohort-cambo">
               <div class="cohorts-list">
-                <button type="button" class="btn btn-sm btn-cohorts-list" onclick="updateCohortVersionData('Cohort 01')" name="button">Cohort 01</button>
+                <button type="button" class="btn btn-sm btn-cohorts-list-active" id="cohort_1" onclick="updateCohortVersionData('Cohort 01', 'cohort_1')" name="button">Cohort 01</button>
               </div>
               <a href="#">
                 <img src="./assets/images/group-96.png"
@@ -152,14 +153,14 @@
               </button>
             </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8" id="main_content_block">
             <!-- Drag Graph start -->
             <div class="padd-a-15 white-bg">
               <div class="cohort-graph">
                 <div class="cohort-graph-head-section">
                   <div class="row">
-                    <div class="col-md-4">
-                      <input type="text" id="cohort_version_edit" onkeyup="editCurVersion(this.value)" class="cohort-vertion-form-control form-control" name="cohort_version_edit" value="" placeholder="Cohort version">
+                    <div class="col-md-4" id="update_cohort_version">
+                      <input type="text" id="cohort_version_edit" class="cohort-vertion-form-control form-control" name="cohort_version_edit" value="" placeholder="Cohort version">
                     </div>
                     <div class="col-md-8">
                       <div class="pull-right">
@@ -172,6 +173,12 @@
                 <div class="cohort-graph-data-section">
                   <div class="sub-cohorts text-center">
                     <button type="button" name="subCohorts_1" id="subCohorts_1" class="btn btn-sm sub-cohort-btn-blue subCohorts marg-top-10">SC 1</button>
+                    <a href="#">
+                      <img src="./assets/images/group-96.png"
+                      srcset="./assets/images/group-96@2x.png 2x,
+                      ./assets/images/group-96@3x.png 3x"
+                      class="close-sub-cohort">
+                    </a>
                     <button type="button" name="subCohorts_2" id="subCohorts_2" class="btn btn-sm sub-cohort-btn-white subCohorts marg-top-10">SC 2</button>
                     <button type="button" name="addCohort" class="btn btn-sm sub-cohort-btn-white marg-top-10">
                       <img src="./assets/images/square-add-button.png"
@@ -181,7 +188,7 @@
                   </div>
                   <div class="cohort-graph-area">
                     <div class="col-md-4">
-                      <input type="text" id="cohort_version_edit" onkeyup="editCurVersion(this.value)" class="cohort-vertion-form-control form-control" name="cohort_version_edit" value="" placeholder="Sub cohort info...">
+                      <input type="text" id="sub_cohort_version_edit" onkeyup="editSubCohortVersion(this.value)" class="cohort-vertion-form-control form-control" name="sub_cohort_version_edit" value="" placeholder="Sub cohort info...">
                     </div>
                     <div class="col-md-8">
                       <div class="text-center">
@@ -189,8 +196,6 @@
                         <button type="button" name="summary" class="btn btn-sm sub-cohort-result-btn">Results</button>
                       </div>
                     </div>
-                    <!-- <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 160 }'>
-  <div class="grid-item"></div> -->
                     <div class="sel-cohort-cards-list">
                       <div id="showListOfCohortsCards" class="masonry-grid hide"></div>
                     </div>
@@ -250,8 +255,6 @@
             <div class="sub-title-bg marg-top-6">
               <div class="sub-title-cohorts text-center">Cohort Constructors</div>
             </div>
-            <!-- Popover template -->
-            <!-- <div id="showListOfCohortsCards" class="hide"></div> -->
             <!-- Clinical parameters -->
             <div class="panel-group marg-top-15" id="accordion" role="tablist" aria-multiselectable="true">
               <div class="panel panel-default">

@@ -120,12 +120,23 @@ hr {
   color: #ffffff;
   box-shadow: 0 1px 6px 0 #bcbcbc;
 }
-.btn-cohorts-list {
+.btn-cohorts-list-default {
   background-color: #0063c3;
   width: 100%;
-  color: #ffffff
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.btn-cohorts-list:hover {
+.btn-cohorts-list-active {
+  background-color: #00204a;
+  width: 100%;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-cohorts-list-default:hover, .btn-cohorts-list-active:hover {
   color: #ffffff
 }
 .close-cohort {
@@ -134,6 +145,14 @@ hr {
   margin-left: -6px;
   margin-top: -3px;
   object-fit: contain;
+}
+.close-sub-cohort {
+  width: 17px;
+  height: 17px;
+  margin-left: -11px;
+  margin-top: 0px;
+  object-fit: contain;
+  position: absolute;
 }
 .cohort-cambo {
   display: -webkit-box;
@@ -174,9 +193,7 @@ hr {
 }
 .btn-points-estimate {
   width: 115px;
-  /* height: 40px; */
   border-radius: 4px;
-  box-shadow: 0 3px 35px 0 #e1f7f2;
   border: solid 1px #0063c3 !important;
   background-color: #ffffff;
 }
@@ -349,12 +366,29 @@ hr {
   background-color: #d7e7ef;
   padding: 0px 3px;
   margin-top: 3px;
+  height: 56px;
+  overflow: hidden;
 }
 .cohort-default-card-content {
   border-radius: 2px;
   background-color: #e3e3e3;
   padding: 0px 3px;
   margin-top: 3px;
+  height: 56px;
+  overflow: hidden;
+}
+.cohort-active-card-content p, .cohort-default-card-content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: auto;
+}
+.constructor-points {
+  font-size: 11px;
+  margin-top: 13px;
+  cursor: auto;
 }
 .show-cohort-card {
   /* left: -100px;
@@ -396,27 +430,29 @@ hr {
 .panel-body {
   padding: 0px !important;
 }
+.panel-title {
+  font-size: 14px !important;
+}
 a[aria-expanded="true"] .panel-title {
   /* background-color: #eee; */
   /* margin-right: 10px; */
 }
 a[aria-expanded="true"] .panel-title:after {
-  content: "\2304";
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-  margin-right: 3px;
-  float: right;
-  font-size: 22px;
-  margin-top: -7px;
-}
-a[aria-expanded="false"] .panel-title:after {
-  content: "\2303";
+  content: "\25B8";
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   margin-right: 10px;
   float: right;
-  font-size: 22px;
-  margin-top: -4px;
+  font-size: 15px;
+}
+a[aria-expanded="false"] .panel-title:after {
+  content: "\25B8";
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  margin-right: 10px;
+  float: right;
+  font-size: 15px;
+  margin-top: -2px;
 }
 .alert-danger {
   width: 300px;
@@ -425,4 +461,61 @@ a[aria-expanded="false"] .panel-title:after {
 .alert {
   padding: 8px 15px !important;
   margin-bottom: 0px !important;
+}
+/* Relational joins */
+.cohort-card-ellipse-left {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: solid 1px #606060;
+  position: absolute;
+  background-color: #ffffff;
+  cursor: default;
+}
+.cohort-card-ellipse-right {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: solid 1px #606060;
+  position: absolute;
+  background-color: #ffffff;
+  cursor: default;
+}
+.link-triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 7px solid #606060;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  left: -8px;
+  margin-top: -5px;
+  cursor: default;
+}
+.next-sibling-link {
+  width: 69px;
+  margin-left: -70px;
+  margin-top: 3px;
+  border-bottom: solid 1px #606060;
+  cursor: default;
+}
+.link-ellipse-active {
+  left: -42px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  /* border: solid 1px #606060; */
+  /* background-color: #ffffff; */
+  position: absolute;
+  top: -2px;
+}
+.link-ellipse-default {
+  left: -42px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: solid 1px #606060;
+  background-color: #ffffff;
+  position: absolute;
+  top: -2px;
 }
