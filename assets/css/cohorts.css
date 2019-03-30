@@ -1,6 +1,6 @@
 .cohort-graph {
-  /* width: 1208.4px; */
-  height: 350px;
+  /* height: 350px; */
+  height: 393px;
   border: solid 1px #ccc;
 }
 .cohort-graph-head-section {
@@ -282,7 +282,8 @@ hr {
   margin-right: 3px;
 }
 .cohort-graph-data-section {
-  height: 300px;
+  /* height: 300px; */
+  height: 342px;
   display: inline-flex;
   width: 100%
 }
@@ -319,7 +320,7 @@ hr {
   width: 100%;
   background-size: 10px 10px;
   background-image: linear-gradient(to right, rgb(204, 206, 206, 0.45) 1px, transparent 1px), linear-gradient(to bottom, rgb(204, 206, 206, 0.45) 1px, transparent 1px);
-  padding: 10px !important;
+  /* padding: 10px !important; */
 }
 .sub-cohort-run-btn {
   border-radius: 4px;
@@ -413,10 +414,12 @@ hr {
   font-size: 13px;
 }
 .sel-cohort-cards-list {
-  height: 120px;
+  /* height: 100%; */
+  height: 300px;
   left: 0px !important;
-  margin-top: 30px;
-  width: 100%
+  /* margin-top: 30px; */
+  width: 100%;
+  /* border: 1px solid red */
 }
 /* .masonry-grid {
   margin-bottom: 15px
@@ -518,4 +521,19 @@ a[aria-expanded="false"] .panel-title:after {
   background-color: #ffffff;
   position: absolute;
   top: -2px;
+}
+
+
+
+.draggable_operator {
+  display: inline-block;
+  padding: 2px 5px 2px 5px;
+  border: 1px solid #ccc;
+  cursor: grab;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

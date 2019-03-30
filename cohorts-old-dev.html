@@ -7,17 +7,21 @@
     <link rel="stylesheet" href="./assets/css/cohorts.css">
     <link rel="stylesheet" href="./assets/css/common.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" /> -->
     <link href="./assets/css/datepicker.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- <link href="./assets/css/jquery-ui.css" rel="stylesheet"> -->
-    <link href="./assets/css/flowchart/jquery.flowchart.css" rel="stylesheet">
+    <!-- <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"> -->
+    <link href="./assets/css/jquery-ui.css" rel="stylesheet">
     <!-- Scripts -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script src = "https://code.jquery.com/jquery-1.10.2.js"></script> -->
+    <!-- <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> -->
     <script src="./assets/js/jquery.min.js"></script>
-    <!-- <script src = "./assets/js/jquery-1.10.2.js"></script> -->
+    <script src = "./assets/js/jquery-1.10.2.js"></script>
     <script src = "./assets/js/jquery-ui.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/flowchart/jquery.flowchart.js"></script>
     <script src="./assets/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="./assets/js/common.js"></script>
     <script type="text/javascript" src="./assets/js/cohorts.js"></script>
@@ -183,32 +187,22 @@
                            class="sub-cohort-add-btn-white"></button>
                   </div>
                   <div class="cohort-graph-area">
-                    <div class="col-md-4 marg-top-10">
+                    <div class="col-md-4">
                       <input type="text" id="sub_cohort_version_edit" onkeyup="editSubCohortVersion(this.value)" class="cohort-vertion-form-control form-control" name="sub_cohort_version_edit" value="" placeholder="Sub cohort info...">
                     </div>
-                    <div class="col-md-8 marg-top-10">
+                    <div class="col-md-8">
                       <div class="text-center">
                         <button type="button" name="worksheet" class="btn btn-sm sub-cohort-run-btn"><i class="fas fa-play-circle 5x"></i> Run</button>
                         <button type="button" name="summary" class="btn btn-sm sub-cohort-result-btn">Results</button>
                       </div>
                     </div>
-                    <div class="sel-cohort-cards-list" id="showListOfCohortsCards">
-                      <!-- <div id="showListOfCohortsCards" class="masonry-grid hide"></div> -->
+                    <div class="sel-cohort-cards-list">
+                      <div id="showListOfCohortsCards" class="masonry-grid hide"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- <div class="draggable_operators">
-              <div class="draggable_operators_divs">
-                <div class="draggable_operator ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="0">1 input</div>
-                <div class="draggable_operator ui-draggable ui-draggable-handle" data-nb-inputs="0" data-nb-outputs="1">1 output</div>
-                <div class="draggable_operator ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="1">1 input &amp; 1 output</div>
-                <div class="draggable_operator ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="2">1 in &amp; 2 out</div>
-                <div class="draggable_operator ui-draggable ui-draggable-handle" data-nb-inputs="2" data-nb-outputs="1">2 in &amp; 1 out</div>
-                <div class="draggable_operator ui-draggable ui-draggable-handle" data-nb-inputs="2" data-nb-outputs="2">2 in &amp; 2 out</div>
-              </div>
-            </div> -->
             <!-- Drag Graph end -->
             <div class="padd-a-15 white-bg marg-top-15" style="height: 253px">
               <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
@@ -271,27 +265,24 @@
                 </a>
                 <div id="ClinicalParameters" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                   <div class="panel-body">
-                    <!-- <button type="button" class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-inputs="1" data-nb-outputs="1" onclick="getCohortConstructElements('Clinical Parameters', 'Diagnosis', 'showDiagnosisPopover')" id="showDiagnosisPopover">
+                    <button type="button" class="cohort-constuctor-elem-list-btn marg-top-10" onclick="getCohortConstructElements('Clinical Parameters', 'Diagnosis', 'showDiagnosisPopover')" id="showDiagnosisPopover">
                       <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
-                    </button> -->
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="1">
-                      <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="1" onclick="getCohortConstructElements('Clinical Parameters', 'Procedures', 'showProceduresPopover')" id="showProceduresPopover">
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Procedures', 'showProceduresPopover')" id="showProceduresPopover">
                       <div class="cohort-constuctor-elem-list-text">Procedures</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="1" id="showTreatmentPopover">
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Treatment', 'showTreatmentPopover')" id="showTreatmentPopover">
                       <div class="cohort-constuctor-elem-list-text">Treatment</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="1" id="showClinicalNotesPopover">
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Clinical Notes', 'showClinicalNotesPopover')" id="showClinicalNotesPopover">
                       <div class="cohort-constuctor-elem-list-text">Clinical Notes</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="1" id="showDiseaseStatePopover">
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Disease State', 'showDiseaseStatePopover')" id="showDiseaseStatePopover">
                       <div class="cohort-constuctor-elem-list-text">Disease State</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="1" id="showVitalsPopover">
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Clinical Parameters', 'Vitals', 'showVitalsPopover')" id="showVitalsPopover">
                       <div class="cohort-constuctor-elem-list-text">Vitals</div>
-                    </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -304,18 +295,18 @@
                 </a>
                 <div id="Demographics" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDemographics">
                   <div class="panel-body">
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="1" id="showCurrentAgePopover">
+                    <button type="button" class="cohort-constuctor-elem-list-btn marg-top-10" onclick="getCohortConstructElements('Demographics', 'Current Age', 'showCurrentAgePopover')" id="showCurrentAgePopover">
                       <div class="cohort-constuctor-elem-list-text">Current Age</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="1" id="showGenderPopover">
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Demographics', 'Gender', 'showGenderPopover')" id="showGenderPopover">
                       <div class="cohort-constuctor-elem-list-text">Gender</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="1" id="showRacePopover">
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Demographics', 'Race', 'showRacePopover')" id="showRacePopover">
                       <div class="cohort-constuctor-elem-list-text">Race</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="1" id="showEthnicityPopover">
+                    </button>
+                    <button type="button" class="cohort-constuctor-elem-list-btn" onclick="getCohortConstructElements('Demographics', 'Ethnicity', 'showEthnicityPopover')" id="showEthnicityPopover">
                       <div class="cohort-constuctor-elem-list-text">Ethnicity</div>
-                    </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -328,9 +319,9 @@
                 </a>
                 <div id="Constraints" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingConstraints">
                   <div class="panel-body">
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constraints" data-nb-inputs="2" data-nb-outputs="1" id="showRelatedEventsPopover">
+                    <button type="button" class="cohort-constuctor-elem-list-btn marg-top-10" onclick="getCohortConstructElements('Constraints', 'Related Events', 'showRelatedEventsPopover')" id="showRelatedEventsPopover">
                       <div class="cohort-constuctor-elem-list-text">Related Events</div>
-                    </div>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -354,4 +345,4 @@
   </body>
 </html>
 
-<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
