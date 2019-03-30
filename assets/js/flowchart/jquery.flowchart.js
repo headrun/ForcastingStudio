@@ -467,9 +467,15 @@ $(function () {
 
         _getOperatorFullElement: function (operatorData) {
             var infos = this.getOperatorCompleteData(operatorData);
+            // Old cards changing to white color
+            $('.flowchart-operator').removeClass('cohort-card-active');
+            $('.flowchart-operator').addClass('cohort-card-default');
+            $('.flowchart-operator .flowchart-operator-title').removeClass('color-white');
+            $('.flowchart-operator .flowchart-operator-title').addClass('color-default');
+            $('.find-cohort-content').removeClass('cohort-active-card-content');
+            $('.find-cohort-content').addClass('cohort-default-card-content');
 
-            // var $operator = $('<div class="flowchart-operator show-cohort-card cohort-card-active text-center fade in"><div class="cohort-card-ellipse-left"></div><div class="cohort-card-ellipse-right"></div></div>');
-            var $operator = $('<div class="flowchart-operator flowchart-default-operator ui-draggable"></div>');
+            var $operator = $('<div class="flowchart-operator cohort-card-active flowchart-default-operator ui-draggable"></div>');
             $operator.addClass(infos.class);
 
             var $operator_title = $('<div class="flowchart-operator-title color-white"></div>');
@@ -485,7 +491,7 @@ $(function () {
             // var $operator_inputs = $('<p></p>');
             $operator_inputs.appendTo($operator_inputs_outputs);
 
-            var $operator_outputs = $('<div class="cohort-active-card-content"><input type="text" id="cohort_constructor_title" name="cohort_constructor_title" value=""></div><div class="flowchart-operator-outputs"></div>');
+            var $operator_outputs = $('<div class="find-cohort-content cohort-active-card-content"><input type="hidden" id="cohort_constructor_title" name="cohort_constructor_title" value=""><p></p><span></span></div><div class="flowchart-operator-outputs"></div>');
             // var $operator_outputs = $('<div class="constructor-points"></div>');
             $operator_outputs.appendTo($operator_inputs_outputs);
 

@@ -1,5 +1,6 @@
 var getCohortConstructElements, updateCohortEleAndTitle, updateCohortVersionData, editSubCohortVersion, editCohortVersion, closeCard, checkIsValueExist, initialFunction, flowchart, addConstructorTitle;
 var selCohortCards = {};
+
 $(document).ready(function(){
 
   initialFunction = function () {
@@ -148,11 +149,6 @@ $(document).ready(function(){
               addConstructorTitle($(this).data('nb-constructor-header'));
           }
       }
-  });
-
-  $('.flowchart-operator').on('click', function(){
-    // debugger;
-    console.log(this);
   });
 
 
@@ -339,5 +335,4 @@ $(document).ready(function(){
     this.classList.remove('sub-cohort-btn-white');
     this.classList.add('sub-cohort-btn-blue');
   })
-
 })

@@ -113,7 +113,7 @@
     width: 115px;
     border: 1px solid #CCCCCC;
     /* background: #FAFAFA; */
-    background: #00204a;
+    /* background: #00204a; */
     pointer-events: initial;
 }
 
@@ -133,8 +133,8 @@
     font-weight: bold;
     box-sizing: border-box;
     /* border-bottom: 1px solid #DDDDDD; */
-    border-bottom: 1px solid #00204a;
-    background: #00204a;
+    /* border-bottom: 1px solid #00204a;
+    background: #00204a; */
     /* background: #F0F0F0; */
     text-align: center;
     height: auto;
@@ -144,7 +144,6 @@
     white-space: nowrap;
     cursor: move;
 }
-
 .flowchart-operator .flowchart-operator-inputs-outputs {
     display: table;
     width: 100%;
