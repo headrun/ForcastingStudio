@@ -485,7 +485,7 @@ $(function () {
             // var $operator_inputs = $('<p></p>');
             $operator_inputs.appendTo($operator_inputs_outputs);
 
-            var $operator_outputs = $('<div class="flowchart-operator-outputs"></div>');
+            var $operator_outputs = $('<div class="cohort-active-card-content"><input type="text" id="cohort_constructor_title" name="cohort_constructor_title" value=""></div><div class="flowchart-operator-outputs"></div>');
             // var $operator_outputs = $('<div class="constructor-points"></div>');
             $operator_outputs.appendTo($operator_inputs_outputs);
 

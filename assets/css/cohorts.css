@@ -362,7 +362,7 @@ hr {
   padding: 5px;
   cursor: -webkit-grabbing;
 }
-.cohort-active-card-content {
+/* .cohort-active-card-content {
   border-radius: 2px;
   background-color: #d7e7ef;
   padding: 0px 3px;
@@ -377,14 +377,32 @@ hr {
   margin-top: 3px;
   height: 56px;
   overflow: hidden;
-}
-.cohort-active-card-content p, .cohort-default-card-content p {
+} */
+/* .cohort-active-card-content p, .cohort-default-card-content p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: auto;
+} */
+.cohort-active-card-content {
+  /* border: 1px solid red; */
+  font-size: 10px;
+  text-align: center;
+  margin-top: -5px;
+  margin-left: -44px;
+  width: 90px;
+  padding: 0px 2px;
+  height: 62px;
+  position: absolute;
+  border-radius: 2px;
+  background-color: #d7e7ef;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .constructor-points {
   font-size: 11px;

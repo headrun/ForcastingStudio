@@ -1,6 +1,6 @@
 @import url("font-awesome.min.css");
 body {
-  font-family: HelveticaNeue;
+  font-family: HelveticaNeue !important;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
