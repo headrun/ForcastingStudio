@@ -362,7 +362,6 @@ $(document).ready(function(){
   $(document).on('click', '.close-flowchart-cohort', function(){
     $flowchart.flowchart('deleteSelected');
     $(this).closest('.flowchart-operator').remove();
-
   });
 
   $('.subCohorts').on('click', function(){
@@ -370,6 +369,10 @@ $(document).ready(function(){
     $('.sub-cohort-btn-blue').removeClass('sub-cohort-btn-blue');
     this.classList.remove('sub-cohort-btn-white');
     this.classList.add('sub-cohort-btn-blue');
+  })
+
+  $(document).on('.click', '#diagnosis_create', function(){
+    $('#diagnosis_model').show();
   })
 })
 
@@ -379,21 +382,25 @@ function show_display(val) {
     updateCohortEleAndTitle('Constructor Parameters', 'Procedures',);
     $('#Procedures').show()
   }
-  if(val=='Diagnosis') {
+  else if(val=='Diagnosis') {
     updateCohortEleAndTitle('Constructor Parameters', 'Diagnosis',);
     $('#Diagnosis').show()
   }
-  if(val=='Treatment') {
+  else if(val=='Treatment') {
     updateCohortEleAndTitle('Constructor Parameters', 'Treatment',);
     $('#Treatment').show()
   }
-  if(val=='Related Events') {
+  else if(val=='Related Events') {
     updateCohortEleAndTitle('Constructor Parameters', 'Related Events',);
     $('#related_events').show()
   }
-  if(val=='Current Age') {
+  else if(val=='Current Age') {
     updateCohortEleAndTitle('Constructor Parameters', 'Age',);
     $('#current_age').show()
+  }
+  else {
+    // updateCohortEleAndTitle('Constructor Parameters', 'Data Source',);
+    $('#cohort_default').show()
   }
 
 }
