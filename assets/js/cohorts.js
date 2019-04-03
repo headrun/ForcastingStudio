@@ -371,7 +371,7 @@ $(document).ready(function(){
     this.classList.add('sub-cohort-btn-blue');
   })
 
-  $(document).on('.click', '#diagnosis_create', function(){
+  $(document).on('click', '#diagnosis_create', function(){
     $('#diagnosis_model').show();
   })
 })

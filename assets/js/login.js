@@ -8,7 +8,7 @@ $(document).ready(function() {
         $('.alert-danger').removeClass('in');
         $('.alert-danger').addClass('hide');
       }, 3000);
-    } else if ($('#username').val() != 'studio' || $('#password').val() != '123456789') {
+    } else if ($('#username').val() != 'AChandhok' || $('#password').val() != 'password') {
       $('.alert-danger').html('<strong>Error!</strong> <span>Please verify your details.</span>');
       $('.alert-danger').addClass('in');
       $('.alert-danger').removeClass('hide');
@@ -18,7 +18,7 @@ $(document).ready(function() {
         $('.alert-danger').removeClass('in');
         $('.alert-danger').addClass('hide');
       }, 3000);
-    } else if ($('#username').val() == 'studio' || $('#password').val() == '123456789') {
+    } else if ($('#username').val() == 'AChandhok' || $('#password').val() == 'password') {
       // var porjectsUrl = window.location.href+'projects.html';
       window.location = '{{url()}}/projects.html';
       // return true;
