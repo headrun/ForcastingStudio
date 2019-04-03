@@ -83,10 +83,10 @@ hr {
   padding: 5px 12px !important;
 }
 .start_date {
-  width: 175px
+  width: 165px
 }
 .end_date {
-  width: 175px;
+  width: 165px;
   margin-left: 20px
 }
 .project-steps-radio {
@@ -667,4 +667,78 @@ option {
     margin-left: -4%;
     margin-top: 19% !important;
     text-align: center;
+}
+
+.first-box {
+  width:396px; 
+  float:left; 
+  border:1px solid black;
+  height: 291px;
+}
+
+.first-box p {
+  color: blue;
+  text-align: 
+}
+
+.second-box {
+  margin-left: -19px;
+    width: 422px;
+    height: 290px;
+  border:2px solid #03a9f4db;
+}
+
+.second-box p {
+  color: blue;
+  padding-left: 15px;
+  padding-top: 6px;
+  
+}
+
+.diagnosis_create {
+  border-radius: 4px;
+  width: 65px;
+  height: 25px;
+  border: solid 1px #9d9d9d !important;
+  background-color: #ffffff;
+  font-size: 12px;
+}
+
+.add_map {
+    width: 39px;
+    height: 30px;
+    border-radius: 4px;
+    border: solid 1px #cccc;
+    background-color: #ffffff;
+    font-size: 19px;
+    text-align: center;
+    padding: 2px 5px 3px 4px;
+    color: #606060;
+    margin-left: 30%;
+}
+
+.close_map {
+  width: 39px;
+    height: 30px;
+    border-radius: 4px;
+    border: solid 1px #cccc;
+    background-color: #ffffff;
+    font-size: 19px;
+    text-align: center;
+    padding: 2px 5px 3px 4px;
+    color: #606060;
+    margin-left: 35%;
+}
+
+.dynamic_select{
+  width: 60% !important;
+  padding-left: 2% !important;
+  padding-right: 2% !important;
+  margin-left: -5%;
+}
+
+.modal_close{
+  margin-top: -2px;
+  margin-right: 0%;
+  color: #ccc !important;
 }
