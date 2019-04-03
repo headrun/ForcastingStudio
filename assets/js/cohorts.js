@@ -395,5 +395,19 @@ function show_display(val) {
     updateCohortEleAndTitle('Constructor Parameters', 'Age',);
     $('#current_age').show()
   }
+  
+
+  /*$('#project_data').click(function() {
+   if($('#project_data').is(':checked')) { alert("it's checked"); }
+  });*/
 
 }
+$(document).on('click', "#project_data",function(){
+    $("#selcect-drop-down").hide();
+    $("#selcect-drop-down_1").hide();
+  });
+$(document).on('click', "#rwd",function(){
+    $("#selcect-drop-down").show();
+    $("#selcect-drop-down_1").show();
+  });
+
