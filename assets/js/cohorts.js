@@ -329,6 +329,42 @@ $(document).ready(function(){
     $('#cohort_version_edit').val(subCohortTxt);
   }
 
+  $(document).on('click', '.flowchart-operator', function (e){
+
+    $('.flowchart-operator').removeClass('cohort-card-active');
+    $('.flowchart-operator').addClass('cohort-card-default');
+    $('.flowchart-operator .flowchart-operator-title').removeClass('color-white');
+    $('.flowchart-operator .flowchart-operator-title').addClass('color-default');
+    $('.find-cohort-content').removeClass('cohort-active-card-content');
+    $('.find-cohort-content').addClass('cohort-default-card-content');
+    $(this).addClass('cohort-card-active');
+    $(this).removeClass('cohort-card-default');
+    $(this).find('.flowchart-operator-title').addClass('color-white');
+    $(this).find('.flowchart-operator-title').removeClass('color-default');
+    $(this).closest('.find-cohort-content').addClass('cohort-active-card-content');
+    $(this).closest('.find-cohort-content').removeClass('cohort-default-card-content');
+
+    var close_btn = '<a href="#">'+
+                      '<img src="./assets/images/group-96.png" srcset="./assets/images/group-96@2x.png 2x,'+
+                      './assets/images/group-96@3x.png 3x"'+
+                      'class="close-flowchart-cohort">'+
+                    '</a>';
+    $(this).append(close_btn);
+
+    $('.close-flowchart-cohort').hide();
+    $(this).find('.close-flowchart-cohort').show();
+
+    var val =$(this).find('.flowchart-operator-title').text();
+    val1 =$.trim(val);
+    show_display(val1);
+  })
+
+  $(document).on('click', '.close-flowchart-cohort', function(){
+    $flowchart.flowchart('deleteSelected');
+    $(this).closest('.flowchart-operator').remove();
+
+  });
+
   $('.subCohorts').on('click', function(){
     $('.sub-cohort-btn-blue').addClass('sub-cohort-btn-white');
     $('.sub-cohort-btn-blue').removeClass('sub-cohort-btn-blue');
@@ -336,3 +372,28 @@ $(document).ready(function(){
     this.classList.add('sub-cohort-btn-blue');
   })
 })
+
+function show_display(val) {
+  $('.cohort-display').hide()
+  if(val=='Procedures') {
+    updateCohortEleAndTitle('Constructor Parameters', 'Procedures',);
+    $('#Procedures').show()
+  }
+  if(val=='Diagnosis') {
+    updateCohortEleAndTitle('Constructor Parameters', 'Diagnosis',);
+    $('#Diagnosis').show()
+  }
+  if(val=='Treatment') {
+    updateCohortEleAndTitle('Constructor Parameters', 'Treatment',);
+    $('#Treatment').show()
+  }
+  if(val=='Related Events') {
+    updateCohortEleAndTitle('Constructor Parameters', 'Related Events',);
+    $('#related_events').show()
+  }
+  if(val=='Current Age') {
+    updateCohortEleAndTitle('Constructor Parameters', 'Age',);
+    $('#current_age').show()
+  }
+
+}

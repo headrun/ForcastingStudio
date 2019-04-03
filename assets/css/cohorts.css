@@ -8,6 +8,10 @@
   /* height: auto; */
   padding: 10px;
 }
+.cohort-graph-body-section {
+  /* height: auto; */
+  padding: 10px;
+}
 .sub-title-cohorts {
   font-family: HelveticaNeue;
   font-size: 14px;
@@ -575,4 +579,92 @@ a[aria-expanded="false"] .panel-title:after {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.close-flowchart-cohort{
+  width: 17px;
+  height: 17px;
+  margin-left: 104px;
+  margin-top: -101px;
+  object-fit: contain;
+  position: absolute;
+}
+
+.map_include{
+  margin-left: -20% !important;
+}
+
+.or_style{
+  padding-left: 30% !important;
+  padding-top: 1%;
+}
+
+.map_drop_down{
+  width: 65% !important; 
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.project-form-group2 {
+  display: flex;
+  align-items: center;
+  width: 200%;
+  /*margin: 10px 0px;*/
+}
+
+td, th{
+  padding: 5px !important;
+}
+
+table {
+  width: 90%;
+}
+
+.cohort-right-element{
+  text-align: right;
+}
+
+.cohort-left-element{
+  text-align: left;
+}
+
+.by_input{
+  width: 20% !important;
+  height: 29px !important;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: 1%;
+  padding-top: 9px !important;
+}
+
+.project-form-input {
+  width: 130px !important;
+  height: 29px !important;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /*margin-left: 10%;*/
+}
+
+option {
+  background-color: #d7e7ef;
+}
+
+.add_button {
+  border: 1px solid #cccc;
+    padding: 0px 6px 7px 7px;
+    margin-left: -4%;
+    margin-top: 19% !important;
+    text-align: center;
 }

@@ -1,0 +1,160 @@
+.cohort_summary {
+  /* height: 350px; */
+  height: 393px;
+  border: solid 1px #ccc;
+}
+
+.CHD-with-CV-events {
+  width: 168px;
+  height: 22px;
+  font-family: HelveticaNeue;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: left;
+  color: #606060;
+}
+
+.Rectangle-7 {
+  width: 300px;
+  height: 45px;
+  border-radius: 2px;
+  border: solid 1px #707070;
+  background-color: #f5f5f5;
+}
+
+.Overall {
+  /*margin-top: 10px;*/
+  width: 52px;
+  height: 19px;
+  font-family: HelveticaNeue;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #00204a;
+  background-color: #d8e7f0;
+  border: 1px solid;
+  padding: 3px 14px 2px 14px;
+  border-radius: 3px 3px 0px 0px;
+  border-bottom: none;
+}
+
+.Rectangle-28 {
+  width: 111px;
+  height: 34px;
+  border: solid 1px #707070;
+  background-color: #d8e7f0 !important;
+}
+
+.Overall_row {
+    width: 775px !important;
+    height: 63px !important;
+    border-radius: 6px !important;
+    border: solid 1px #707070 !important;
+    background-color: #ffffff !important;
+}
+
+.inside_overall{
+    width: 345px;
+    height: 32px;
+    border-radius: 6px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.MI-All-UA-All-IS-All{
+    width: 200px;
+    height: 19px;
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: #606060;
+    margin-top: 10px;
+}
+
+.inside_overall_1{
+    margin-top: 18px;
+    margin-left: 100px;
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+    border: solid 1px #707070;
+    background-color: #ffffff;
+}
+
+.inside_overall_2{
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+    border: solid 1px #707070;
+    background-color: #f5f5f5;
+    margin-left: 160px;
+}
+
+.inside_overall_3{
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+    border: solid 1px #707070;
+    background-color: #f5f5f5;
+    margin-left: 160px;
+}
+
+.Proportional_Estimates{
+  margin-left: 75px;
+}
+.RWD{
+  margin-left: 200px;
+}
+
+.cohort_card {
+  border: 1px solid #cccc;
+  padding: 2%;
+  width: 100% !important;
+  margin-left: 0% !important;
+  border-radius: 4px;
+  margin-bottom: 2% !important;
+}
+
+.cohort_card_input {
+  margin-left: 5% !important;
+  float: left;
+  height: 29px !important;
+  width: 15% !important;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f5f5f5
+}
+
+.cohort_card_big_input {
+  margin-left: 7% !important;
+  width: 50% !important;
+  float: left;
+  height: 29px !important;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.rwd_style{
+  margin-left: 56%;
+  font-size: 12px;
+}
+
+.proportional_style {
+  margin-left: 10%;
+  font-size: 12px;
+}
+

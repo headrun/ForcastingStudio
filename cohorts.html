@@ -210,7 +210,7 @@
               </div>
             </div> -->
             <!-- Drag Graph end -->
-            <div class="padd-a-15 white-bg marg-top-15" style="height: 253px">
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" style="height: 253px">
               <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
               <hr>
               <div class="col-md-8 col-md-offset-2">
@@ -256,6 +256,286 @@
                 </div>
               </div>
             </div>
+            <!-- code by nantha -->
+            <!-- procedures -->
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='Procedures' style="height: 253px; display: none">
+              <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
+              <hr>
+              <div class="col-md-8 col-md-offset-2">
+                <div class="project-form-group">
+                  <span class="project-form-label">Description</span>
+                  <input type="text" name="description" class="project-form-control form-control" value="">
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">Procedures Map</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-7 map_include">
+                      <select class="project-form-control form-control" name="">
+                        <option value="">Include</option>
+                      </select>
+                    </div>
+                    <div class="col-md-7 map_drop_down">
+                      <select class="form-control" name="" style="width: 109% !important">
+                        <option value="">Please select a function</option>
+                      </select>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">create</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-6 or_style">
+                      Or
+                    </div>
+                    <div class="col-md-7" style="width: 60% !important;padding-left: 2%;padding-right: 2%;margin-left: -5%;">
+                      <select class="form-control" name="" style="width: 109% !important">
+                        <option value="">Please select a function</option>
+                      </select>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">Time Period</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-6">
+                      <div id="datetimepickerStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
+                          <input class="form-control" type="text" name="start_date" placeholder="Start date"/>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class='input-group date end_date' id='datetimepickerEndDate'>
+                        <input type='text' class="form-control" name="end_date" placeholder="End date"/>
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Disgnosis  -->
+
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='Diagnosis' style="height: 253px; display: none">
+              <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
+              <hr>
+              <div class="col-md-8 col-md-offset-2">
+                <div class="project-form-group">
+                  <span class="project-form-label">Description</span>
+                  <input type="text" name="description" class="project-form-control form-control" value="">
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">Diagnosis Map</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-7 map_include">
+                      <select class="project-form-control form-control" name="">
+                        <option value="">Include</option>
+                      </select>
+                    </div>
+                    <div class="col-md-7 map_drop_down">
+                      <select class="form-control" name="" style="width: 109% !important">
+                        <option value="">Please select a function</option>
+                      </select>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">create</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-6 or_style">
+                      Or
+                    </div>
+                    <div class="col-md-7" style="width: 60% !important;padding-left: 2%;padding-right: 2%;margin-left: -5%;">
+                      <select class="form-control" name="" style="width: 109% !important">
+                        <option value="">Please select a function</option>
+                      </select>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">Time Period</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-6">
+                      <div id="datetimepickerStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
+                          <input class="form-control" type="text" name="start_date" placeholder="Start date"/>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class='input-group date end_date' id='datetimepickerEndDate'>
+                        <input type='text' class="form-control" name="end_date" placeholder="End date"/>
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Treatment -->
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='Treatment' style="height: 253px; display: none">
+              <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
+              <hr>
+              <div class="col-md-8 col-md-offset-2">
+                <div class="project-form-group">
+                  <span class="project-form-label">Description</span>
+                  <input type="text" name="description" class="project-form-control form-control" value="">
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">Treatment Map</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-7 map_include">
+                      <select class="project-form-control form-control" name="">
+                        <option value="">Include</option>
+                      </select>
+                    </div>
+                    <div class="col-md-7 map_drop_down">
+                      <select class="form-control" name="" style="width: 109% !important">
+                        <option value="">Please select a function</option>
+                      </select>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">create</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-6 or_style">
+                      Or
+                    </div>
+                    <div class="col-md-7" style="width: 60% !important;padding-left: 2%;padding-right: 2%;margin-left: -5%;">
+                      <select class="form-control" name="" style="width: 109% !important">
+                        <option value="">Please select a function</option>
+                      </select>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">Time Period</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-6">
+                      <div id="datetimepickerStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
+                          <input class="form-control" type="text" name="start_date" placeholder="Start date"/>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class='input-group date end_date' id='datetimepickerEndDate'>
+                        <input type='text' class="form-control" name="end_date" placeholder="End date"/>
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Related Events -->
+
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='related_events' style="height: 253px; display: none">
+              <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
+              <hr>
+              <table class="">
+                <tr>
+                  <td></td>
+                  <td class="cohort-right-element">Description</td>
+                  <td class="cohort-left-element">
+                     <input type='text' class="form-control" name="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <select class="project-form-input" name="">
+                      <option value="">Any</option>
+                    </select>
+                  </td>
+                  <td class="cohort-right-element">Evant A</td>
+                  <td class="cohort-left-element">
+                     <input type='text' class="form-control" name="" style="background-color: #d7e7ef" />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td class="cohort-left-element" style="float: left;margin-left: 0%;">
+                    <select class="project-form-input" name="">
+                      <option value="">select</option>
+                      <option value="">After</option>
+                      <option value="">Before</option>
+                      <option value="">After or Before</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <select class="project-form-input" name="">
+                      <option value="">Any</option>
+                      <option value="">First</option>
+                      <option value="">Last</option>
+                    </select>
+                  </td>
+                  <td class="cohort-right-element">Evant B</td>
+                  <td  class="cohort-left-element">
+                     <input type='text' class="form-control" name="" style="background-color: #d7e7ef" />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="cohort-right-element">By</td>
+                  <td class="cohort-left-element">
+                    <select class="project-form-input" name="">
+                      <option value="">select</option>
+                    </select>
+                    <input type='text' class="by_input" name=""/>
+                    <span style="padding-left: 4%">And</span>
+                    <input type='text' class="by_input" name=""/>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- Current Age -->
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='current_age' style="height: 253px; display: none">
+              <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
+              <hr>
+              <div class="col-md-9 col-md-offset-2">
+                <div class="project-form-group">
+                  <span class="project-form-label">Description</span>
+                  <input type="text" name="description" class="project-form-control form-control" value="">
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">Age</span>
+                  <div class="col-md-10">
+                      <select class="project-form-input" name="" style="margin-left: 1%">
+                        <option value="">Select</option>
+                        <option value="">Less then</option>
+                        <option value="">Less then or equal</option>
+                        <option value="">Greater than</option>
+                        <option value="">Greater than</option>
+                        <option value="">Not equal</option>
+                        <option value="">between</option>
+                      </select>
+                      <input type='text' class="by_input" name=""/>
+                      <span style="padding-left: 1%">and</span>
+                      <input type='text' class="by_input" name=""/>
+                       <span style="padding-left: 1%">years</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
           </div>
           <div class="col-md-2 white-bg cohorts-auto-height">
             <div class="sub-title-bg marg-top-6">

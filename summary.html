@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>List of projects</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/cohorts.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/summary.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link href="./assets/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link href="./assets/css/jquery-ui.css" rel="stylesheet"> -->
+    <link href="./assets/css/flowchart/jquery.flowchart.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- <script src = "./assets/js/jquery-1.10.2.js"></script> -->
+    <script src = "./assets/js/jquery-ui.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/flowchart/jquery.flowchart.js"></script>
+    <script src="./assets/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="./assets/js/common.js"></script>
+    <script type="text/javascript" src="./assets/js/cohorts.js"></script>
+  </head>
+  <body class="theme-bg-color">
+    <div class="container-fluid">
+      <div class="row top-menu-bg-color">
+        <div class="col-md-6">
+          <div class="top-menu-bar">
+            <img src="./assets/images/group-212.png"
+                  srcset="./assets/images/group-212@2x.png 2x,
+                  ./assets/images/group-212@3x.png 3x"
+                  class="Group-212">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <ul id="menuItems">
+            <li>
+              <div>
+                <a href="#">
+                  <img src="./assets/images/home.png"
+                  srcset="./assets/images/home@2x.png 2x,
+                  ./assets/images/home@3x.png 3x"
+                  class="home">
+                </a>
+              </div>
+            </li>
+            <!-- <li class="menu-devider"></li> -->
+            <li>
+              <a href="./projects.html">
+                <div class="li-with-background">Projects</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="li-item">Definitions</div>
+              </a>
+            </li>
+            <li style="border: none">
+              <a href="#">
+                <div class="li-item">Help</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 marg-top-10">
+          <img src="./assets/images/mask-group-4.png"
+               srcset="./assets/images/mask-group-4@2x.png 2x,
+                       ./assets/images/mask-group-4@3x.png 3x"
+               class="avatar-icon">
+          <div class="avatar-info">
+            Vinay
+          </div>
+          <div class="pull-right">
+            <a href="#">
+              <i class="fas fa-ellipsis-v setting-menu"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <!-- Project setup header -->
+      <div class="row">
+        <div class="project-setup-header">
+          <div class="col-md-2">
+            <div class="sub-title">Repatha Level 3 - US</div>
+          </div>
+          <div class="col-md-8 text-center">
+            <div class="project-stpes">
+              <ul id="projectSteps">
+                <li>Project Setup</li>
+                <li class="active-project">Cohorts</li>
+                <!-- <li>Cohorts</li> -->
+                <li>Point Estimate</li>
+                <li>Projection and Forecasting</li>
+              </ul>
+            </div>
+            <div class="status-bar">
+              <div class="ellipse-common"></div>
+              <div class="ellipse-line-1-active-left"></div>
+              <div class="first-ellipse ellipse-active"></div>
+              <div class="ellipse-line-1"></div>
+              <div class="ellipse-common"></div>
+              <div class="ellipse-line-3"></div>
+              <div class="ellipse-common"></div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="alert alert-danger hide" id="danger-alert">
+              <!-- <button type="button" class="close" data-dismiss="alert">x</button> -->
+              <strong>Warning! </strong>
+              <span class="alert-content"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row marg-top-15">
+        <div class="col-md-12" style="height: auto">
+          <div class="col-md-2 white-bg cohorts-auto-height" style="height: calc(100vh - 72px);">
+            <div class="sub-title-bg marg-top-6">
+              <div class="sub-title-cohorts text-center">Versions & Cohorts</div>
+            </div>
+            <div class="verstion-desc-text marg-top-15">V0 - Description Text</div>
+            <div class="cohort-cambo">
+              <div class="cohorts-list">
+                <button type="button" class="btn btn-sm btn-cohorts-list-active" id="cohort_1" onclick="updateCohortVersionData('Cohort 01', 'cohort_1')" name="button">Cohort 01</button>
+              </div>
+              <a href="#">
+                <img src="./assets/images/group-96.png"
+                srcset="./assets/images/group-96@2x.png 2x,
+                ./assets/images/group-96@3x.png 3x"
+                class="close-cohort">
+              </a>
+            </div>
+            <div class="marg-top-10">
+              <button type="button" name="button" class="btn btn-lg btn-cohort-add">
+                <img src="./assets/images/square-add-button.png"
+                     srcset="./assets/images/square-add-button@2x.png 2x,
+                             ./assets/images/square-add-button@3x.png 3x"
+                     class="square-add-button"><span class="cohort-btn-text">Add</span>
+              </button>
+              <button type="button" name="button" class="btn btn-points-estimate pull-right" style="padding: 1px 5px !important;">
+                <span class="btn-points-estimate-text">Go to Point&nbsp;Estimate</span>
+                <img src="./assets/images/arrow-pointing-right-in-a-circle.png"
+                     srcset="./assets/images/arrow-pointing-right-in-a-circle@2x.png 2x,
+                             ./assets/images/arrow-pointing-right-in-a-circle@3x.png 3x"
+                     class="arrow-pointing-right-in-a-circle">
+              </button>
+            </div>
+          </div>
+          <div class="col-md-8" id="main_content_block">
+            <!-- Drag Graph start -->
+            <div class="padd-a-15 white-bg">
+              <div class="cohort-graph">
+                <div class="cohort-graph-head-section">
+                  <div class="row">
+                    <div class="col-md-4" id="update_cohort_version">
+                      <input type="text" id="cohort_version_edit" class="cohort-vertion-form-control form-control" name="cohort_version_edit" value="" placeholder="CHD with CV events">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="pull-right">
+                        <button type="button" name="worksheet" class="btn btn-blue">Worksheet</button>
+                        <button type="button" name="summary" class="btn btn-cohort-default">Summary</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cohort-graph-body-section">
+                  <span class="Overall"> Overall</span>
+                  <span class="rwd_style">RWD</span>
+                  <span class="proportional_style">Proportional Estimates</span>
+                  <div class="col-md-9 col-md-offset-2 cohort_card">
+                      <input type="text" class= "cohort_card_big_input" value="" placeholder="CHD with CV events">
+                      <input type="text" class= "cohort_card_input" value="" placeholder="">
+                      <input type="text" class= "cohort_card_input" value="" placeholder="">
+                      <span style="margin-left: 2%">
+                        <img src="img/group-227.png" srcset="img/group-227@2x.png 2x,img/group-227@3x.png 3x" class="Group-227">
+                      </span>
+                    </div>
+                    <br/>
+                    <span class="Overall"> Overall</span>
+                  <span class="rwd_style">RWD</span>
+                  <span class="proportional_style">Proportional Estimates</span>
+                  <div class="col-md-9 col-md-offset-2 cohort_card">
+                      <input type="text" class= "cohort_card_big_input" value="" placeholder="CHD with CV events">
+                      <input type="text" class= "cohort_card_input" value="" placeholder="">
+                      <input type="text" class= "cohort_card_input" value="" placeholder="">
+                      <span style="margin-left: 2%">
+                        <img src="img/group-227.png" srcset="img/group-227@2x.png 2x,img/group-227@3x.png 3x" class="Group-227">
+                      </span>
+                    </div>
+                    <br>
+                  </div>
+                  </div>
+                </div>          
+              </div>
+            </div> 
+          </div>
+          <div class="col-md-2 white-bg cohorts-auto-height">
+            <div class="sub-title-bg marg-top-6">
+              <div class="sub-title-cohorts text-center">Cohort Constructors</div>
+            </div>
+            <!-- Clinical parameters -->
+            <div class="panel-group marg-top-15" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#ClinicalParameters" aria-expanded="true" aria-controls="ClinicalParameters">
+                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingOne">
+                      <h4 class="panel-title">Clinical Parameters</h4>
+                  </div>
+                </a>
+                <div id="ClinicalParameters" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <!-- <button type="button" class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-inputs="1" data-nb-outputs="1" onclick="getCohortConstructElements('Clinical Parameters', 'Diagnosis', 'showDiagnosisPopover')" id="showDiagnosisPopover">
+                      <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
+                    </button> -->
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2">
+                      <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
+                    </div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" onclick="getCohortConstructElements('Clinical Parameters', 'Procedures', 'showProceduresPopover')" id="showProceduresPopover">
+                      <div class="cohort-constuctor-elem-list-text">Procedures</div>
+                    </div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showTreatmentPopover">
+                      <div class="cohort-constuctor-elem-list-text">Treatment</div>
+                    </div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showClinicalNotesPopover">
+                      <div class="cohort-constuctor-elem-list-text">Clinical Notes</div>
+                    </div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showDiseaseStatePopover">
+                      <div class="cohort-constuctor-elem-list-text">Disease State</div>
+                    </div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showVitalsPopover">
+                      <div class="cohort-constuctor-elem-list-text">Vitals</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Demographics -->
+              <div class="panel panel-default">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Demographics" aria-expanded="false" aria-controls="Demographics">
+                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingDemographics">
+                      <h4 class="panel-title">Demographics</h4>
+                  </div>
+                </a>
+                <div id="Demographics" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDemographics">
+                  <div class="panel-body">
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showCurrentAgePopover">
+                      <div class="cohort-constuctor-elem-list-text">Current Age</div>
+                    </div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showGenderPopover">
+                      <div class="cohort-constuctor-elem-list-text">Gender</div>
+                    </div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showRacePopover">
+                      <div class="cohort-constuctor-elem-list-text">Race</div>
+                    </div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showEthnicityPopover">
+                      <div class="cohort-constuctor-elem-list-text">Ethnicity</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Constraints -->
+              <div class="panel panel-default">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Constraints" aria-expanded="false" aria-controls="Constraints">
+                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingConstraints">
+                      <h4 class="panel-title">Constraints</h4>
+                  </div>
+                </a>
+                <div id="Constraints" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingConstraints">
+                  <div class="panel-body">
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constraints" data-nb-inputs="2" data-nb-outputs="2" id="showRelatedEventsPopover">
+                      <div class="cohort-constuctor-elem-list-text">Related Events</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Miscellaneous -->
+              <div class="panel panel-default">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Miscellaneous" aria-expanded="false" aria-controls="Miscellaneous">
+                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingMiscellaneous">
+                      <h4 class="panel-title">Miscellaneous</h4>
+                  </div>
+                </a>
+                <div id="Miscellaneous" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMiscellaneous">
+                  <div class="panel-body">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
