@@ -20,47 +20,10 @@ $(document).ready(function(){
 
   var data = {
     operators: {
-      // operator1: {
-      //   top: cy - 100,
-      //   left: cx - 200,
-      //   properties: {
-      //     title: 'Operator 1',
-      //     inputs: {},
-      //     outputs: {
-      //       output_1: {
-      //         label: 'Output 1',
-      //       },
-      //       output_2: {
-      //         label: ' ',
-      //       }
-      //     }
-      //   }
-      // },
-      // operator2: {
-      //   top: cy,
-      //   left: cx + 140,
-      //   properties: {
-      //     title: 'Operator 2',
-      //     inputs: {
-      //       input_1: {
-      //         label: 'Input 1',
-      //       },
-      //       input_2: {
-      //         label: 'Input 2',
-      //       },
-      //     },
-      //     outputs: {}
-      //   }
-      // },
     },
     // Initial links start here
     links: {
-      // link_1: {
-      //   fromOperator: 'operator1',
-      //   fromConnector: 'output_1',
-      //   toOperator: 'operator2',
-      //   toConnector: 'input_2',
-      // },
+
     }
   };
 
@@ -326,8 +289,41 @@ $(document).ready(function(){
     $('#'+buttonId).text(curVersion);
   }
   editSubCohortVersion = function (subCohortTxt) {
-    $('#cohort_version_edit').val(subCohortTxt);
+    $('#cohort_1').html(subCohortTxt);
   }
+
+  changeDescription = function (text){
+    $('.color-white').parent().find('.cohort-default-card-content').html(text);
+  }
+
+  $(document).on('click', '.btn-cohort-add', function(){
+    content = '<div class="cohort-cambo"><div class="cohorts-list"><button type="button" class="btn btn-sm btn-cohorts-list-active" id="new-cohort" name="button" style="color: #fff !important">New Cohort</button>';
+    content += '</div>';
+    content += '<a href="#">';
+    content +=  '<img src="./assets/images/group-96.png"';
+    content += 'srcset="./assets/images/group-96@2x.png 2x,';
+    content +=  './assets/images/group-96@3x.png 3x" ';
+    content += 'class="close-cohort"></a></div>';
+
+    $('.cohorts_list').after(content);
+  });
+
+  window.count = 3;
+  $(document).on('click', '.sub-cohort-add-btn-white', function(){
+    content = '<button type="button" name="subCohorts_'+window.count+'" id="subCohorts_'+window.count+'" class="btn btn-sm sub-cohort-btn-white subCohorts marg-top-10">SC '+window.count+'</button>';
+    $("#subCohorts_"+(window.count-1)).after(content);
+    window.count = window.count+1;
+  });
+
+  $(document).on('click', '#subCohorts_2', function(){
+    $('.sc_two_one').css({'display': 'none'});
+    $('.sc_two_page').css({'display': 'block'});
+  });
+
+  $(document).on('click', '#subCohorts_1', function(){
+    $('.sc_two_page').css({'display': 'none'});
+    $('.sc_two_one').css({'display': 'block'});
+  });
 
   $(document).on('click', '.flowchart-operator', function (e){
 
@@ -353,15 +349,20 @@ $(document).ready(function(){
 
     $('.close-flowchart-cohort').hide();
     $(this).find('.close-flowchart-cohort').show();
-
-    var val =$(this).find('.flowchart-operator-title').text();
-    val1 =$.trim(val);
-    show_display(val1);
+    getValue($(this))
+    
   })
 
+function getValue(that, status=true) {
+  var val =$(that).find('.flowchart-operator-title').text();
+  val1 =$.trim(val);
+  show_display(val1, status);
+}
   $(document).on('click', '.close-flowchart-cohort', function(){
+    var cohortId = $(this).parent().parent().find('.flowchart-operator-title').text().trim();
     $flowchart.flowchart('deleteSelected');
     $(this).closest('.flowchart-operator').remove();
+    getValue($(this));
   });
 
   $('.subCohorts').on('click', function(){
@@ -374,15 +375,21 @@ $(document).ready(function(){
   $(document).on('click', '#diagnosis_create', function(){
     $('#diagnosis_model').show();
   })
+
+  $(document).on('click', '.sub-cohort-result-btn', function(){
+    show_display('result', true);
+  })
+
 })
 
-function show_display(val) {
+function show_display(val, status) {
   $('.cohort-display').hide()
-  if(val=='Procedures') {
+
+  if(val=='Procedures' && status==true) {
     updateCohortEleAndTitle('Constructor Parameters', 'Procedures',);
     $('#Procedures').show()
   }
-  else if(val=='Diagnosis') {
+  else if(val=='Diagnosis' && status==true) {
     updateCohortEleAndTitle('Constructor Parameters', 'Diagnosis',);
     $('#Diagnosis').show()
   }
@@ -398,11 +405,16 @@ function show_display(val) {
     updateCohortEleAndTitle('Constructor Parameters', 'Age',);
     $('#current_age').show()
   }
-
-  else {
-    // updateCohortEleAndTitle('Constructor Parameters', 'Data Source',);
-    $('#cohort_default').show()
+  else if(val=='result') {
+    updateCohortEleAndTitle('20 + years with M', 'Result',);
+    $('#result').show()
   }
+
+  else if(val=='Disease State') {
+   updateCohortEleAndTitle('Constructor Parameters', 'Stages',);
+   $('#Disease_State').show()
+ }
+
 }
 $(document).on('click', "#project_data",function(){
     $("#selcect-drop-down").hide();

@@ -60,7 +60,7 @@
                        ./assets/images/mask-group-4@3x.png 3x"
                class="avatar-icon">
           <div class="avatar-info">
-            Vinay
+            Ajay Chandhok
           </div>
           <div class="pull-right">
             <a href="#">
@@ -114,14 +114,25 @@
                   <div class="col-md-8">
                     <div class="project-form-group">
                       <span class="project-form-label">Therapy Area</span>
-                      <select class="project-form-control form-control" name="therapy_area">
-                        <option value="">Please select a function</option>
+                      <select class="project-form-control form-control" name="therapy_area" id='therapy_area'>
+                        <option>select</option>
+                        <option value="" selected="">Oncology</option>
+                        <option value="">Gastroenterology</option>
+                        <option value="">Hepatology(Liver, Pancreatic, Gall Bladder)</option>
+                        <option value="">Hematology</option>
+                        <option value="">Nephrology</option>
+                        <option value="">Neurology</option>
                       </select>
                     </div>
                     <div class="project-form-group">
-                      <span class="project-form-label">Project Group</span>
+                      <span class="project-form-label">Sub-Therapy Area</span>
                       <select class="project-form-control form-control" name="project_group">
-                        <option value="">Please select a function</option>
+                        <option>Colon & rectal cancer (CRC)</option>
+                        <option>Lung cancer (NSCLC)</option>
+                        <option>Skin cancer (Melanoma)</option>
+                        <option>Acute myeloid leukemia (AML - Solid)</option>
+                        <option>Myelodysplastic syndromes (MDS)</option>
+                        <option>Multiple myeloma (MM)</option>
                       </select>
                     </div>
                     <div class="project-form-group">
@@ -138,6 +149,7 @@
                       <span class="project-form-label">Country</span>
                       <select class="project-form-control form-control" name="project_visibility">
                         <option value="">USA</option>
+                        <option value="">Japan</option>
                       </select>
                     </div>
                     <div class="project-form-group">
@@ -167,18 +179,11 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Joho Doe</td>
+                          <td>Ajay Chandhok</td>
                           <td>
                             <select class="project-member-control" name="project_visibility">
                               <option value="">Admin</option>
-                            </select>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Joho Doe</td>
-                          <td>
-                            <select class="project-member-control" name="project_visibility">
-                              <option value="">Admin</option>
+                              <option value="">User</option>
                             </select>
                           </td>
                         </tr>
@@ -190,7 +195,7 @@
                 <div class="row text-center marg-bottom-15">
                   <button type="button" name="cancel" class="btn-cancel">Cancel</button>
                   <a href="./cohorts.html"><button type="button" name="cancel" class="btn-next">Next</button></a>
-                  <a href="#" class="project-saved">Saved</a>
+                  <!-- <a href="#" class="project-saved">Saved</a> -->
                 </div>
               </div>
             </div>

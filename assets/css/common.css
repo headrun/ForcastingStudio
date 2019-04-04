@@ -294,15 +294,15 @@ ul#projectSteps {
 }
 ul#projectSteps li {
   display: inline-block;
-  text-align: center;
+  /*text-align: center;*/
   padding: 0px 16px;
   text-decoration: none;
-  font-family: HelveticaNeue;
+  /*font-family: HelveticaNeue;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.23;
   letter-spacing: normal;
-  text-align: left;
+  text-align: left;*/
   color: #ffffff;
 }
 .active-project {
