@@ -242,9 +242,9 @@
               <div class="col-md-8 col-md-offset-2">
                 <div class="project-form-group">
                   <span class="project-form-label">Description</span>
-                  <input type="text" name="description" class="project-form-control form-control" value="">
+                  <input type="text" name="description" id='disgnosis_desc' class="project-form-control form-control" value="" onkeyup="changeDescription(this.value)">
                 </div>
-                <div>
+                <div class="project-form-group" style="width: 117% !important">
                   <span class="project-form-label">Procedures Map</span>
                   <div class="project-form-control">
                     <div class="row col-md-7 map_include">
@@ -256,22 +256,100 @@
                     <div class="col-md-7 map_drop_down">
                       <select class="form-control" name="" style="width: 109% !important">
                         <option value="">Please select</option>
+                        <option>Colon & rectal cancer (CRC)</option>
+                        <option>Lung cancer (NSCLC)</option>
+                        <option>Skin cancer (Melanoma)</option>
+                        <option>Acute myeloid leukemia (AML - Solid)</option>
+                        <option>Myelodysplastic syndromes (MDS)</option>
+                        <option>Multiple myeloma (MM)</option>
                       </select>
                     </div>
                   </div>
-                 
-                </div>
-                <div class="project-form-group" style="width: 110% !important">
-                  <span class="project-form-label" style="margin-top: -3%">
+                  <div style="padding: 0% 0% 0% 3% !important;">
+                   <span class="project-form-label" style="margin-top: 0%">
                     <button type="button" class="diagnosis_create" data-toggle="modal" data-target="#diagnosis_model">Create</button>
                   </span>
-                  <div class="project-form-control" style="margin-top: 1% !important;">
-                    <div class="row col-md-6 or_style">
-                      Or
+                </div>
+                  
+                </div>
+
+                <div class="project-form-group" style="margin-top: -4%; margin-bottom: -4%;">
+                  <div class="project-form-group">
+                    <span class="project-form-label">Or</span>
+                  </div>
+                </div>
+
+                <div class="project-form-group" style="width: 110% !important">
+                  <span class="project-form-label">Procedures Code</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-7 map_include">
+                      <select class="project-form-control form-control" name="">
+                        <option value="">Include</option>
+                        <option value="">Exclude</option>
+                      </select>
                     </div>
-                    <div class="col-md-7 dynamic_select">
-                      <select class="form-control" name="" style="width: 109% !important;  margin-left: -1% !important">
+                    <div class="col-md-7 map_drop_down">
+                      <select class="form-control diagnosis_dropdown" name="" style="width: 109% !important">
                         <option value="">Please select</option>
+                        <option>A00 - Cholera</option>
+                        <option>A000 - Cholera due to Vibrio cholerae 01, biovar cholerae</option>
+                        <option>A001 - Cholera due to Vibrio cholerae 01, biovar eltor</option>
+                        <option>A009 - Cholera, unspecified</option>
+                        <option>A01 - Typhoid and paratyphoid fevers</option>
+                        <option>A010 - Typhoid fever</option>
+                        <option>A0100 - Typhoid fever, unspecified</option>
+                        <option>A0101 - Typhoid meningitis</option>
+                        <option>A0102 - Typhoid fever with heart involvement</option>
+                        <option>A0103 - Typhoid pneumonia</option>
+                        <option>A0104 - Typhoid arthritis</option>
+                        <option>A0105 - Typhoid osteomyelitis</option>
+                        <option>A0109 - Typhoid fever with other complications</option>
+                        <option>A011 - Paratyphoid fever A</option>
+                        <option>A012 - Paratyphoid fever B</option>
+                        <option>A013 - Paratyphoid fever C</option>
+                        <option>A014 - Paratyphoid fever, unspecified</option>
+                        <option>A02 - Other salmonella infections</option>
+                        <option>A020 - Salmonella enteritis</option>
+                        <option>A021 - Salmonella sepsis</option>
+                        <option>A022 - Localized salmonella infections</option>
+                        <option>A0220 - Localized salmonella infection, unspecified</option>
+                        <option>A0221 - Salmonella meningitis</option>
+                        <option>A0222 - Salmonella pneumonia</option>
+                        <option>A0223 - Salmonella arthritis</option>
+                        <option>A0224 - Salmonella osteomyelitis</option>
+                        <option>A0225 - Salmonella pyelonephritis</option>
+                        <option>A0229 - Salmonella with other localized infection</option>
+                        <option>A028 - Other specified salmonella infections</option>
+                        <option>A029 - Salmonella infection, unspecified</option>
+                        <option>A03 - Shigellosis</option>
+                        <option>A030 - Shigellosis due to Shigella dysenteriae</option>
+                        <option>A031 - Shigellosis due to Shigella flexneri</option>
+                        <option>A032 - Shigellosis due to Shigella boydii</option>
+                        <option>A033 - Shigellosis due to Shigella sonnei</option>
+                        <option>A038 - Other shigellosis</option>
+                        <option>A039 - Shigellosis, unspecified</option>
+                        <option>ICD10 - C34 - Malignant Neoplasm Of Bronchus And Lung</option>
+                        <option>ICD10 - C34.0 - Malignant Neoplasm Of Main Bronchus</option>
+                        <option>ICD10 - C34.00 - Malignant Neoplasm Of Unspecified Main Bronchus</option>
+                        <option>ICD10 - C34.01 - Malignant Neoplasm Of Right Main Bronchus</option>
+                        <option>ICD10 - C34.02 - Malignant Neoplasm Of Left Main Bronchus</option>
+                        <option>ICD10 - C34.1 - Malignant Neoplasm Of Upper Lobe, Bronchus Or Lung</option>
+                        <option>ICD10 - C34.10 - Malignant Neoplasm Of Upper Lobe, Unspecified Bronchus Or Lung</option>
+                        <option>ICD10 - C34.11 - Malignant Neoplasm Of Upper Lobe, Right Bronchus Or Lung</option>
+                        <option>ICD10 - C34.12 - Malignant Neoplasm Of Upper Lobe, Left Bronchus Or Lung</option>
+                        <option>ICD10 - C34.2 - Malignant Neoplasm Of Middle Lobe, Bronchus Or Lung</option>
+                        <option>ICD10 - C34.3 - Malignant Neoplasm Of Lower Lobe, Bronchus Or Lung</option>
+                        <option>ICD10 - C34.30 - Malignant Neoplasm Of Lower Lobe, Unspecified Bronchus Or Lung</option>
+                        <option>ICD10 - C34.31 - Malignant Neoplasm Of Lower Lobe, Right Bronchus Or Lung</option>
+                        <option>ICD10 - C34.32 - Malignant Neoplasm Of Lower Lobe, Left Bronchus Or Lung</option>
+                        <option>ICD10 - C34.8 - Malignant Neoplasm Of Overlapping Sites Of Bronchus And Lung</option>
+                        <option>ICD10 - C34.80 - Malignant Neoplasm Of Overlapping Sites Of Unspecified Bronchus And Lung</option>
+                        <option>ICD10 - C34.81 - Malignant Neoplasm Of Overlapping Sites Of Right Bronchus And Lung</option>
+                        <option>ICD10 - C34.82 - Malignant Neoplasm Of Overlapping Sites Of Left Bronchus And Lung</option>
+                        <option>ICD10 - C34.9 - Malignant Neoplasm Of Unspecified Part Of Bronchus Or Lung</option>
+                        <option>ICD10 - C34.90 - Malignant Neoplasm Of Unspecified Part Of Unspecified Bronchus Or Lung</option>
+                        <option>ICD10 - C34.91 - Malignant Neoplasm Of Unspecified Part Of Right Bronchus Or Lung</option>
+                        <option>ICD10 - C34.92 - Malignant Neoplasm Of Unspecified Part Of Left Bronchus Or Lung</option>
                       </select>
                     </div>
                   </div>
@@ -304,7 +382,6 @@
                 </div>
               </div>
             </div>
-
             <!-- Disgnosis  -->
 
             <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='Diagnosis' style="height: 253px; display: none">
@@ -670,6 +747,55 @@
                       <input type='text' class="by_input" name=""/>
                        <span style="padding-left: 1%">years</span>
                     </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- data source -->
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='data_source' style="height: 253px; display: none;">
+              <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
+              <hr>
+              <div class="col-md-8 col-md-offset-2">
+                <div class="project-form-group">
+                  <span class="project-form-label">Description</span>
+                  <input type="text" name="description" class="project-form-control form-control" value="" onkeyup="changeDescription(this.value)">
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">&nbsp;</span>
+                  <div class="project-steps-radio">
+                    <input type="radio" id="rwd" name="project_steps" value="rwd">
+                    <label for="rwd">RWD</label>
+                  </div>
+                  <div class="project-steps-radio">
+                    <input type="radio" id="project_data" name="project_steps" value="project_data">
+                    <label for="project_data">Project data (from previous steps)</label>
+                  </div>
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">Data Source</span>
+                  <select class="project-form-control form-control" name="">
+                    <option value="">Please select a function</option>
+                  </select>
+                </div>
+                <div class="project-form-group">
+                  <span class="project-form-label">Time Period</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-6">
+                      <div id="datetimepickerStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
+                          <input class="form-control" type="text" name="start_date" placeholder="Start date"/>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class='input-group date end_date' id='datetimepickerEndDate'>
+                        <input type='text' class="form-control" name="end_date" placeholder="End date"/>
+                        <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

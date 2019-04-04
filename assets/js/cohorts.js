@@ -326,7 +326,6 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '.flowchart-operator', function (e){
-
     $('.flowchart-operator').removeClass('cohort-card-active');
     $('.flowchart-operator').addClass('cohort-card-default');
     $('.flowchart-operator .flowchart-operator-title').removeClass('color-white');
@@ -346,23 +345,17 @@ $(document).ready(function(){
                       'class="close-flowchart-cohort">'+
                     '</a>';
     $(this).append(close_btn);
-
-    $('.close-flowchart-cohort').hide();
-    $(this).find('.close-flowchart-cohort').show();
-    getValue($(this))
+    var val =$(this).find('.flowchart-operator-title').text();
+    val1 =$.trim(val);
+    show_display(val1);
     
   })
 
-function getValue(that, status=true) {
-  var val =$(that).find('.flowchart-operator-title').text();
-  val1 =$.trim(val);
-  show_display(val1, status);
-}
-  $(document).on('click', '.close-flowchart-cohort', function(){
-    var cohortId = $(this).parent().parent().find('.flowchart-operator-title').text().trim();
+  $(document).on('click', '.close-flowchart-cohort', function(e){
+    e.stopImmediatePropagation();
     $flowchart.flowchart('deleteSelected');
     $(this).closest('.flowchart-operator').remove();
-    getValue($(this));
+    show_display('');
   });
 
   $('.subCohorts').on('click', function(){
@@ -382,14 +375,14 @@ function getValue(that, status=true) {
 
 })
 
-function show_display(val, status) {
+function show_display(val) {
   $('.cohort-display').hide()
 
-  if(val=='Procedures' && status==true) {
+  if(val=='Procedures') {
     updateCohortEleAndTitle('Constructor Parameters', 'Procedures',);
     $('#Procedures').show()
   }
-  else if(val=='Diagnosis' && status==true) {
+  else if(val=='Diagnosis') {
     updateCohortEleAndTitle('Constructor Parameters', 'Diagnosis',);
     $('#Diagnosis').show()
   }
@@ -413,6 +406,15 @@ function show_display(val, status) {
   else if(val=='Disease State') {
    updateCohortEleAndTitle('Constructor Parameters', 'Stages',);
    $('#Disease_State').show()
+ }
+
+ else if(val=='Data Source') {
+  updateCohortEleAndTitle('Constructor Parameters', 'Data Source',);
+   $('#data_source').show()
+ }
+
+ else {
+  $("#cohort_default").show();
  }
 
 }
