@@ -12,6 +12,7 @@
     <!-- <script src="./assets/js/bootstrap.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/js/common.js"></script>
+    <script type="text/javascript" src="./assets/js/project-setup.js"></script>
   </head>
   <body class="theme-bg-color">
     <div class="container-fluid">
@@ -167,8 +168,8 @@
                   <div class="col-md-5">
                     <div class="project-form-group">
                       <span class="project-form-label" style="width: 100px">User Name</span>
-                      <input type="text" name="project_name" class="project-form-control form-control" value="">
-                      <a href="#" class="btn btn-sm btn-project marg-left-15">Add</a>
+                      <input type="text" id='project_name' name="project_name" class="project-form-control form-control" value="">
+                      <button class="btn btn-sm btn-project marg-left-15 add_user">Add</button>
                     </div>
                   </div>
                   <div class="col-md-5">
@@ -177,7 +178,7 @@
                         <th>Member Name</th>
                         <th>Member Role</th>
                       </thead>
-                      <tbody>
+                      <tbody class="user_add">
                         <tr>
                           <td>Ajay Chandhok</td>
                           <td>
@@ -205,3 +206,4 @@
     </div>
   </body>
 </html>
+
