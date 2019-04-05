@@ -495,6 +495,10 @@ $(function () {
             // var $operator_outputs = $('<div class="constructor-points"></div>');
             $operator_outputs.appendTo($operator_inputs_outputs);
 
+            var $footer_text = $('<div class="footer_text"></div>');
+
+            $footer_text.appendTo($operator)
+
             var self = this;
 
             var connectorArrows = {};

@@ -339,12 +339,24 @@ $(document).ready(function(){
     $(this).closest('.find-cohort-content').addClass('cohort-active-card-content');
     $(this).closest('.find-cohort-content').removeClass('cohort-default-card-content');
 
+    $('.footer_text').addClass('cohort-footer-color');
+    $(this).find('.footer_text').removeClass('cohort-footer-color');
+    $(this).find('.footer_text').addClass('cohort-default-footer-color');
+
     var close_btn = '<a href="#">'+
                       '<img src="./assets/images/group-96.png" srcset="./assets/images/group-96@2x.png 2x,'+
                       './assets/images/group-96@3x.png 3x"'+
                       'class="close-flowchart-cohort">'+
                     '</a>';
-    $(this).append(close_btn);
+    if($(this).find('.close-flowchart-cohort').length===0){
+
+      $(this).append(close_btn);
+    }
+
+    if ($(this).find('.footer_text').html() !== '') {
+      $(this).find('.close-flowchart-cohort').css({'margin-top':'-107px'})
+    }
+
     var val =$(this).find('.flowchart-operator-title').text();
     val1 =$.trim(val);
     show_display(val1);
@@ -404,7 +416,7 @@ function show_display(val) {
   }
 
   else if(val=='Disease State') {
-   updateCohortEleAndTitle('Constructor Parameters', 'Stages',);
+   updateCohortEleAndTitle('Constructor Parameters', 'Disease State',);
    $('#Disease_State').show()
  }
 
@@ -431,4 +443,35 @@ $(document).on('click', "#rwd",function(){
     $("#selcect-drop-down").show();
     $("#selcect-drop-down_1").show();
   });
+
+$(document).on('click', '.sub-cohort-run-btn', function() {
+  /*$("#overlay").show()*/
+  $('.close-flowchart-cohort').css({'margin-top':'-107px'});
+  
+  $("#overlay").show();
+  
+  setTimeout(function(){
+    $("#overlay").hide();
+    $(".load_run").hide();
+    setCohortValue()
+  }, 3000);
+
+});
+
+function setCohortValue() {
+  val = $.trim($('.flowchart-operator-title').text())
+  val1 = val.split('\n')[0];
+  $('.flowchart-operator-title').each(function(){
+    if ($(this).text().trim() === 'Diagnosis'){
+      $(this).parent().find('.footer_text').html('36,890');
+
+    } else if ($(this).text().trim() === 'Active Enrollment'){
+      $(this).parent().find('.footer_text').html('11,232');
+    } else if ($(this).text().trim() === 'Treatment'){
+      $(this).parent().find('.footer_text').html('18,639');
+    } else if ($(this).text().trim() === 'Disease State'){
+      $(this).parent().find('.footer_text').html('23,167');
+    }
+  })
+}
 

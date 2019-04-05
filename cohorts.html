@@ -199,7 +199,10 @@
                     <div class="sel-cohort-cards-list" id="showListOfCohortsCards">
                       <!-- <div id="showListOfCohortsCards" class="masonry-grid hide"></div> -->
                     <svg class="flowchart-temporary-link-layer" style="display: none;"><line x1="0" y1="0" x2="0" y2="0" stroke-dasharray="6,6" stroke-width="4" stroke="black" fill="none"></line></svg>
-
+                    <div id="overlay" style="padding: 109px; display: none;">
+                      <i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom load_run" style="margin-left: 40%; color: red"></i>
+                      <span class="sr-only">Loading...</span>
+                    </div>
                     </div>
                   </div>
                   <div class="cohort-graph-area sc_two_page" style="display: none;">
@@ -1188,27 +1191,12 @@
                 <div style="margin-top: -6%;">
                 <!--  <select id="therapy" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 27px;width: 52%;">-->
           <select class="form-control" name="select2" id="select2" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
-                    <option value="1">Breast cancer</option>
-                    <option value="1">Endometrial cancer</option>
-                    <option value="1">Cervix cancer</option>
-                    <option value="1">Ovary cancer</option>
-                    <option value="1">Lung cancer</option>
-                    <option value="1">Head and neck cancer</option>
-                    <option value="1">Brain cancer</option>
-                    <option value="1">Thyroid cancer</option>
-                    <option value="1">Oesophagus cancer</option>
-                    <option value="1">Stomach cancer</option>
-                    <option value="1">Colon & rectal cancer</option>
-                    <option value="1">Liver cancer</option>
-                    <option value="1">Pancreatic cancer</option>
-                    <option value="1">Skin cancer</option>
-                    <option value="1">Kidney cancer</option>
-                    <option value="1">Bladder cancer</option>
-                    <option value="1">Prostate cancer</option>
-                    <option value="1">Testis cancer</option>
-                    <option value="1">Bone cancer</option>
-                    <option value="1">Lymphoma</option>
-                    <option value="1">Blood cancer</option>
+                    <option>Colon & rectal cancer (CRC)</option>
+                    <option>Lung cancer (NSCLC)</option>
+                    <option>Skin cancer (Melanoma)</option>
+                    <option>Acute myeloid leukemia (AML - Solid)</option>
+                    <option>Myelodysplastic syndromes (MDS)</option>
+                    <option>Multiple myeloma (MM)</option>
 
                     <option value="2">Crohn's Disease</option>
                     <option value="2">Diverticulosis</option>
@@ -1285,12 +1273,12 @@
                <div class="search-container">
                    <!-- <input style="margin-top: 4px;margin-bottom: 4px;padding-left: 5px;width: 92%;border-radius: 5px;border-color: #00000096;height:29px;border-width: thin;margin-left:14px" type="text" name="search" class="fa fa-search"> -->
                    <input id="myInput" type="text" style="margin-top: 4px;margin-bottom: 4px;padding-left: 5px;width: 90%;border-radius: 5px;border-color: #00000096;height:29px;border-width: thin;margin-left:20px" name="search" class="fa fa-search">
-                  <i style="    margin-left: -24px;" class="fa fa-search"></i>
+                  <i style="margin-left: -24px;" class="fa fa-search"></i>
                </div>
              </div>
                   <div>
-                   <ul id="myList">
-                    <div id="dvCSV"></div>
+                   <ul id="myList" style="padding-left: 0px;">
+                    <div id="search_list"></div>
                    </ul>
                   </div>
            </div>
@@ -1311,7 +1299,7 @@
                 <p style="color: black;background-color: #2196f347;height:35px;border-bottom: 1px solid b#00000096">Selected Codes<span style="float: right;padding-right: 10px;">Total selected: 3</span></p>
               </div>
               <div>
-                   <ul id="myList">
+                   <ul id="myList" style="padding-left: 0px !important">
                     <div id="dvCSV"></div>
                    </ul>
                   </div>
@@ -1402,14 +1390,15 @@
     });
 </script>
 
-
-<script>
+<script type="text/javascript">
 $(document).ready(function(){
- $("#myInput").on("keyup", function() {
-   var value = $(this).val().toLowerCase();
-   $("#myList li").filter(function() {
-     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-   });
+
+ $(document).on("keyup", '#myInput', function() {
+  if (event.keyCode === 13) {
+    $('#search_list').html('<ul><li>C3400 - Malignant neoplasm of unspecified main bronchus</li><li>C3401 - Malignant neoplasm of right main bronchus</li><li>C3402 - Malignant neoplasm of left main bronchus</li><li>"C3410 - Malignant neoplasm of upper lobe</li><li style=""> unsp bronchus or lung"</li><li>"C3411 - Malignant neoplasm of upper lobe</li><li style=""> right bronchus or lung"</li><li>"C3412 - Malignant neoplasm of upper lobe</li><li style=""> left bronchus or lung"</li><li>"C342 - Malignant neoplasm of middle lobe</li><li style=""> bronchus or lung"</li><li>"C3430 - Malignant neoplasm of lower lobe</li><li style=""> unsp bronchus or lung"</li><li>"C3431 - Malignant neoplasm of lower lobe</li><li style=""> right bronchus or lung"</li><li>"C3432 - Malignant neoplasm of lower lobe</li><li style=""> left bronchus or lung"</li><li>C3480 - Malignant neoplasm of ovrlp sites of unsp bronchus and lung</li><li>C3481 - Malignant neoplasm of ovrlp sites of right bronchus and lung</li><li>C3482 - Malignant neoplasm of ovrlp sites of left bronchus and lung</li><li>C3490 - Malignant neoplasm of unsp part of unsp bronchus or lung</li><li>C3491 - Malignant neoplasm of unsp part of right bronchus or lung</li><li>C3492 - Malignant neoplasm of unsp part of left bronchus or lung</li></ul>');
+  } else if (event.keyCode === 8) {
+    $('#search_list').html('');
+  }
  });
 });
 </script>
