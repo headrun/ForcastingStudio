@@ -683,9 +683,9 @@ option {
 
 .second-box {
   margin-left: -19px;
-    width: 422px;
-    height: 290px;
-  border:2px solid #03a9f4db;
+  width: 422px;
+  height: 292px;
+  border: 1px solid #000000;
 }
 
 .second-box p {

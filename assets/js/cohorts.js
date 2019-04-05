@@ -39,7 +39,7 @@ $(document).ready(function(){
     var nbOutputs = parseInt($element.data('nb-outputs'));
     var nbConstructorHeader = $element.data('nb-constructor-header');
 
-    updateCohortEleAndTitle(nbConstructorHeader, $element.text());
+    //updateCohortEleAndTitle(nbConstructorHeader, $element.text());
     var data = {
       properties: {
         title: $element.text(),
@@ -411,6 +411,11 @@ function show_display(val) {
  else if(val=='Data Source') {
   updateCohortEleAndTitle('Constructor Parameters', 'Data Source',);
    $('#data_source').show()
+ }
+
+ else if(val=='Active Enrollment') {
+  updateCohortEleAndTitle('Constructor Parameters', 'Active Enrollment',);
+   $('#active_enrollment').show()
  }
 
  else {

@@ -267,13 +267,13 @@
                   </div>
                   <div style="padding: 0% 0% 0% 3% !important;">
                    <span class="project-form-label" style="margin-top: 0%">
-                    <button type="button" class="diagnosis_create" data-toggle="modal" data-target="#diagnosis_model">Create</button>
+                    <button type="button" class="diagnosis_create" data-toggle="modal">Create</button>
                   </span>
                 </div>
                   
                 </div>
 
-                <div class="project-form-group" style="margin-top: -4%; margin-bottom: -4%;">
+                <!-- <div class="project-form-group" style="margin-top: -4%; margin-bottom: -4%;">
                   <div class="project-form-group">
                     <span class="project-form-label">Or</span>
                   </div>
@@ -360,7 +360,7 @@
                     <span class="close_map">x</span>
                   </div>
                  
-                </div>
+                </div> -->
                 <div class="project-form-group">
                   <span class="project-form-label">Time Period</span>
                   <div class="project-form-control">
@@ -383,6 +383,121 @@
               </div>
             </div>
             <!-- Disgnosis  -->
+
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='active_enrollment' style="height: 253px; display: none">
+              <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
+              <hr>
+              <div class="col-md-8 col-md-offset-2">
+                <div class="project-form-group">
+                  <span class="project-form-label">Description</span>
+                  <input type="text" name="description" id='disgnosis_desc' class="project-form-control form-control" value="" onkeyup="changeDescription(this.value)">
+                </div>
+                <div class="project-form-group" style="width: 117% !important">
+                  <span class="project-form-label">Constraints</span>
+                  <div class="project-form-control">
+                    <div class="col-md-7 map_drop_down">
+                      <select class="form-control" name="" style="width: 150% !important; margin-left: -18% !important">
+                        <option value="">Please select</option>
+                        <option>At least one instance every year</option>
+                        <option>At least one instance every six months</option>
+                        <option>At least one instance every quarter</option>
+                        <option>At least two instances after first diagnosis</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="project-form-group" style="margin-top: -4%; margin-bottom: -4%;">
+                  <div class="project-form-group">
+                    <span class="project-form-label">Or</span>
+                  </div>
+                </div>
+
+                <div class="project-form-group" style="width: 110% !important">
+                  <span class="project-form-label">Procedures Code</span>
+                  <div class="project-form-control">
+                    <div class="row col-md-7 map_include">
+                      <select class="project-form-control form-control" name="">
+                        <option value="">Include</option>
+                        <option value="">Exclude</option>
+                      </select>
+                    </div>
+                    <div class="col-md-7 map_drop_down">
+                      <select class="form-control diagnosis_dropdown" name="" style="width: 109% !important">
+                        <option value="">Please select</option>
+                        <option>A00 - Cholera</option>
+                        <option>A000 - Cholera due to Vibrio cholerae 01, biovar cholerae</option>
+                        <option>A001 - Cholera due to Vibrio cholerae 01, biovar eltor</option>
+                        <option>A009 - Cholera, unspecified</option>
+                        <option>A01 - Typhoid and paratyphoid fevers</option>
+                        <option>A010 - Typhoid fever</option>
+                        <option>A0100 - Typhoid fever, unspecified</option>
+                        <option>A0101 - Typhoid meningitis</option>
+                        <option>A0102 - Typhoid fever with heart involvement</option>
+                        <option>A0103 - Typhoid pneumonia</option>
+                        <option>A0104 - Typhoid arthritis</option>
+                        <option>A0105 - Typhoid osteomyelitis</option>
+                        <option>A0109 - Typhoid fever with other complications</option>
+                        <option>A011 - Paratyphoid fever A</option>
+                        <option>A012 - Paratyphoid fever B</option>
+                        <option>A013 - Paratyphoid fever C</option>
+                        <option>A014 - Paratyphoid fever, unspecified</option>
+                        <option>A02 - Other salmonella infections</option>
+                        <option>A020 - Salmonella enteritis</option>
+                        <option>A021 - Salmonella sepsis</option>
+                        <option>A022 - Localized salmonella infections</option>
+                        <option>A0220 - Localized salmonella infection, unspecified</option>
+                        <option>A0221 - Salmonella meningitis</option>
+                        <option>A0222 - Salmonella pneumonia</option>
+                        <option>A0223 - Salmonella arthritis</option>
+                        <option>A0224 - Salmonella osteomyelitis</option>
+                        <option>A0225 - Salmonella pyelonephritis</option>
+                        <option>A0229 - Salmonella with other localized infection</option>
+                        <option>A028 - Other specified salmonella infections</option>
+                        <option>A029 - Salmonella infection, unspecified</option>
+                        <option>A03 - Shigellosis</option>
+                        <option>A030 - Shigellosis due to Shigella dysenteriae</option>
+                        <option>A031 - Shigellosis due to Shigella flexneri</option>
+                        <option>A032 - Shigellosis due to Shigella boydii</option>
+                        <option>A033 - Shigellosis due to Shigella sonnei</option>
+                        <option>A038 - Other shigellosis</option>
+                        <option>A039 - Shigellosis, unspecified</option>
+                        <option>ICD10 - C34 - Malignant Neoplasm Of Bronchus And Lung</option>
+                        <option>ICD10 - C34.0 - Malignant Neoplasm Of Main Bronchus</option>
+                        <option>ICD10 - C34.00 - Malignant Neoplasm Of Unspecified Main Bronchus</option>
+                        <option>ICD10 - C34.01 - Malignant Neoplasm Of Right Main Bronchus</option>
+                        <option>ICD10 - C34.02 - Malignant Neoplasm Of Left Main Bronchus</option>
+                        <option>ICD10 - C34.1 - Malignant Neoplasm Of Upper Lobe, Bronchus Or Lung</option>
+                        <option>ICD10 - C34.10 - Malignant Neoplasm Of Upper Lobe, Unspecified Bronchus Or Lung</option>
+                        <option>ICD10 - C34.11 - Malignant Neoplasm Of Upper Lobe, Right Bronchus Or Lung</option>
+                        <option>ICD10 - C34.12 - Malignant Neoplasm Of Upper Lobe, Left Bronchus Or Lung</option>
+                        <option>ICD10 - C34.2 - Malignant Neoplasm Of Middle Lobe, Bronchus Or Lung</option>
+                        <option>ICD10 - C34.3 - Malignant Neoplasm Of Lower Lobe, Bronchus Or Lung</option>
+                        <option>ICD10 - C34.30 - Malignant Neoplasm Of Lower Lobe, Unspecified Bronchus Or Lung</option>
+                        <option>ICD10 - C34.31 - Malignant Neoplasm Of Lower Lobe, Right Bronchus Or Lung</option>
+                        <option>ICD10 - C34.32 - Malignant Neoplasm Of Lower Lobe, Left Bronchus Or Lung</option>
+                        <option>ICD10 - C34.8 - Malignant Neoplasm Of Overlapping Sites Of Bronchus And Lung</option>
+                        <option>ICD10 - C34.80 - Malignant Neoplasm Of Overlapping Sites Of Unspecified Bronchus And Lung</option>
+                        <option>ICD10 - C34.81 - Malignant Neoplasm Of Overlapping Sites Of Right Bronchus And Lung</option>
+                        <option>ICD10 - C34.82 - Malignant Neoplasm Of Overlapping Sites Of Left Bronchus And Lung</option>
+                        <option>ICD10 - C34.9 - Malignant Neoplasm Of Unspecified Part Of Bronchus Or Lung</option>
+                        <option>ICD10 - C34.90 - Malignant Neoplasm Of Unspecified Part Of Unspecified Bronchus Or Lung</option>
+                        <option>ICD10 - C34.91 - Malignant Neoplasm Of Unspecified Part Of Right Bronchus Or Lung</option>
+                        <option>ICD10 - C34.92 - Malignant Neoplasm Of Unspecified Part Of Left Bronchus Or Lung</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div style="margin-left: 2%">
+                    <span class="add_map">+</span>
+                  </div>
+                  <div style="margin-right: -3%">
+                    <span class="close_map">x</span>
+                  </div>
+                 
+                </div> -->
+              </div>
+            </div>
+            <!-- Active Enrollment -->
 
             <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='Diagnosis' style="height: 253px; display: none">
               <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
@@ -421,7 +536,7 @@
                   
                 </div>
 
-                <div class="project-form-group" style="margin-top: -4%; margin-bottom: -4%;">
+                <!-- <div class="project-form-group" style="margin-top: -4%; margin-bottom: -4%;">
                   <div class="project-form-group">
                     <span class="project-form-label">Or</span>
                   </div>
@@ -508,7 +623,7 @@
                     <span class="close_map">x</span>
                   </div>
                  
-                </div>
+                </div> -->
                 <div class="project-form-group">
                   <span class="project-form-label">Time Period</span>
                   <div class="project-form-control">
@@ -563,13 +678,13 @@
                   </div>
                   <div style="padding: 0% 0% 0% 3% !important;">
                    <span class="project-form-label" style="margin-top: 0%">
-                    <button type="button" class="diagnosis_create" data-toggle="modal" data-target="#diagnosis_model">Create</button>
+                    <button type="button" class="diagnosis_create" data-toggle="modal">Create</button>
                   </span>
                 </div>
                   
                 </div>
 
-                <div class="project-form-group" style="margin-top: -4%; margin-bottom: -4%;">
+                <!-- <div class="project-form-group" style="margin-top: -4%; margin-bottom: -4%;">
                   <div class="project-form-group">
                     <span class="project-form-label">Or</span>
                   </div>
@@ -635,7 +750,7 @@
                     <span class="close_map">x</span>
                   </div>
                  
-                </div>
+                </div> -->
                 <div class="project-form-group">
                   <span class="project-form-label">Time Period</span>
                   <div class="project-form-control">
@@ -814,7 +929,7 @@
                    <td></td>
                    <td></td>
                    <td class="cohort-left-element">
-                    <input type="text" class="form-control" name="">
+                    <input type="text" name="description" class="project-form-control form-control" onkeyup="changeDescription(this.value)" style="width: 100% !important">
                    </td>
                  </tr>
                  <tr>
@@ -822,24 +937,10 @@
                    <td></td>
                    <td></td>
                    <td class="cohort-left-element" style="float: left;margin-left: 0%;">
-                   <form>
-                       <div class="multiselect" style="font-weight: 500 !important">
-                         <div class="selectBox" onclick="showCheckboxes()">
-                           <select>
-                             <option>Select</option>
-                           </select>
-                           <div class="overSelect"></div>
-                         </div>
-                         <div id="checkboxes">
-                           <label for="one">
-                             <input type="checkbox" id="stage1" />Stage 1</label>
-                           <label for="two">
-                             <input type="checkbox" id="stage2" />Stage 2</label>
-                           <label for="three">
-                             <input type="checkbox" id="stage3" />Stage 3</label>
-                         </div>
-                       </div>
-                     </form>
+                    <span class="stage1"><input type="checkbox" name="stage1" style="margin-right: 5px;">Stage I</span>
+                    <span class="stage2" style="padding-left: 10px;"><input type="checkbox" name="stage1" style="margin-right: 5px;">Stage II</span>
+                    <span class="stage3" style="padding-left: 10px;"><input type="checkbox" name="stage1" style="margin-right: 5px;">Stage III</span>
+                    <span class="stage3" style="padding-left: 10px;"><input type="checkbox" name="stage1" style="margin-right: 5px;">Stage IV</span>
                    </td>
                  </tr>
                </tbody>
@@ -953,6 +1054,22 @@
             </div>
             <!-- Clinical parameters -->
             <div class="panel-group marg-top-15" id="accordion" role="tablist" aria-multiselectable="true">
+
+              <div class="panel panel-default">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Miscellaneous" aria-expanded="false" aria-controls="Miscellaneous">
+                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingMiscellaneous">
+                      <h4 class="panel-title" style="font-size: 13px !important">Data</h4>
+                  </div>
+                </a>
+                <div id="Miscellaneous" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMiscellaneous">
+                    <div class="panel-body">
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constraints" data-nb-inputs="2" data-nb-outputs="2" id="showRelatedEventsPopover">
+                      <div class="cohort-constuctor-elem-list-text">Data Source</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="panel panel-default">
                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#ClinicalParameters" aria-expanded="true" aria-controls="ClinicalParameters">
                   <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingOne">
@@ -1018,27 +1135,13 @@
                     <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constraints" data-nb-inputs="2" data-nb-outputs="2" id="showRelatedEventsPopover">
                       <div class="cohort-constuctor-elem-list-text">Related Events</div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Miscellaneous -->
-              <div class="panel panel-default">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Miscellaneous" aria-expanded="false" aria-controls="Miscellaneous">
-                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingMiscellaneous">
-                      <h4 class="panel-title" style="font-size: 13px !important">Miscellaneous</h4>
-                  </div>
-                </a>
-                <div id="Miscellaneous" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMiscellaneous">
-                    <div class="panel-body">
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constraints" data-nb-inputs="2" data-nb-outputs="2" id="showRelatedEventsPopover">
-                      <div class="cohort-constuctor-elem-list-text">Data Source</div>
-                    </div>
                     <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constraints" data-nb-inputs="2" data-nb-outputs="2" id="showRelatedEventsPopover">
                       <div class="cohort-constuctor-elem-list-text">Active Enrollment</div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- Miscellaneous -->
             </div>
           </div>
         </div>
@@ -1051,7 +1154,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <button type="button" class="close" data-dismiss="modal" style="margin-right: 5px !important;">&times;</button>
           <h4 class="modal-title" style="color: blue">Diagnosis Map</h4>
         </div>
         <div class="modal-body" style="padding-top: 35px;">
@@ -1063,7 +1166,7 @@
                 <!-- <input style="margin-left: 50px;border-radius: 5px;border-color: #00000096;border-width: thin;" type="text" name=""> -->
                 <div style="margin-top: -6%;">
                   <!--<select id="therapy" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 27px;width: 52%;">-->
-          <select class="form-control" name="select1" id="select1" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;">
+          <select class="form-control" name="select1" id="select1" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
                     <option value="1">Oncology</option>
                     <option value="2">Gastroenterology</option>
                     <option value="3">Hepatology (Liver, Pancreatic, Gall Bladder)</option>
@@ -1075,7 +1178,7 @@
             </div>
             <div class="col-lg-6">
                 Name
-                <input style="margin-left: 86px;border-radius: 5px;border-color: #00000096;border-width: thin;" type="text" name="">
+                <input style="margin-left: 86px;border-radius: 5px;border-color: #00000096;border-width: thin;width: 52%;" type="text" name="">
             </div>
           </div>
           <div class="row" style="padding-bottom: 30px;">
@@ -1084,7 +1187,7 @@
                 <!-- <input type="text" style="margin-left: 18px;border-radius: 5px;border-color: #00000096;border-width: thin;" name=""> -->
                 <div style="margin-top: -6%;">
                 <!--  <select id="therapy" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 27px;width: 52%;">-->
-          <select class="form-control" name="select2" id="select2" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;">
+          <select class="form-control" name="select2" id="select2" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
                     <option value="1">Breast cancer</option>
                     <option value="1">Endometrial cancer</option>
                     <option value="1">Cervix cancer</option>
@@ -1169,7 +1272,7 @@
             </div>
             <div class="col-lg-6">
                 Description 
-                <input type="text" style="margin-left: 50px;border-radius: 5px;border-color: #00000096;border-width: thin;" name="">
+                <input type="text" style="margin-left: 50px;border-radius: 5px;border-color: #00000096;border-width: thin;width:52%" name="">
             </div>
           </div>
       
@@ -1203,7 +1306,7 @@
             <input type="button" id="upload" value="Upload" style="margin-left: 226px;" />
 
 
-            <div class="second-box" style="margin-left: 10px;overflow-y: scroll;">
+            <div class="second-box" style="overflow-y: scroll;margin-left: -15px;margin-top: 8px;">
               <div>
                 <p style="color: black;background-color: #2196f347;height:35px;border-bottom: 1px solid b#00000096">Selected Codes<span style="float: right;padding-right: 10px;">Total selected: 3</span></p>
               </div>
