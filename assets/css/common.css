@@ -20,7 +20,7 @@ a:hover {
   margin-right: -15px;
 }
 .marg-top-30 {
-  margin-top: 30px
+  margin-top: 44px;
 }
 .marg-top-15 {
   margin-top: 15px
@@ -81,7 +81,7 @@ a:hover {
 }
 .btn-project {
   border-radius: 4px;
-  background-color: #0063c3;
+  background-color: #6b9840;
   color: #ffffff
 }
 /* Navbar menu start */
@@ -104,7 +104,7 @@ a:hover {
   object-fit: contain;
 }
 .li-with-background {
-  color: #0063c3;
+  color: #6b9840;
   border-radius: 3px;
   padding: 0px 15px;
   background-color: rgba(0, 102, 152, 0.15);
@@ -219,10 +219,10 @@ ul#menuItems li {
   transition: .4s;
 }
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #6b9840;
 }
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #6b9840;
 }
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
@@ -267,7 +267,7 @@ input:checked + .slider:before {
   /* height: 40px; */
   height: 52px;
   box-shadow: 0 6px 45px 0 rgba(0, 102, 152, 0.15);
-  background-color: #00204a;
+  background-color: #606060;
   display: flex;
   align-items: center;
 }
@@ -320,7 +320,7 @@ ul#projectSteps li {
   height: 13px;
   border-radius: 50%;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  background-color: #0063c3;
+  background-color: #6b9840;
 }
 .ellipse-common {
   width: 13px;
@@ -332,7 +332,7 @@ ul#projectSteps li {
 .ellipse-line-1 {
   width: 95px;
   height: 5px;
-  background-image: linear-gradient(89deg, #0063c3, #ffffff);
+  background-image: linear-gradient(89deg, #6b9840, #ffffff);
 }
 .ellipse-line-2 {
   width: 95px;
@@ -347,6 +347,6 @@ ul#projectSteps li {
 .ellipse-line-1-active-left {
   width: 95px;
   height: 5px;
-  background-image: linear-gradient(to right, #ffffff, #0063c3);
+  background-image: linear-gradient(to right, #ffffff, #6b9840);
 }
 /* Project setup header end */

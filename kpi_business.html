@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>List of projects</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/cohorts.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/summary.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link href="./assets/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link href="./assets/css/jquery-ui.css" rel="stylesheet"> -->
+    <link href="./assets/css/flowchart/jquery.flowchart.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- <script src = "./assets/js/jquery-1.10.2.js"></script> -->
+    <script src = "./assets/js/jquery-ui.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/flowchart/jquery.flowchart.js"></script>
+    <script src="./assets/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="./assets/js/common.js"></script>
+    <script type="text/javascript" src="./assets/js/cohorts.js"></script>
+  </head>
+  <body class="theme-bg-color">
+    <div class="container-fluid">
+      <div class="row top-menu-bg-color">
+        <div class="col-md-6">
+          <div class="top-menu-bar">
+            <img src="./assets/images/group-212.png"
+                  srcset="./assets/images/group-212@2x.png 2x,
+                  ./assets/images/group-212@3x.png 3x"
+                  class="Group-212">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <ul id="menuItems">
+            <li>
+              <div>
+                <a href="#">
+                  <img src="./assets/images/home.png"
+                  srcset="./assets/images/home@2x.png 2x,
+                  ./assets/images/home@3x.png 3x"
+                  class="home">
+                </a>
+              </div>
+            </li>
+            <!-- <li class="menu-devider"></li> -->
+            <li>
+              <a href="./projects.html">
+                <div class="li-with-background">Projects</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="li-item">Definitions</div>
+              </a>
+            </li>
+            <li style="border: none">
+              <a href="#">
+                <div class="li-item">Help</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 marg-top-10">
+          <img src="./assets/images/mask-group-4.png"
+               srcset="./assets/images/mask-group-4@2x.png 2x,
+                       ./assets/images/mask-group-4@3x.png 3x"
+               class="avatar-icon">
+          <div class="avatar-info">
+            Vinay
+          </div>
+          <div class="pull-right">
+            <a href="#">
+              <i class="fas fa-ellipsis-v setting-menu"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <!-- Project setup header -->
+      <div class="row">
+        <div class="project-setup-header">
+          <div class="col-md-2">
+            <div class="sub-title">Repatha Level 3 - US</div>
+          </div>
+          <div class="col-md-8 text-center">
+            <div class="project-stpes">
+              <ul id="projectSteps">
+                <li>Project Setup</li>
+                <li class="active-project">Cohorts</li>
+                <!-- <li>Cohorts</li> -->
+                <li>Point Estimate</li>
+                <li>Projection and Forecasting</li>
+              </ul>
+            </div>
+            <div class="status-bar">
+              <div class="ellipse-common"></div>
+              <div class="ellipse-line-1-active-left"></div>
+              <div class="first-ellipse ellipse-active"></div>
+              <div class="ellipse-line-1"></div>
+              <div class="ellipse-common"></div>
+              <div class="ellipse-line-3"></div>
+              <div class="ellipse-common"></div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="alert alert-danger hide" id="danger-alert">
+              <!-- <button type="button" class="close" data-dismiss="alert">x</button> -->
+              <strong>Warning! </strong>
+              <span class="alert-content"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row marg-top-15">
+        <div class="col-md-12" style="height: auto">
+          <div class="col-md-2 white-bg cohorts-auto-height" style="height: calc(100vh - 72px);">
+            <div class="sub-title-bg marg-top-6">
+              <div class="sub-title-cohorts text-center">Versions & Cohorts</div>
+            </div>
+            <div class="verstion-desc-text marg-top-15">V0 - Description Text</div>
+            <div class="cohort-cambo">
+              <div class="cohorts-list">
+                <button type="button" class="btn btn-sm btn-cohorts-list-active" id="cohort_1" onclick="updateCohortVersionData('Cohort 01', 'cohort_1')" name="button">Cohort 01</button>
+              </div>
+              <a href="#">
+                <img src="./assets/images/group-96.png"
+                srcset="./assets/images/group-96@2x.png 2x,
+                ./assets/images/group-96@3x.png 3x"
+                class="close-cohort">
+              </a>
+            </div>
+            <div class="marg-top-10">
+              <button type="button" name="button" class="btn btn-lg btn-cohort-add">
+                <img src="./assets/images/square-add-button.png"
+                     srcset="./assets/images/square-add-button@2x.png 2x,
+                             ./assets/images/square-add-button@3x.png 3x"
+                     class="square-add-button"><span class="cohort-btn-text">Add</span>
+              </button>
+              <button type="button" name="button" class="btn btn-points-estimate pull-right" style="padding: 1px 5px !important;">
+                <span class="btn-points-estimate-text">Go to Point&nbsp;Estimate</span>
+                <img src="./assets/images/arrow-pointing-right-in-a-circle.png"
+                     srcset="./assets/images/arrow-pointing-right-in-a-circle@2x.png 2x,
+                             ./assets/images/arrow-pointing-right-in-a-circle@3x.png 3x"
+                     class="arrow-pointing-right-in-a-circle">
+              </button>
+            </div>
+          </div>
+          <div class="col-md-8" id="main_content_block" style="width: 83% !important">
+            <!-- Drag Graph start -->
+            <div class="padd-a-15 white-bg">
+              <span>Select Required KPI </span>
+              <div class="cohort-graph" style="border: none !important;">
+                <div class="col-md-13" style="padding: 0%!important; height: 25%">
+                  <div style="height: 28px">
+                    <input type="checkbox" name="">
+                  </div>
+                </div>
+              </div>
+            </div>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->

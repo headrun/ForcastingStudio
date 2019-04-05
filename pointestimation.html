@@ -22,7 +22,45 @@
     <script type="text/javascript" src="./assets/js/common.js"></script>
     <script type="text/javascript" src="./assets/js/cohorts.js"></script>
     <style>
-      .Work-space-01-BG {
+      ul#projectSteps li {
+        padding: 0px 27px;
+      }
+      .Next {
+  width: 30px;
+  height: 22px;
+  font-family: HelveticaNeue;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+      .Rectangle-85 {
+  width: 90px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #6b9840;
+}
+      .Cancel {
+  width: 50px;
+  height: 22px;
+  font-family: HelveticaNeue;
+  font-size: 17px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+      .Rectangle-94 {
+  width: 90px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #606060;
+}
+      /*.Work-space-01-BG {
 
   width: 807px;
 
@@ -32,6 +70,37 @@
 
   background-color: #ffffff;
 
+}*/
+.black-check-box-with-white-check {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.check-box-empty {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.Rectangle-184 {
+  width: 986px;
+    margin-left: 20px;
+    height: 172px;
+    border: solid 1px #b9b9b9;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+.Rectangle-92 {
+  width: 984px;
+  height: 49px;
+  background-color: #f4f4f4;
+}
+.Work-space-01-BG {
+ width: 1030px;
+ height: 793px;
+ box-shadow: 0 3px 6px 0 rgba(0, 99, 195, 0.4);
+ background-color: #ffffff;
 }
 .Poin-Estimates-Prevalence {
 
@@ -46,7 +115,11 @@
   font-weight: 500;
 
   font-style: normal;
-
+.Rectangle-92 {
+  width: 1520px;
+  height: 49px;
+  background-color: #f4f4f4;
+}
   font-stretch: normal;
 
   line-height: 1.28;
@@ -157,6 +230,9 @@
 .box{
   margin-top: 18px;
 }
+span{
+  color: #606060;
+}
 </style>
 </head>
 
@@ -165,10 +241,8 @@
       <div class="row top-menu-bg-color">
         <div class="col-md-6">
           <div class="top-menu-bar">
-            <img src="./assets/images/group-212.png"
-                  srcset="./assets/images/group-212@2x.png 2x,
-                  ./assets/images/group-212@3x.png 3x"
-                  class="Group-212">
+            <img src="./assets/images/group-212.png" srcset="./assets/images/group-212@2x.png 2x,
+                  ./assets/images/group-212@3x.png 3x" class="Group-212">
           </div>
         </div>
         <div class="col-md-4">
@@ -176,10 +250,8 @@
             <li>
               <div>
                 <a href="#">
-                  <img src="./assets/images/home.png"
-                  srcset="./assets/images/home@2x.png 2x,
-                  ./assets/images/home@3x.png 3x"
-                  class="home">
+                  <img src="./assets/images/home.png" srcset="./assets/images/home@2x.png 2x,
+                  ./assets/images/home@3x.png 3x" class="home">
                 </a>
               </div>
             </li>
@@ -202,12 +274,10 @@
           </ul>
         </div>
         <div class="col-md-2 marg-top-10">
-          <img src="./assets/images/mask-group-4.png"
-               srcset="./assets/images/mask-group-4@2x.png 2x,
-                       ./assets/images/mask-group-4@3x.png 3x"
-               class="avatar-icon">
+          <img src="./assets/images/mask-group-4.png" srcset="./assets/images/mask-group-4@2x.png 2x,
+                       ./assets/images/mask-group-4@3x.png 3x" class="avatar-icon">
           <div class="avatar-info">
-            Vinay
+            Ajay Chandhok
           </div>
           <div class="pull-right">
             <a href="#">
@@ -219,30 +289,30 @@
     </div>
     <div class="container-fluid">
       <!-- Project setup header -->
-      <div class="row">
-        <div class="project-setup-header">
+      <div class="row" >
+        <div class="project-setup-header" style="background-color: #606060;">
           <div class="col-md-2">
             <div class="sub-title">Repatha Level 3 - US</div>
           </div>
           <div class="col-md-8 text-center">
             <div class="project-stpes">
               <ul id="projectSteps">
-                <li>Project Setup</li>
+                <li style="padding-left: 30px;">Project Setup</li>
                 <li class="active-project">Cohorts</li>
                 <!-- <li>Cohorts</li> -->
-                <li>Point Estimate</li>
-                <li>Projection and Forecasting</li>
+                <li>KPI & Business Rules</li>
+                <li>Dashboard</li>
               </ul>
             </div>
             <div class="status-bar">
-              <div class="ellipse-common"></div>
-              <div class="ellipse-line-1-active-left"></div>
-              <div class="first-ellipse ellipse-active"></div>
-              <div class="ellipse-line-1"></div>
-              <div class="ellipse-common"></div>
-              <div class="ellipse-line-3"></div>
-              <div class="ellipse-common"></div>
-            </div>
+             <div class="ellipse-common"></div>
+             <div class="ellipse-line-1-active-left" style="background-image: linear-gradient(to right, #ffffff, white);width: 140px;"></div>
+             <div class="ellipse-common"></div>
+             <div class="ellipse-line-1" style="background-image: linear-gradient(to right, #ffffff, #6b9840); "></div>
+             <div class="first-ellipse ellipse-active" style="background-color: #6b9840"></div>
+             <div class="ellipse-line-3" style="background-image: linear-gradient(89deg, #6b9840, #ffffff);"></div>
+             <div class="ellipse-common"></div>
+           </div>
           </div>
           <div class="col-md-2">
             <div class="alert alert-danger hide" id="danger-alert">
@@ -256,13 +326,13 @@
       <div class="row marg-top-15">
         <div class="col-md-12" style="height: auto">
           <div class="col-md-2 white-bg cohorts-auto-height" style="height: calc(100vh - 72px);">
-            <div class="sub-title-bg marg-top-6">
+            <div class="sub-title-bg marg-top-6" style=" background-color: rgba(174, 205, 71, 0.25);">
               <div class="sub-title-cohorts text-center">Versions & Cohorts</div>
             </div>
-            <div class="verstion-desc-text marg-top-15">V0 - Description Text</div>
+            <div class="verstion-desc-text marg-top-15" style="background-color: #6b9840;">V0 - Description Text</div>
             <div class="cohort-cambo">
               <div class="cohorts-list">
-                <button type="button" class="btn btn-sm btn-cohorts-list-active" id="cohort_1" onclick="updateCohortVersionData('Cohort 01', 'cohort_1')" name="button">Cohort 01</button>
+                <button type="button" class="btn btn-sm btn-cohorts-list-active" id="cohort_1" onclick="updateCohortVersionData('Cohort 01', 'cohort_1')" name="button" style="background-color: #606060;">CHD with CV events</button>
               </div>
               <a href="#">
                 <img src="./assets/images/group-96.png"
@@ -272,193 +342,191 @@
               </a>
             </div>
             <div class="marg-top-10">
-              <button type="button" name="button" class="btn btn-lg btn-cohort-add">
-                <img src="./assets/images/square-add-button.png"
+              <button type="button" name="button" class="btn btn-lg btn-cohort-add" style=" width: 100%">
+                <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/2570DB34-13FC-4449-A262-FF477ADDE7F1.svg"
                      srcset="./assets/images/square-add-button@2x.png 2x,
                              ./assets/images/square-add-button@3x.png 3x"
-                     class="square-add-button"><span class="cohort-btn-text">Add</span>
+                     class="square-add-button" style="margin-top: 1px;"><span class="cohort-btn-text" style="color: #6b9840;">Back</span>
               </button>
-              <button type="button" name="button" class="btn btn-points-estimate pull-right" style="padding: 1px 5px !important;">
-                <span class="btn-points-estimate-text">Go to Point&nbsp;Estimate</span>
-                <img src="./assets/images/arrow-pointing-right-in-a-circle.png"
+             <!--  <button type="button" name="button" class="btn btn-points-estimate pull-right" style="padding: 1px 5px !important;border: solid 1px #6b9840 !important;">
+                <span class="btn-points-estimate-text" style="color: #6b9840;">Go to Dashboard</span>
+                <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/CC52D8E4-2B0D-44C7-BC3D-FAE5F0BF7D18.svg"
                      srcset="./assets/images/arrow-pointing-right-in-a-circle@2x.png 2x,
                              ./assets/images/arrow-pointing-right-in-a-circle@3x.png 3x"
                      class="arrow-pointing-right-in-a-circle">
-              </button>
+              </button> -->
             </div>
           </div>
 
           <!------------------------- <center body> ----------------->
-          <div class="col-md-8" id="main_content_block">
+          <div class="col-md-10" id="main_content_block">
             
             <div class="Work-space-01-BG" >
               <div class="Poin-Estimates-Prevalence">
-                <p style="padding-left: 12px;padding-top: 15px;">
-                    point estimation (Prevalence)
+                <p style="    font-size: 15px;padding-left: 21px;padding-top: 15px;">
+                    Select Required KPI
                 </p>
               </div>
-              <div class="row" style="margin-left: 0px;margin-top: 60px;">
-                <div class="Rectangle-29 col-lg-2" style="padding-left: 24px;color:  #00204a;">Overall</div>
-                <div class="Rectangle-29 col-lg-2">On Statin</div>
-                <div class="Rectangle-46 col-lg-1" style="margin-left: 13px;">
-                  <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9E653F9A-C74B-4373-887B-EB21247E6EF4.svg" class="Path-32">
+              <div class="Rectangle-184">
+                <div class="Rectangle-92" style="border-bottom: solid 1px #b9b9b9;">
+                  <div class="row" >
+                    <div class="col-md-12" style="margin-top: 14px;">
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 10px;">
+                      <span style="margin-left: 4px">Patient Profile</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 620px;">
+                      <span>Share</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/EB8626FE-EC35-4F91-B702-5657E3AD03A6.svg" class="black-check-box-with-white-check" style="    margin-left: 30px;">
+                      <span>Volume</span>
+                      <!-- <hr style="margin-top: 10px;"> -->
+                  </div>
+                </div>
+                <br>
+                <div class="row" style="font-size: 12px">
+                    <div class="col-md-12" style="margin-top: 14px;">
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>Gender</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 90px;">
+                      <span>By Age</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 90px;">
+                      <span>By State</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 90px;">
+                      <span>By Region</span>
+                      <!-- <hr style="margin-top: 10px;"> -->
+                  </div>
+                </div>
+                <br>
+                <div class="row" style="font-size: 12px">
+                    <div class="col-md-12" style="margin-top: 14px;">
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>By Stages</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 72px;">
+                      <span>By Incidence</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 54px;">
+                      <span>By Co-Morbidities</span>
+                      
+                      <!-- <hr style="margin-top: 10px;"> -->
+                  </div>
+                </div>
+                
+
                 </div>
               </div>
-              <div class="Workspace-Border">
-                          <!----------------- <box1> ------------->
-                <div class="Rectangle-130 ">
-                  CHD with CV events 
-                  <span style="padding-left: 300px;">RWD</span>
-                  <span style="padding-left: 105px;">Proportional-Estimates</span> 
-                </div>
-                <div class="Rectangle-129" style="margin-bottom: 28px;">
+              <div class="Rectangle-184"  style="margin-top: 1%">
+                <div class="Rectangle-92" style="border-bottom: solid 1px #b9b9b9;">
                   <div class="row">
-                    <div class="col-lg-6 Rectangle-106" style>MI-AII , UA-AII, IS-AII.</div>
-                    <div class="col-lg-3 Rectangle-28"></div>
-                    <div class="col-lg-3 Rectangle-28"></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 MI---All">MI-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 MI---All">UA-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 MI---All">ISS-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
+                    <div class="col-md-12" style="margin-top: 14px;">
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 10px;">
+                      <span style="margin-left: 4px">Line Progression</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 600px;">
+                      <span>Share</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="black-check-box-with-white-check" style="    margin-left: 30px;">
+                      <span>Volume</span>
+                      <!-- <hr style="margin-top: 10px;"> -->
                   </div>
                 </div>
-                <!------------------ <box2> ----------------------->
-                <div class="Rectangle-130 ">
-                  CHD with CV events 
-                  <span style="padding-left: 300px;">RWD</span>
-                  <span style="padding-left: 105px;">Proportional-Estimates</span> 
-                </div>
-                <div class="Rectangle-129" style="margin-bottom: 28px;">
-                  <div class="row">
-                    <div class="col-lg-6 Rectangle-106">SA-AII,TIA-AII,IS-AII,Revascularization-AII.</div>
-                    <div class="col-lg-3 Rectangle-28"></div>
-                    <div class="col-lg-3 Rectangle-28"></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 MI---All">SA-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 MI---All">TIA-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6 MI---All">IS-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
+                <br>
+                <div class="row" style="font-size: 12px">
+                    <div class="col-md-12" style="margin-top: 14px;">
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>By Stage</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>By Lines</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>By Regimen</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 70px;">
+                      <span>By Drugs</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 110px;">
+                      <span>By Biomakers</span>
+                      <!-- <hr style="margin-top: 10px;"> -->
                   </div>
                 </div>
+                <br>
+                <div class="row" style="font-size: 12px">
+                    <div class="col-md-12" style="margin-top: 14px;">
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>By Stages</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 72px;">
+                      <span>By Incidence</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 54px;">
+                      <span>By Co-Morbidities</span>
+                      
+                      <!-- <hr style="margin-top: 10px;"> -->
+                  </div>
+                </div>
+                
 
-
-
+                </div>
               </div>
+
+              <div class="Rectangle-184" style="margin-top: 1%">
+                <div class="Rectangle-92" style="border-bottom: solid 1px #b9b9b9;">
+                  <div class="row">
+                    <div class="col-md-12" style="margin-top: 14px;">
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 10px;">
+                      <span style="margin-left: 4px">Duration of Therapy</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 580px;">
+                      <span>Mean</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="black-check-box-with-white-check" style="    margin-left: 30px;">
+                      <span>Median</span>
+                      <!-- <hr style="margin-top: 10px;"> -->
+                  </div>
+                </div>
+                <br>
+                <div class="row" style="font-size: 12px">
+                    <div class="col-md-12" style="margin-top: 14px;">
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>By Stage</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>By Lines</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>By Regimen</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 70px;">
+                      <span>By Drugs</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 110px;">
+                      <span>By Biomakers</span>
+                      <!-- <hr style="margin-top: 10px;"> -->
+                  </div>
+                </div>
+                <br>
+                <div class="row" style="font-size: 12px">
+                    <div class="col-md-12" style="margin-top: 14px;">
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 80px;">
+                      <span>By Stages</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 72px;">
+                      <span>By Incidence</span>
+                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/DA01E994-531B-444F-ADDF-7201D3BF3A05.svg" class="check-box-empty" style="    margin-left: 54px;">
+                      <span>By Co-Morbidities</span>
+                      
+                      <!-- <hr style="margin-top: 10px;"> -->
+                  </div>
+                </div>
+                
+
+                </div>
+              </div>
+              <br>
+              <br>
+              <br>
+              <div class="row" style="margin-top: -2%">
+                <div class="col-md-6">
+                  <div class="Rectangle-94" style="float: right;">
+                    <div class="Cancel" style="margin-top: 5%;margin-left: 16%">Cancel</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="Rectangle-85">
+                    <div class="Next" style="padding-top: 5px; margin-left: 30%">Next</div>
+                  </div>
+                </div>
+                
+              </div>
+
+
+              
+              
             </div>
           </div>
 <!----------------------------------- <body ends> --------------------------->
-          <div class="col-md-2 white-bg cohorts-auto-height">
-            <div class="sub-title-bg marg-top-6">
-              <div class="sub-title-cohorts text-center">Cohort Constructors</div>
-            </div>
-            <!-- Clinical parameters -->
-            <div class="panel-group marg-top-15" id="accordion" role="tablist" aria-multiselectable="true">
-              <div class="panel panel-default">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#ClinicalParameters" aria-expanded="true" aria-controls="ClinicalParameters">
-                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingOne">
-                      <h4 class="panel-title">Clinical Parameters</h4>
-                  </div>
-                </a>
-                <div id="ClinicalParameters" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                  <div class="panel-body">
-                    <!-- <button type="button" class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-inputs="1" data-nb-outputs="1" onclick="getCohortConstructElements('Clinical Parameters', 'Diagnosis', 'showDiagnosisPopover')" id="showDiagnosisPopover">
-                      <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
-                    </button> -->
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2">
-                      <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" onclick="getCohortConstructElements('Clinical Parameters', 'Procedures', 'showProceduresPopover')" id="showProceduresPopover">
-                      <div class="cohort-constuctor-elem-list-text">Procedures</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showTreatmentPopover">
-                      <div class="cohort-constuctor-elem-list-text">Treatment</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showClinicalNotesPopover">
-                      <div class="cohort-constuctor-elem-list-text">Clinical Notes</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showDiseaseStatePopover">
-                      <div class="cohort-constuctor-elem-list-text">Disease State</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showVitalsPopover">
-                      <div class="cohort-constuctor-elem-list-text">Vitals</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Demographics -->
-              <div class="panel panel-default">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Demographics" aria-expanded="false" aria-controls="Demographics">
-                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingDemographics">
-                      <h4 class="panel-title">Demographics</h4>
-                  </div>
-                </a>
-                <div id="Demographics" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDemographics">
-                  <div class="panel-body">
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showCurrentAgePopover">
-                      <div class="cohort-constuctor-elem-list-text">Current Age</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showGenderPopover">
-                      <div class="cohort-constuctor-elem-list-text">Gender</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showRacePopover">
-                      <div class="cohort-constuctor-elem-list-text">Race</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showEthnicityPopover">
-                      <div class="cohort-constuctor-elem-list-text">Ethnicity</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Constraints -->
-              <div class="panel panel-default">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Constraints" aria-expanded="false" aria-controls="Constraints">
-                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingConstraints">
-                      <h4 class="panel-title">Constraints</h4>
-                  </div>
-                </a>
-                <div id="Constraints" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingConstraints">
-                  <div class="panel-body">
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constraints" data-nb-inputs="2" data-nb-outputs="2" id="showRelatedEventsPopover">
-                      <div class="cohort-constuctor-elem-list-text">Related Events</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Miscellaneous -->
-              <div class="panel panel-default">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Miscellaneous" aria-expanded="false" aria-controls="Miscellaneous">
-                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingMiscellaneous">
-                      <h4 class="panel-title">Miscellaneous</h4>
-                  </div>
-                </a>
-                <div id="Miscellaneous" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMiscellaneous">
-                  <div class="panel-body">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

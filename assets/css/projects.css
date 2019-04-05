@@ -1,7 +1,7 @@
 .sidebar-theme {
   height: calc(100vh - 52.12px);
   box-shadow: 0 6px 45px 0 rgba(0, 102, 152, 0.15);
-  background-color: #00204a;
+  background-color: #606060;
   text-align: center;
   margin: 0 auto;
 }
@@ -29,7 +29,7 @@
 .sidebar-selected-item {
   height: auto;
   padding: 35px 0px;
-  background-color: #002d67;
+  background-color: #292828;
   color: #ffffff;
 }
 .sidebar-item {
@@ -50,7 +50,7 @@ table {
 }
 .thead-bg-styles {
   border-radius: 4px !important;
-  background-color: #0063c3 !important;
+  background-color: #6b9840 !important;
   color: #fff !important;
 }
 /* Datatable styles end */
