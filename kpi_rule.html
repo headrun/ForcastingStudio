@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>List of projects</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/cohorts.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link href="./assets/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link href="./assets/css/jquery-ui.css" rel="stylesheet"> -->
+    <link href="./assets/css/flowchart/jquery.flowchart.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- <script src = "./assets/js/jquery-1.10.2.js"></script> -->
+    <script src = "./assets/js/jquery-ui.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/flowchart/jquery.flowchart.js"></script>
+    <script src="./assets/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="./assets/js/common.js"></script>
+    <script type="text/javascript" src="./assets/js/cohorts.js"></script>
+    <style>
+      ul#projectSteps li {
+        padding: 0px 27px;
+      }
+      .Next {
+  width: 30px;
+  height: 22px;
+  font-family: HelveticaNeue;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  cursor: pointer;
+}
+      .Rectangle-85 {
+  width: 90px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #6b9840;
+}
+      .Cancel {
+  width: 50px;
+  height: 22px;
+  font-family: HelveticaNeue;
+  font-size: 17px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+      .Rectangle-94 {
+  width: 90px;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #606060;
+}
+      /*.Work-space-01-BG {
+
+  width: 807px;
+
+  height: 793px;
+
+  box-shadow: 0 3px 6px 0 rgba(0, 99, 195, 0.4);
+
+  background-color: #ffffff;
+
+}*/
+.black-check-box-with-white-check {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.check-box-empty {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.Rectangle-184 {
+  width: 986px;
+    margin-left: 20px;
+    height: 172px;
+    border: solid 1px #b9b9b9;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+.Rectangle-92 {
+  width: 984px;
+  height: 49px;
+  background-color: #f4f4f4;
+}
+.Work-space-01-BG {
+ width: 1030px;
+ height: 793px;
+ box-shadow: 0 3px 6px 0 rgba(0, 99, 195, 0.4);
+ background-color: #ffffff;
+}
+.Poin-Estimates-Prevalence {
+
+  /*width: 231px;*/
+
+  height: 22px;
+
+  font-family: HelveticaNeue;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  font-style: normal;
+.Rectangle-92 {
+  width: 1520px;
+  height: 49px;
+  background-color: #f4f4f4;
+}
+  font-stretch: normal;
+
+  line-height: 1.28;
+
+  letter-spacing: normal;
+
+  text-align: left;
+
+  color: #00204a;
+
+}
+.Rectangle-46 {
+  width: 34px;
+  height: 34px;
+  border: solid 1px #707070;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom: none;
+  background-color: #ffffff;
+      padding-left: 9px;
+    margin-left: 13px;
+    padding-top: 6px;
+}
+.Path-32 {
+  width: 15.9px;
+  height: 15.9px;
+  object-fit: contain;
+  /*background-color: #606060;*/
+}
+.Rectangle-28 {
+  width: 150px;
+  height: 30px;
+  border-radius: 4px;
+  border: solid 1px #707070;
+  background-color: #f5f5f5;
+      margin-top: 25px;
+    margin-left: 49px;
+}
+.Rectangle-29 {
+  height: 34px;
+  border: solid 1px #707070;
+  background-color: #d8e7f0;
+  border-bottom: none;
+    padding-top: 5px;
+    padding-left: 20px;
+    margin-left: 11px;
+    width: 98px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-left: 11px;
+}
+.Workspace-Border {
+    width: 786.4px;
+    height: 670px;
+    border: solid 1px #606060;
+    margin-left: 11px;
+
+}
+.Rectangle-130 {
+      padding-top: 8px;
+    padding-left: 10px;
+  margin-left: 21px;
+  margin-top: 16px;
+  width: 746px;
+  height: 36px;
+  border: solid 1px #707070;
+  background-color: #d8e7f0;
+      border-bottom: none;
+          border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+}
+.Rectangle-129 {
+  margin-left: 21px;
+  width: 746px;
+  height: 231px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
+}
+.Rectangle-106 {
+  width: 329px;
+  color: #606060;
+  height: 30px;
+  border-radius: 6px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
+  margin-left: 23px;
+  margin-top: 25px;
+  padding-left: 20px;
+    padding-top: 4px;
+}
+
+.MI---All {
+  width: 97px;
+  height: 19px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #606060;
+  margin-left: 283px;
+  margin-top: 25px;
+}
+.box{
+  margin-top: 18px;
+}
+span{
+  color: #606060;
+}
+</style>
+</head>
+
+  <body class="theme-bg-color">
+    <div class="container-fluid">
+      <div class="row top-menu-bg-color">
+        <div class="col-md-6">
+          <div class="top-menu-bar">
+            <img src="./assets/images/group-212.png" srcset="./assets/images/group-212@2x.png 2x,
+                  ./assets/images/group-212@3x.png 3x" class="Group-212">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <ul id="menuItems">
+            <li>
+              <div>
+                <a href="#">
+                  <img src="./assets/images/home.png" srcset="./assets/images/home@2x.png 2x,
+                  ./assets/images/home@3x.png 3x" class="home">
+                </a>
+              </div>
+            </li>
+            <!-- <li class="menu-devider"></li> -->
+            <li>
+              <a href="./projects.html">
+                <div class="li-with-background">Projects</div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="li-item">Definitions</div>
+              </a>
+            </li>
+            <li style="border: none">
+              <a href="#">
+                <div class="li-item">Help</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 marg-top-10">
+          <img src="./assets/images/mask-group-4.png" srcset="./assets/images/mask-group-4@2x.png 2x,
+                       ./assets/images/mask-group-4@3x.png 3x" class="avatar-icon">
+          <div class="avatar-info">
+            Ajay Chandhok
+          </div>
+          <div class="pull-right">
+            <a href="#">
+              <i class="fas fa-ellipsis-v setting-menu"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <!-- Project setup header -->
+      <div class="row" >
+        <div class="project-setup-header" style="background-color: #606060;">
+          <div class="col-md-2">
+            <div class="sub-title">Repatha Level 3 - US</div>
+          </div>
+          <div class="col-md-8 text-center">
+            <div class="project-stpes">
+              <ul id="projectSteps">
+                <li style="padding-left: 30px;">Project Setup</li>
+                <li class="active-project">Cohorts</li>
+                <!-- <li>Cohorts</li> -->
+                <li>KPI & Business Rules</li>
+                <li>Dashboard</li>
+              </ul>
+            </div>
+            <div class="status-bar">
+             <div class="ellipse-common"></div>
+             <div class="ellipse-line-1-active-left" style="background-image: linear-gradient(to right, #ffffff, white);width: 140px;"></div>
+             <div class="ellipse-common"></div>
+             <div class="ellipse-line-1" style="background-image: linear-gradient(to right, #ffffff, #6b9840); "></div>
+             <div class="first-ellipse ellipse-active" style="background-color: #6b9840"></div>
+             <div class="ellipse-line-3" style="background-image: linear-gradient(89deg, #6b9840, #ffffff);"></div>
+             <div class="ellipse-common"></div>
+           </div>
+          </div>
+          <div class="col-md-2">
+            <div class="alert alert-danger hide" id="danger-alert">
+              <!-- <button type="button" class="close" data-dismiss="alert">x</button> -->
+              <strong>Warning! </strong>
+              <span class="alert-content"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row marg-top-15">
+        <div class="col-md-12" style="height: auto">
+          <div class="col-md-2 white-bg cohorts-auto-height" style="height: calc(100vh - 72px);">
+            <div class="sub-title-bg marg-top-6" style=" background-color: rgba(174, 205, 71, 0.25);">
+              <div class="sub-title-cohorts text-center">Versions & Cohorts</div>
+            </div>
+            <div class="verstion-desc-text marg-top-15" style="background-color: #6b9840;">V0 - Description Text</div>
+            <div class="cohort-cambo">
+              <div class="cohorts-list">
+                <button type="button" class="btn btn-sm btn-cohorts-list-active" id="cohort_1" onclick="updateCohortVersionData('Cohort 01', 'cohort_1')" name="button" style="background-color: #606060;">CHD with CV events</button>
+              </div>
+              <a href="#">
+                <img src="./assets/images/group-96.png"
+                srcset="./assets/images/group-96@2x.png 2x,
+                ./assets/images/group-96@3x.png 3x"
+                class="close-cohort">
+              </a>
+            </div>
+            <div class="marg-top-10">
+              <button type="button" name="button" class="btn btn-lg btn-cohort-add" style=" width: 100%"  onclick="location.href = 'cohorts.html';">
+                <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/2570DB34-13FC-4449-A262-FF477ADDE7F1.svg"
+                     srcset="./assets/images/square-add-button@2x.png 2x,
+                             ./assets/images/square-add-button@3x.png 3x"
+                     class="square-add-button" style="margin-top: 1px;"><span class="cohort-btn-text" style="color: #6b9840;">Back</span>
+              </button>
+             <!--  <button type="button" name="button" class="btn btn-points-estimate pull-right" style="padding: 1px 5px !important;border: solid 1px #6b9840 !important;">
+                <span class="btn-points-estimate-text" style="color: #6b9840;">Go to Dashboard</span>
+                <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/CC52D8E4-2B0D-44C7-BC3D-FAE5F0BF7D18.svg"
+                     srcset="./assets/images/arrow-pointing-right-in-a-circle@2x.png 2x,
+                             ./assets/images/arrow-pointing-right-in-a-circle@3x.png 3x"
+                     class="arrow-pointing-right-in-a-circle">
+              </button> -->
+            </div>
+          </div>
+
+          <!------------------------- <center body> ----------------->
+          <div class="col-md-10" id="main_content_block">
+            
+            <div class="Work-space-01-BG" >
+              <div class="Poin-Estimates-Prevalence">
+                <p style="    font-size: 15px;padding-left: 21px;padding-top: 15px;">
+                    Select Required KPI
+                </p>
+              </div>
+              <div class="Rectangle-184">
+                <div class="Rectangle-92" style="border-bottom: solid 1px #b9b9b9;">
+                  <div class="row" >
+                    <div class="col-md-1" style="margin-top: 14px;">
+                      <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                      </form>
+                    </div>
+                    <div class="col-md-1" style="margin-top: 18px;">
+                        <span style="margin-left: -42px">Patient Profile</span>
+                      
+                    </div>
+                    <div class="col-md-6" style="margin-top: 14px;"></div>
+
+                    <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                      <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                      </form>
+                    </div>
+                    <div class="col-md-1" style="margin-top: 18px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">Share</span>
+                      
+                    </div>
+                    <div class="col-md-1" style="margin-top: 14px;">
+                      <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;" checked>
+                      </form>
+                    </div>
+                    
+                    <div class="col-md-1" style="margin-top: 18px;">
+                        <span style="margin-left: -42px;">Volume</span>
+                      
+                    </div>
+                        <!-- <span style="margin-left: -42px">Volume</span> -->
+                    
+                  </div>
+                <br>
+                <div class="row" style="font-size: 12px;margin-top: -10px;">
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">Gender</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Age</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By State</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Region</span>
+                      
+                  </div>
+                  <div class="col-md-4" style="margin-top: 14px;"></div>
+                    
+                </div>
+                <br>
+                <div class="row" style="font-size: 12px">
+                    <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Stages</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Incidence</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-2" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Co-Morbidities</span>
+                      
+                  </div>
+                  <div class="col-md-5" style="margin-top: 14px;"></div>
+                
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <div class="Rectangle-184" style="margin-top: 1%">
+                <div class="Rectangle-92" style="border-bottom: solid 1px #b9b9b9;">
+                  <div class="row" >
+                    <div class="col-md-1" style="margin-top: 14px;">
+                      <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                      </form>
+                    </div>
+                    <div class="col-md-1" style="margin-top: 18px;padding-right: 0px;">
+                        <span style="margin-left: -42px">Line Progression</span>
+                      
+                    </div>
+                    <div class="col-md-6" style="margin-top: 14px;"></div>
+
+                    <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                      <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                      </form>
+                    </div>
+                    <div class="col-md-1" style="margin-top: 18px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">Share</span>
+                      
+                    </div>
+                    <div class="col-md-1" style="margin-top: 14px;">
+                      <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                      </form>
+                    </div>
+                    
+                    <div class="col-md-1" style="margin-top: 18px;">
+                        <span style="margin-left: -42px;">Volume</span>
+                      
+                    </div>
+                        <!-- <span style="margin-left: -42px">Volume</span> -->
+                    
+                  </div>
+                <br>
+                <div class="row" style="font-size: 12px;margin-top: -10px;">
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Stage</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Lines</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Regimen</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Drugs</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-2" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Biomakers</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;"></div>
+                    
+                </div>
+                <br>
+                <div class="row" style="font-size: 12px">
+                    <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Stages</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Incidence</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-2" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Co-Morbidities</span>
+                      
+                  </div>
+                  <div class="col-md-5" style="margin-top: 14px;"></div>
+                
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="Rectangle-184" style="margin-top: 1%">
+                <div class="Rectangle-92" style="border-bottom: solid 1px #b9b9b9;">
+                  <div class="row" >
+                    <div class="col-md-1" style="margin-top: 14px;">
+                      <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                      </form>
+                    </div>
+                    <div class="col-md-2" style="margin-top: 18px;padding-right: 0px;">
+                        <span style="margin-left: -42px">Duration of Therapy</span>
+                      
+                    </div>
+                    <div class="col-md-5" style="margin-top: 14px;"></div>
+
+                    <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                      <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                      </form>
+                    </div>
+                    <div class="col-md-1" style="margin-top: 18px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">Mean</span>
+                      
+                    </div>
+                    <div class="col-md-1" style="margin-top: 14px;">
+                      <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                      </form>
+                    </div>
+                    
+                    <div class="col-md-1" style="margin-top: 18px;">
+                        <span style="margin-left: -42px;">Median</span>
+                      
+                    </div>
+                        <!-- <span style="margin-left: -42px">Volume</span> -->
+                    
+                  </div>
+                <br>
+                <div class="row" style="font-size: 12px;margin-top: -10px;">
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Stage</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Lines</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Regimen</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Drugs</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-2" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Biomakers</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;"></div>
+                    
+                </div>
+                <br>
+                <div class="row" style="font-size: 12px">
+                    <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;">
+                        <span style="margin-left: -42px;">By Stages</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-1" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Incidence</span>
+                      
+                  </div>
+                  <div class="col-md-1" style="margin-top: 14px;padding-left: 50px;">
+                    <form>
+                        <input type="checkbox" name="" value="" style="margin-left: 10px;width: 20px;
+                        height: 20px;">
+                    </form>
+                  </div>
+                  <div class="col-md-2" style="margin-top: 20px;padding-left: 50px;padding-right: 0px;">
+                        <span style="margin-left: -42px;">By Co-Morbidities</span>
+                      
+                  </div>
+                  <div class="col-md-5" style="margin-top: 14px;"></div>
+                
+              </div>
+
+            </div>
+          </div>
+              
+              <br>
+              <br>
+              <br>
+              <div class="row" style="margin-top: -2%">
+                <div class="col-md-6">
+                  <div class="Rectangle-94" style="float: right;">
+                    <div class="Cancel" style="margin-top: 5%;margin-left: 16%">Cancel</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="Rectangle-85">
+                    <div class="Next" style="padding-top: 5px; margin-left: 30%"  onclick="location.href = 'business_rule.html';">Next</div>
+                  </div>
+                </div>
+                
+              </div>
+
+
+              
+              
+            </div>
+          </div>
+<!----------------------------------- <body ends> --------------------------->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->

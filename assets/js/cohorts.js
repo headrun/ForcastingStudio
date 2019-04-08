@@ -475,3 +475,14 @@ function setCohortValue() {
   })
 }
 
+$(document).on('click','#rwd', function(){
+  $("#rwd_select").show();
+  $("#project_data_select").hide();
+});
+
+$(document).on('click', '#project_data', function(){
+  $("#rwd_select").hide();
+  $("#project_data_select").show();
+})
+
+
