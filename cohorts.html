@@ -26,6 +26,22 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <style type="text/css">
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+    </style>
   </head>
   <body class="theme-bg-color">
     <div class="container-fluid">
@@ -164,7 +180,6 @@
                     <div class="col-md-8">
                       <div class="pull-right">
                         <button type="button" name="worksheet" class="btn btn-blue">Worksheet</button>
-                        <a href="./summary.html"><button type="button" name="summary" class="btn btn-cohort-default">Summary</button></a>
                       </div>
                     </div>
                   </div>
@@ -193,7 +208,6 @@
                     <div class="col-md-8 marg-top-10">
                       <div class="text-center">
                         <button type="button" name="worksheet" class="btn btn-sm sub-cohort-run-btn"><i class="fas fa-play-circle 5x"></i> Run</button>
-                        <button type="button" name="summary" class="btn btn-sm sub-cohort-result-btn">Results</button>
                       </div>
                     </div>
                     <div class="sel-cohort-cards-list" id="showListOfCohortsCards">
@@ -1178,12 +1192,13 @@
                 <div style="margin-top: -6%;">
                 <!--  <select id="therapy" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 27px;width: 52%;">-->
           <select class="form-control" name="select2" id="select2" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
-                    <option>Colon & rectal cancer (CRC)</option>
-                    <option>Lung cancer (NSCLC)</option>
-                    <option>Skin cancer (Melanoma)</option>
-                    <option>Acute myeloid leukemia (AML - Solid)</option>
-                    <option>Myelodysplastic syndromes (MDS)</option>
-                    <option>Multiple myeloma (MM)</option>
+                    <option value="1">Colon & rectal cancer (CRC)</option>
+                    <option value="1">Lung cancer (NSCLC)</option>
+                    <option value="1">Skin cancer (Melanoma)</option>
+                    <option value="1">Acute myeloid leukemia (AML - Solid)</option>
+                    <option value="1">Myelodysplastic syndromes (MDS)</option>
+                    <option value="1">Multiple myeloma (MM)</option>
+
 
                     <option value="2">Crohn's Disease</option>
                     <option value="2">Diverticulosis</option>
@@ -1254,7 +1269,7 @@
          <div class="row">
           
           <div class="col-lg-6">
-           <p style="margin-left: 10px;margin-top: 9px;">search codes</p>
+           <p style="margin-left: 10px;margin-top: 9px;">Search codes</p>
            <div class="first-box" style="margin-left: 10px;overflow-y: scroll;">
              <div style="border-bottom: 1px solid #00000045;background-color:#2196f347">
                <div class="search-container">
@@ -1265,7 +1280,7 @@
              </div>
                   <div>
                    <ul id="myList" style="padding-left: 0px;">
-                    <div id="search_list"></div>
+                    <div id="search_list" style="margin-left: 5px;"></div>
                    </ul>
                   </div>
            </div>
@@ -1274,16 +1289,35 @@
 
         <div class="col-lg-6">
           <!-- <i style="font-size:20px" class="fa">&#xf093;</i -->
-          <!-- <button type="button" style="color: #3275fbl;background-color:#cbe0fb;margin-left: 285px;margin-bottom: 7px;" class="btn btn-default" data-dismiss="modal">Uplo -->
+          <button type="button" id="myBtn" style="color: #3275fbl;background-color:#cbe0fb;margin-left: 285px;" class="btn btn-default">Upload</button>
+
+          <!-- The Modal2 -->
+          <div id="mod2" class="mod">
+
+            <!-- Modal2 content -->
+            <div class="mod-content">
+              <button style="padding-right: 20px;padding-top: 8px;" type="button" class="close" data-dismiss="mod">&times;</button>
+              <p style="padding-left: 20px;"><b>Progress Update File Upload</b></p>
+              <p style="font-size: 14px;color: #00000061;margin-bottom: 2px;">Select file:</p>
+              <div style="height: 32px;border: 1px solid #00000061;border-radius: 5px;">
+              <input style="padding-left: 10px;padding-top: 4px;" type="file" id="fileUpload"/><br><br>
+              </div>
+<!--               <button id="upload" data-dismiss="mod" value="Upload" style="width: 94px;background-color: #00BCD4;border-width: 0px;color: 2px solid white;margin-top: 25px;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;" class="btn btn-default">Upload</button> -->
+
+              <input type="button" id="upload" class="cls" value="Upload" style="width: 94px;background-color: #00BCD4;border-width: 0px;color: 2px solid white;margin-top: 25px;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;"/>&nbsp;&nbsp;
+              <!-- data-dismiss="modal" -->
+              <u style="color: #00bcd4">Download Template</u>
+            </div>
+          </div>
+
           <!-- <input type="file" id="fileUpload" onchange="this.form.submit()" /> -->
+            <!-- <input type="file" id="fileUpload" style="margin-left: 225px;margin-top: -18px;" />
+            <input type="button" id="upload" value="Upload" style="margin-left: 226px;" /> -->
 
-            <input type="file" id="fileUpload" style="margin-left: 225px;margin-top: -18px;" />
-            <input type="button" id="upload" value="Upload" style="margin-left: 226px;" />
 
-
-            <div class="second-box" style="overflow-y: scroll;margin-left: -15px;margin-top: 8px;">
+            <div class="second-box" style="overflow-y: scroll;margin-left: -15px;margin-top: 5px;">
               <div>
-                <p style="color: black;background-color: #2196f347;height:35px;border-bottom: 1px solid b#00000096">Selected Codes<span style="float: right;padding-right: 10px;">Total selected: 3</span></p>
+                <p style="color: black;background-color: #2196f347;height:35px;border-bottom: 1px solid #00000096">Selected Codes<span style="float: right;padding-right: 10px;">Total selected: 0</span></p>
               </div>
               <div>
                    <ul id="myList" style="padding-left: 0px !important">
@@ -1355,7 +1389,7 @@
                         var rows = e.target.result.split("\n");
                         for (var i = 0; i < rows.length; i++) {
                             var row = $("<li/>");
-                            var cells = rows[i].split(",");
+                            var cells = rows[i].split("\n");
                             for (var j = 0; j < cells.length; j++) {
                                 var cell = $("<li/>");
                                 cell.html(cells[j]);
@@ -1380,13 +1414,51 @@
 <script type="text/javascript">
 $(document).ready(function(){
 
-
  $(document).on("keyup", '#myInput', function() {
   if (event.keyCode === 13) {
-    $('#search_list').html('<ul><li>C3400 - Malignant neoplasm of unspecified main bronchus</li><li>C3401 - Malignant neoplasm of right main bronchus</li><li>C3402 - Malignant neoplasm of left main bronchus</li><li>"C3410 - Malignant neoplasm of upper lobe</li><li style=""> unsp bronchus or lung"</li><li>"C3411 - Malignant neoplasm of upper lobe</li><li style=""> right bronchus or lung"</li><li>"C3412 - Malignant neoplasm of upper lobe</li><li style=""> left bronchus or lung"</li><li>"C342 - Malignant neoplasm of middle lobe</li><li style=""> bronchus or lung"</li><li>"C3430 - Malignant neoplasm of lower lobe</li><li style=""> unsp bronchus or lung"</li><li>"C3431 - Malignant neoplasm of lower lobe</li><li style=""> right bronchus or lung"</li><li>"C3432 - Malignant neoplasm of lower lobe</li><li style=""> left bronchus or lung"</li><li>C3480 - Malignant neoplasm of ovrlp sites of unsp bronchus and lung</li><li>C3481 - Malignant neoplasm of ovrlp sites of right bronchus and lung</li><li>C3482 - Malignant neoplasm of ovrlp sites of left bronchus and lung</li><li>C3490 - Malignant neoplasm of unsp part of unsp bronchus or lung</li><li>C3491 - Malignant neoplasm of unsp part of right bronchus or lung</li><li>C3492 - Malignant neoplasm of unsp part of left bronchus or lung</li></ul>');
+    $('#search_list').html('<input type="checkbox" name="" value="" style="    margin-right: 4px;">C3400 - Malignant neoplasm of unspecified main bronchus<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3401 - Malignant neoplasm of right main bronchus<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3402 - Malignant neoplasm of left main bronchus<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3410 - Malignant neoplasm of upper lobe unsp bronchus or lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3411 - Malignant neoplasm of upper lobe right bronchus or lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3412 - Malignant neoplasm of upper lobe left bronchus or lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C342 - Malignant neoplasm of middle lobe bronchus or lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3430 - Malignant neoplasm of lower lobe unsp bronchus or lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3431 - Malignant neoplasm of lower lobe right bronchus or lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3432 - Malignant neoplasm of lower lobe left bronchus or lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3480 - Malignant neoplasm of ovrlp sites of unsp bronchus and lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3481 - Malignant neoplasm of ovrlp sites of right bronchus and lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3482 - Malignant neoplasm of ovrlp sites of left bronchus and lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3490 - Malignant neoplasm of unsp part of unsp bronchus or lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3491 - Malignant neoplasm of unsp part of right bronchus or lung<br><input type="checkbox" name="" value="" style="margin-right: 4px;">C3492 - Malignant neoplasm of unsp part of left bronchus or lung<br>');
   } else if (event.keyCode === 8) {
     $('#search_list').html('');
   }
  });
+});
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('mod2');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+$("#myBtn").click(function(){
+
+})
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+$("#upload").click(function(){
+  $(".mod").hide();
+});
+$(".close").click(function(){
+  $(".mod").hide();
 });
 </script>
