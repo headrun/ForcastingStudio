@@ -69,7 +69,7 @@
 .member-table tbody {
   background-color: #f5f5f5;
 }
-.member-table tr{
+.member-table th{
   font-family: HelveticaNeue;
   font-size: 12px;
   font-weight: 100 !important;
@@ -112,4 +112,15 @@
 
 .table>thead>tr>th{
   font-weight: 100 !important;
+}
+
+.member-table tr{
+  font-family: HelveticaNeue;
+  font-size: 12px;
+  font-weight: 100 !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
 }
