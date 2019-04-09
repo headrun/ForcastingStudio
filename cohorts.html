@@ -25,18 +25,34 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <style type="text/css">
-      .close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
+      input[type=file] {
+        display: block; 
+      }
+
+      #upl {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        margin-top: -1px;
+        margin-left: 189px;
+      }
+
+      #btn {
+        border: 2px solid gray;
+        color: gray;
+        margin-left: 13px;
+        background-color: #00BCD4;border-width: 0px;color: 2px solid white;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;
+        padding: 8px 20px;
+        border-radius: 13px;
         font-weight: bold;
       }
 
-      .close:hover,
-      .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
+      #upl input[type=file] {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
       }
 
     </style>
@@ -1189,13 +1205,12 @@
                 <div style="margin-top: -6%;">
                 <!--  <select id="therapy" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 27px;width: 52%;">-->
           <select class="form-control" name="select2" id="select2" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
-                    <option value="1">Colon & rectal cancer (CRC)</option>
+                   <option value="1">Colon & rectal cancer (CRC)</option>
                     <option value="1">Lung cancer (NSCLC)</option>
                     <option value="1">Skin cancer (Melanoma)</option>
                     <option value="1">Acute myeloid leukemia (AML - Solid)</option>
                     <option value="1">Myelodysplastic syndromes (MDS)</option>
                     <option value="1">Multiple myeloma (MM)</option>
-
 
                     <option value="2">Crohn's Disease</option>
                     <option value="2">Diverticulosis</option>
@@ -1266,7 +1281,7 @@
          <div class="row">
           
           <div class="col-lg-6">
-           <p style="margin-left: 10px;margin-top: 9px;">Search codes</p>
+           <p style="margin-left: 10px;margin-top: 9px;">search codes</p>
            <div class="first-box" style="margin-left: 10px;overflow-y: scroll;">
              <div style="border-bottom: 1px solid #00000045;background-color:#2196f347">
                <div class="search-container">
@@ -1286,35 +1301,23 @@
 
         <div class="col-lg-6">
           <!-- <i style="font-size:20px" class="fa">&#xf093;</i -->
-          <button type="button" id="myBtn" style="color: #3275fbl;background-color:#cbe0fb;margin-left: 285px;" class="btn btn-default">Upload</button>
-
-          <!-- The Modal2 -->
-          <div id="mod2" class="mod">
-
-            <!-- Modal2 content -->
-            <div class="mod-content">
-              <button style="padding-right: 20px;padding-top: 8px;" type="button" class="close" data-dismiss="mod">&times;</button>
-              <p style="padding-left: 20px;"><b>Progress Update File Upload</b></p>
-              <p style="font-size: 14px;color: #00000061;margin-bottom: 2px;">Select file:</p>
-              <div style="height: 32px;border: 1px solid #00000061;border-radius: 5px;">
-              <input style="padding-left: 10px;padding-top: 4px;" type="file" id="fileUpload"/><br><br>
-              </div>
-<!--               <button id="upload" data-dismiss="mod" value="Upload" style="width: 94px;background-color: #00BCD4;border-width: 0px;color: 2px solid white;margin-top: 25px;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;" class="btn btn-default">Upload</button> -->
-
-              <input type="button" id="upload" class="cls" value="Upload" style="width: 94px;background-color: #00BCD4;border-width: 0px;color: 2px solid white;margin-top: 25px;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;"/>&nbsp;&nbsp;
-              <!-- data-dismiss="modal" -->
-              <u style="color: #00bcd4">Download Template</u>
-            </div>
-          </div>
-
+          <!-- <button type="button" style="color: #3275fbl;background-color:#cbe0fb;margin-left: 285px;margin-bottom: 7px;" class="btn btn-default" data-dismiss="modal">Uplo -->
           <!-- <input type="file" id="fileUpload" onchange="this.form.submit()" /> -->
-            <!-- <input type="file" id="fileUpload" style="margin-left: 225px;margin-top: -18px;" />
-            <input type="button" id="upload" value="Upload" style="margin-left: 226px;" /> -->
+            <!-- <input type="file" class="btn" id="fileUpload" style="margin-top: -18px;display: inline;width: 86px;background-color: #00BCD4;border-width: 0px;color: 2px solid white;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;" />
+ -->        <div class="upload-btn-wrapper" id="upl">
+              <button class="btn" id="btn">Choose file</button>
+              <input type="file" id="fileUpload" name="myfile"/>
+            </div>
+            <div style="margin-left: 309px;margin-top: -41px;margin-bottom: -4px;"> 
+              <input type="button" id="upload" value="Upload" style="width: 94px;background-color: #00BCD4;border-width: 0px;color: 2px solid white;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;"/>
+            </div>
+            
+      
 
 
-            <div class="second-box" style="overflow-y: scroll;margin-left: -15px;margin-top: 5px;">
+            <div class="second-box" style="overflow-y: scroll;margin-left: -15px;margin-top: 8px;">
               <div>
-                <p style="color: black;background-color: #2196f347;height:35px;border-bottom: 1px solid #00000096">Selected Codes<span style="float: right;padding-right: 10px;">Total selected: 0</span></p>
+                <p style="color: black;background-color: #2196f347;height:35px;border-bottom: 1px solid b#00000096">Selected Codes<span style="float: right;padding-right: 10px;">Total selected: 3</span></p>
               </div>
               <div>
                    <ul id="myList" style="padding-left: 0px !important">
