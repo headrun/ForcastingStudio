@@ -652,7 +652,7 @@ table {
 .project-form-input {
   width: 130px !important;
   height: 29px !important;
-  padding: 6px 12px;
+  padding: 5px 12px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
@@ -843,4 +843,11 @@ option {
 
 .cohort-footer-color {
     color: #00204a;
+}
+
+.result_click{
+  width: 10%;
+  position: absolute;
+  margin-top: -19%;
+  margin-left: 88%;
 }

@@ -406,12 +406,12 @@ function show_display(val) {
     updateCohortEleAndTitle('Constructor Parameters', 'Related Events',);
     $('#related_events').show()
   }
-  else if(val=='Current Age') {
+  else if(val=='Age') {
     updateCohortEleAndTitle('Constructor Parameters', 'Age',);
     $('#current_age').show()
   }
   else if(val=='result') {
-    updateCohortEleAndTitle('20 + years with M', 'Result',);
+    updateCohortEleAndTitle('Myocardial Infraction', 'Result',);
     $('#result').show()
   }
 
@@ -475,3 +475,12 @@ function setCohortValue() {
   })
 }
 
+$(document).on('click','#rwd', function(){
+  $("#rwd_select").show();
+  $("#project_data_select").hide();
+});
+
+$(document).on('click', '#project_data', function(){
+  $("#rwd_select").hide();
+  $("#project_data_select").show();
+})

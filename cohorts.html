@@ -502,7 +502,7 @@
             </div>
             <!-- Active Enrollment -->
 
-            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='Diagnosis' style="height: 253px; display: none">
+           <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='Diagnosis' style="height: 253px; display: none">
               <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
               <hr>
               <div class="col-md-8 col-md-offset-2">
@@ -513,21 +513,70 @@
                 <div class="project-form-group" style="width: 117% !important">
                   <span class="project-form-label">Diagnosis Map</span>
                   <div class="project-form-control">
-                    <div class="row col-md-7 map_include">
-                      <select class="project-form-control form-control" name="">
-                        <option value="">Include</option>
-                        <option value="">Exclude</option>
-                      </select>
-                    </div>
-                    <div class="col-md-7 map_drop_down">
-                      <select class="form-control" name="" style="width: 109% !important">
+                    <div class="project-form-label" style="width: 91% !important">
+                      <select class="form-control diagnosis_dropdown" name="" style="width: 109% !important">
                         <option value="">Please select</option>
-                        <option>Colon & rectal cancer (CRC)</option>
-                        <option>Lung cancer (NSCLC)</option>
-                        <option>Skin cancer (Melanoma)</option>
-                        <option>Acute myeloid leukemia (AML - Solid)</option>
-                        <option>Myelodysplastic syndromes (MDS)</option>
-                        <option>Multiple myeloma (MM)</option>
+                        <option>Myocardial Infraction</option>
+                        <option>UnstableAngina</option>
+                        <option>A00 - Cholera</option>
+                        <option>A000 - Cholera due to Vibrio cholerae 01, biovar cholerae</option>
+                        <option>A001 - Cholera due to Vibrio cholerae 01, biovar eltor</option>
+                        <option>A009 - Cholera, unspecified</option>
+                        <option>A01 - Typhoid and paratyphoid fevers</option>
+                        <option>A010 - Typhoid fever</option>
+                        <option>A0100 - Typhoid fever, unspecified</option>
+                        <option>A0101 - Typhoid meningitis</option>
+                        <option>A0102 - Typhoid fever with heart involvement</option>
+                        <option>A0103 - Typhoid pneumonia</option>
+                        <option>A0104 - Typhoid arthritis</option>
+                        <option>A0105 - Typhoid osteomyelitis</option>
+                        <option>A0109 - Typhoid fever with other complications</option>
+                        <option>A011 - Paratyphoid fever A</option>
+                        <option>A012 - Paratyphoid fever B</option>
+                        <option>A013 - Paratyphoid fever C</option>
+                        <option>A014 - Paratyphoid fever, unspecified</option>
+                        <option>A02 - Other salmonella infections</option>
+                        <option>A020 - Salmonella enteritis</option>
+                        <option>A021 - Salmonella sepsis</option>
+                        <option>A022 - Localized salmonella infections</option>
+                        <option>A0220 - Localized salmonella infection, unspecified</option>
+                        <option>A0221 - Salmonella meningitis</option>
+                        <option>A0222 - Salmonella pneumonia</option>
+                        <option>A0223 - Salmonella arthritis</option>
+                        <option>A0224 - Salmonella osteomyelitis</option>
+                        <option>A0225 - Salmonella pyelonephritis</option>
+                        <option>A0229 - Salmonella with other localized infection</option>
+                        <option>A028 - Other specified salmonella infections</option>
+                        <option>A029 - Salmonella infection, unspecified</option>
+                        <option>A03 - Shigellosis</option>
+                        <option>A030 - Shigellosis due to Shigella dysenteriae</option>
+                        <option>A031 - Shigellosis due to Shigella flexneri</option>
+                        <option>A032 - Shigellosis due to Shigella boydii</option>
+                        <option>A033 - Shigellosis due to Shigella sonnei</option>
+                        <option>A038 - Other shigellosis</option>
+                        <option>A039 - Shigellosis, unspecified</option>
+                        <option>ICD10 - C34 - Malignant Neoplasm Of Bronchus And Lung</option>
+                        <option>ICD10 - C34.0 - Malignant Neoplasm Of Main Bronchus</option>
+                        <option>ICD10 - C34.00 - Malignant Neoplasm Of Unspecified Main Bronchus</option>
+                        <option>ICD10 - C34.01 - Malignant Neoplasm Of Right Main Bronchus</option>
+                        <option>ICD10 - C34.02 - Malignant Neoplasm Of Left Main Bronchus</option>
+                        <option>ICD10 - C34.1 - Malignant Neoplasm Of Upper Lobe, Bronchus Or Lung</option>
+                        <option>ICD10 - C34.10 - Malignant Neoplasm Of Upper Lobe, Unspecified Bronchus Or Lung</option>
+                        <option>ICD10 - C34.11 - Malignant Neoplasm Of Upper Lobe, Right Bronchus Or Lung</option>
+                        <option>ICD10 - C34.12 - Malignant Neoplasm Of Upper Lobe, Left Bronchus Or Lung</option>
+                        <option>ICD10 - C34.2 - Malignant Neoplasm Of Middle Lobe, Bronchus Or Lung</option>
+                        <option>ICD10 - C34.3 - Malignant Neoplasm Of Lower Lobe, Bronchus Or Lung</option>
+                        <option>ICD10 - C34.30 - Malignant Neoplasm Of Lower Lobe, Unspecified Bronchus Or Lung</option>
+                        <option>ICD10 - C34.31 - Malignant Neoplasm Of Lower Lobe, Right Bronchus Or Lung</option>
+                        <option>ICD10 - C34.32 - Malignant Neoplasm Of Lower Lobe, Left Bronchus Or Lung</option>
+                        <option>ICD10 - C34.8 - Malignant Neoplasm Of Overlapping Sites Of Bronchus And Lung</option>
+                        <option>ICD10 - C34.80 - Malignant Neoplasm Of Overlapping Sites Of Unspecified Bronchus And Lung</option>
+                        <option>ICD10 - C34.81 - Malignant Neoplasm Of Overlapping Sites Of Right Bronchus And Lung</option>
+                        <option>ICD10 - C34.82 - Malignant Neoplasm Of Overlapping Sites Of Left Bronchus And Lung</option>
+                        <option>ICD10 - C34.9 - Malignant Neoplasm Of Unspecified Part Of Bronchus Or Lung</option>
+                        <option>ICD10 - C34.90 - Malignant Neoplasm Of Unspecified Part Of Unspecified Bronchus Or Lung</option>
+                        <option>ICD10 - C34.91 - Malignant Neoplasm Of Unspecified Part Of Right Bronchus Or Lung</option>
+                        <option>ICD10 - C34.92 - Malignant Neoplasm Of Unspecified Part Of Left Bronchus Or Lung</option>
                       </select>
                     </div>
                   </div>
@@ -544,7 +593,6 @@
                     <span class="project-form-label">Or</span>
                   </div>
                 </div>
-
                 <div class="project-form-group" style="width: 110% !important">
                   <span class="project-form-label">Diagnosis Code</span>
                   <div class="project-form-control">
@@ -631,13 +679,13 @@
                   <span class="project-form-label">Time Period</span>
                   <div class="project-form-control">
                     <div class="row col-md-6">
-                      <div id="datetimepickerStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
+                      <div id="DiagnosisStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
                           <input class="form-control" type="text" name="start_date" placeholder="Start date"/>
                           <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class='input-group date end_date' id='datetimepickerEndDate'>
+                      <div class='input-group date end_date' id='DiagnosisEndDate' style="margin-left: 18%!important">
                         <input type='text' class="form-control" name="end_date" placeholder="End date"/>
                         <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar"></span>
@@ -650,7 +698,7 @@
             </div>
 
             <!-- Treatment -->
-             <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='Treatment' style="height: 253px; display: none">
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='Treatment' style="height: 253px; display: none">
               <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
               <hr>
               <div class="col-md-8 col-md-offset-2">
@@ -661,21 +709,48 @@
                 <div class="project-form-group" style="width: 117% !important">
                   <span class="project-form-label">Treatment Map</span>
                   <div class="project-form-control">
-                    <div class="row col-md-7 map_include">
-                      <select class="project-form-control form-control" name="">
-                        <option value="">Include</option>
-                        <option value="">Exclude</option>
-                      </select>
-                    </div>
-                    <div class="col-md-7 map_drop_down">
-                      <select class="form-control" name="" style="width: 109% !important">
+                    <div class="project-form-label" style="width: 91%">
+                      <select class="form-control" id="treatment_select" name="" style="width: 109% !important">
                         <option value="">Please select</option>
-                        <option>Colon & rectal cancer (CRC)</option>
-                        <option>Lung cancer (NSCLC)</option>
-                        <option>Skin cancer (Melanoma)</option>
-                        <option>Acute myeloid leukemia (AML - Solid)</option>
-                        <option>Myelodysplastic syndromes (MDS)</option>
-                        <option>Multiple myeloma (MM)</option>
+                        <option>Statins</option>
+                        <option>Chemotherapy - Cisplatin</option>
+                        <option>Chemotherapy - Cyclophosphamide</option>
+                        <option>Chemotherapy - Docetaxel</option>
+                        <option>Chemotherapy - Doxorubicin</option>
+                        <option>Chemotherapy - Etoposide</option>
+                        <option>Chemotherapy - Fluorouracil</option>
+                        <option>Chemotherapy - Gemcitabine</option>
+                        <option>Chemotherapy - Irinotecan</option>
+                        <option>Chemotherapy - Leucovorin</option>
+                        <option>Chemotherapy - Oxaliplatin</option>
+                        <option>Chemotherapy - Paclitaxel Protein-Bound</option>
+                        <option>Chemotherapy - Paclitaxel</option>
+                        <option>Chemotherapy - Pemetrexed</option>
+                        <option>Chemotherapy - Topotecan</option>
+                        <option>Chemotherapy - Vinblastine</option>
+                        <option>Chemotherapy - Vincristine</option>
+                        <option>Chemotherapy - Vinorelbine</option>
+                        <option>Immunotherapy - Atezolizumab</option>
+                        <option>Immunotherapy - Durvalumab</option>
+                        <option>Immunotherapy - Ipilimumab</option>
+                        <option>Immunotherapy - Nivolumab</option>
+                        <option>Immunotherapy - Pembrolizumab</option>
+                        <option>Targeted Therapy - Afatinib</option>
+                        <option>Targeted Therapy - Alectinib</option>
+                        <option>Targeted Therapy - Bevacizumab</option>
+                        <option>Targeted Therapy - Brigatinib</option>
+                        <option>Targeted Therapy - Ceritinib</option>
+                        <option>Targeted Therapy - Cetuximab</option>
+                        <option>Targeted Therapy - Crizotinib</option>
+                        <option>Targeted Therapy - Dabrafenib</option>
+                        <option>Targeted Therapy - Erlotinib</option>
+                        <option>Targeted Therapy - Gefitinib</option>
+                        <option>Targeted Therapy - Necitumumab</option>
+                        <option>Targeted Therapy - Osimertinib</option>
+                        <option>Targeted Therapy - Ramucirumab</option>
+                        <option>Targeted Therapy - Rituximab</option>
+                        <option>Targeted Therapy - Trametinib</option>
+                        <option>Targeted Therapy - Trastuzumab</option>
                       </select>
                     </div>
                   </div>
@@ -692,7 +767,6 @@
                     <span class="project-form-label">Or</span>
                   </div>
                 </div>
-
                 <div class="project-form-group" style="width: 110% !important">
                   <span class="project-form-label">Treatment Code</span>
                   <div class="project-form-control">
@@ -764,7 +838,7 @@
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class='input-group date end_date' id='datetimepickerEndDate'>
+                      <div class='input-group date end_date' id='datetimepickerEndDate' style="margin-left: 18% !important">
                         <input type='text' class="form-control" name="end_date" placeholder="End date"/>
                         <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar"></span>
@@ -792,11 +866,13 @@
                   <td>
                     <select class="project-form-input" name="">
                       <option value="">Any</option>
+                      <option>First</option>
+                      <option>Last</option>
                     </select>
                   </td>
                   <td class="cohort-right-element">Evant A</td>
                   <td class="cohort-left-element">
-                     <input type='text' class="form-control" name="" style="background-color: #d7e7ef" />
+                     <input type='text' class="form-control" name="" value="MI and 20+ years" style="background-color: #d7e7ef" />
                   </td>
                 </tr>
                 <tr>
@@ -821,7 +897,7 @@
                   </td>
                   <td class="cohort-right-element">Evant B</td>
                   <td  class="cohort-left-element">
-                     <input type='text' class="form-control" name="" style="background-color: #d7e7ef" />
+                     <input type='text' class="form-control" name="" value="Statin treated" style="background-color: #d7e7ef" />
                   </td>
                 </tr>
                 <tr>
@@ -830,10 +906,12 @@
                   <td class="cohort-left-element">
                     <select class="project-form-input" name="">
                       <option value="">select</option>
+                      <option>Between</option>
                     </select>
                     <input type='text' class="by_input" name=""/>
                     <span style="padding-left: 4%">And</span>
                     <input type='text' class="by_input" name=""/>
+                    <span style="padding-left: 4%">days</span>
                   </td>
                 </tr>
               </table>
@@ -856,8 +934,7 @@
                         <option value="">Less then</option>
                         <option value="">Less then or equal</option>
                         <option value="">Greater than</option>
-                        <option value="">Greater than</option>
-                        <option value="">Not equal</option>
+                        <option value="">Greater than or equal</option>
                         <option value="">between</option>
                       </select>
                       <input type='text' class="by_input" name=""/>
@@ -882,8 +959,8 @@
                 <div class="project-form-group">
                   <span class="project-form-label">&nbsp;</span>
                   <div class="project-steps-radio">
-                    <input type="radio" id="rwd" name="project_steps" value="rwd">
-                    <label for="rwd">RWD</label>
+                    <input type="radio" id="rwd" name="project_steps" value="rwd" checked>
+                    <label for="rwd" >RWD</label>
                   </div>
                   <div class="project-steps-radio">
                     <input type="radio" id="project_data" name="project_steps" value="project_data">
@@ -892,7 +969,12 @@
                 </div>
                 <div class="project-form-group">
                   <span class="project-form-label">Data Source</span>
-                  <select class="project-form-control form-control" name="">
+                  <select class="project-form-control form-control" name="" id='rwd_select'>
+                    <option value="">Please select a function</option>
+                    <option>Market Scan</option>
+                    <option>Optum Claims</option>
+                  </select>
+                  <select class="project-form-control form-control" name="" id="project_data_select" style="display: none;">
                     <option value="">Please select a function</option>
                   </select>
                 </div>
@@ -900,13 +982,13 @@
                   <span class="project-form-label">Time Period</span>
                   <div class="project-form-control">
                     <div class="row col-md-6">
-                      <div id="datetimepickerStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
+                      <div id="DatasourceStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
                           <input class="form-control" type="text" name="start_date" placeholder="Start date"/>
                           <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class='input-group date end_date' id='datetimepickerEndDate'>
+                      <div class='input-group date end_date' id='DatasourceEndDate' style="margin-left: 18% !important">
                         <input type='text' class="form-control" name="end_date" placeholder="End date"/>
                         <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar"></span>
@@ -977,12 +1059,17 @@
                     <div class="col-md-2" style="margin-left: -10%">
                       <select class="project-form-input" name="">
                         <option value="">Select</option>
+                        <option>MI All</option>
+                        <option>MI and 20+ years</option>
+                        <option>Statin treated</option>
+                        <option>MI and 20+ years and on Statin</option>
                       </select>
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
-                      <select class="project-form-input" name="">
-                        <option value="">Select</option>
-                      </select>
+                      <input type="text" name="" class="project-form-input" name="">
+                      <img src="./assets/images/vintage-sandclock.png"
+                     srcset="./assets/images/vintage-sandclock@2x.png 2x,
+                             ./assets/images/vintage-sandclock@3x.png 3x" class="result_click"></button>
                     </div>
                   </div>
                 </div>
@@ -1002,22 +1089,20 @@
                       <span >Section</span>
                     </div>
                     <div class="col-md-6">
-                      <span style="font-size: 12px">MI-All</span>
+                      <span style="font-size: 12px">MI and 20+ years</span>
                     </div>
                     <div class="col-md-2" style="margin-left: -10%">
-                      <select class="project-form-input" name="">
-                        <option value="">Select</option>
-                      </select>
+                      <input type="text" name="" class="project-form-input" name="">
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
-                      <select class="project-form-input" name="">
-                        <option value="">Select</option>
-                      </select>
+                      <input type="text" name="" class="project-form-input" name="">
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
                       <div style="width: 157%">  
-                        <button>s</button>
-                        <input type="text" name="" style="width: 74%; margin-left: 1%;">
+                        <button><img src="./assets/images/mask_group_12.png"
+                     srcset="./assets/images/mask_group_12@2x.png 2x,
+                             ./assets/images/mask_group_12@3x.png 3x"></button>
+                        <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
                       </div>
                     </div>
                   </div>
@@ -1025,22 +1110,20 @@
                 <div style="padding: 2% 1% 5% 1%;">
                   <div style="padding-bottom: 2%">
                     <div class="col-md-6">
-                      <span style="font-size: 12px">MI -> 20</span>
+                      <span style="font-size: 12px">MI and 20+ years and on Statin</span>
                     </div>
                     <div class="col-md-2" style="margin-left: -10%">
-                      <select class="project-form-input" name="">
-                        <option value="">Select</option>
-                      </select>
+                      <input type="text" name="" class="project-form-input" name="">
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
-                      <select class="project-form-input" name="">
-                        <option value="">Select</option>
-                      </select>
+                      <input type="text" name="" class="project-form-input" name="">
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
                       <div style="width: 157%">
-                        <button>s</button>
-                        <input type="text" name="" style="width: 74%; margin-left: 1%;">
+                        <button><img src="./assets/images/mask_group_12.png"
+                     srcset="./assets/images/mask_group_12@2x.png 2x,
+                             ./assets/images/mask_group_12@3x.png 3x"></button>
+                        <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
                       </div>
                     </div>
                   </div>
@@ -1059,12 +1142,12 @@
             <div class="panel-group marg-top-15" id="accordion" role="tablist" aria-multiselectable="true">
 
               <div class="panel panel-default">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Miscellaneous" aria-expanded="false" aria-controls="Miscellaneous">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Miscellaneous" aria-expanded="true" aria-controls="Miscellaneous">
                   <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingMiscellaneous">
                       <h4 class="panel-title" style="font-size: 13px !important">Data</h4>
                   </div>
                 </a>
-                <div id="Miscellaneous" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMiscellaneous">
+                <div id="Miscellaneous" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingMiscellaneous">
                     <div class="panel-body">
                     <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constraints" data-nb-inputs="2" data-nb-outputs="2" id="showRelatedEventsPopover">
                       <div class="cohort-constuctor-elem-list-text">Data Source</div>
@@ -1112,7 +1195,7 @@
                 <div id="Demographics" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDemographics">
                   <div class="panel-body">
                     <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showCurrentAgePopover">
-                      <div class="cohort-constuctor-elem-list-text">Current Age</div>
+                      <div class="cohort-constuctor-elem-list-text">Age</div>
                     </div>
                     <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showGenderPopover">
                       <div class="cohort-constuctor-elem-list-text">Gender</div>
@@ -1401,4 +1484,31 @@ $(document).ready(function(){
   }
  });
 });
+</script>
+
+<script type="text/javascript">
+  $("#DatasourceStartDate").datepicker({
+        autoclose: true,
+        todayHighlight: true
+}).datepicker('update', new Date());
+$("#DatasourceEndDate").datepicker({
+        autoclose: true,
+        todayHighlight: true
+}).datepicker('update', new Date());
+$("#ProceduresStartDate").datepicker({
+        autoclose: true,
+        todayHighlight: true
+}).datepicker('update', new Date());
+$("#ProceduresEndDate").datepicker({
+        autoclose: true,
+        todayHighlight: true
+}).datepicker('update', new Date());
+$("#DiagnosisStartDate").datepicker({
+        autoclose: true,
+        todayHighlight: true
+}).datepicker('update', new Date());
+$("#DiagnosisEndDate").datepicker({
+        autoclose: true,
+        todayHighlight: true
+}).datepicker('update', new Date());
 </script>
