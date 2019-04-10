@@ -22,6 +22,15 @@
     <script src="./assets/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript" src="./assets/js/common.js"></script>
     <script type="text/javascript" src="./assets/js/cohorts.js"></script>
+    <style>
+      .Rectangle-7 {
+  width: 220px;
+  height: 29px;
+  border-radius: 2px;
+  border: solid 1px #707070;
+  background-color: #f5f5f5;
+}
+    </style>
   </head>
   <body class="theme-bg-color">
     <div class="container-fluid">
@@ -141,8 +150,8 @@
                              ./assets/images/square-add-button@3x.png 3x"
                      class="square-add-button"><span class="cohort-btn-text">Add</span>
               </button>
-              <button type="button" name="button" class="btn btn-points-estimate pull-right" style="padding: 1px 5px !important;">
-                <span class="btn-points-estimate-text">Go to Point&nbsp;Estimate</span>
+              <button type="button" name="button" class="btn btn-points-estimate pull-right" style="padding: 1px 5px !important;" onclick="location.href = 'pointestimation.html';">
+                <span class="btn-points-estimate-text"><span>Go to </span>Point&nbsp;Estimate</span>
                 <img src="./assets/images/arrow-pointing-right-in-a-circle.png"
                      srcset="./assets/images/arrow-pointing-right-in-a-circle@2x.png 2x,
                              ./assets/images/arrow-pointing-right-in-a-circle@3x.png 3x"
@@ -157,38 +166,41 @@
                 <div class="cohort-graph-head-section">
                   <div class="row">
                     <div class="col-md-4" id="update_cohort_version">
-                      <input type="text" id="cohort_version_edit" class="cohort-vertion-form-control form-control" name="cohort_version_edit" value="" placeholder="CHD with CV events">
+                      <!-- <input type="text" id="cohort_version_edit" class="cohort-vertion-form-control form-control" name="cohort_version_edit" value="" placeholder="CHD with CV events"> -->
+                      <div class="Rectangle-7">
+                        <p style="margin: 3px 12px 4px;color: #606060">CHD with CV events</p>
+                      </div>
                     </div>
                     <div class="col-md-8">
                       <div class="pull-right">
-                        <button type="button" name="worksheet" class="btn btn-blue">Worksheet</button>
-                        <button type="button" name="summary" class="btn btn-cohort-default">Summary</button>
+                        <button type="button" name="worksheet" class="btn btn-cohort-default" onclick="location.href = 'cohorts.html';">Worksheet</button>
+                        <button type="button" name="summary" class="btn btn-blue">Summary</button>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="cohort-graph-body-section">
-                  <span class="Overall"> Overall</span>
-                  <span class="rwd_style">RWD</span>
+                  <span class="Overall" style="border: solid 1px #7070709c;padding-left: 21px;padding-right: 20px;font-size: 14px;"> Overall</span>
+                  <span class="rwd_style" style="margin-left: 54%">RWD</span>
                   <span class="proportional_style">Proportional Estimates</span>
                   <div class="col-md-9 col-md-offset-2 cohort_card">
-                      <input type="text" class= "cohort_card_big_input" value="" placeholder="MI - All , UA - All , IS - All.">
-                      <input type="text" class= "cohort_card_input" value="" placeholder="">
-                      <input type="text" class= "cohort_card_input" value="" placeholder="">
+                      <input type="text" class= "cohort_card_big_input" value="" placeholder="MI - All , UA - All , IS - All." style="padding-left: 15px;">
+                      <input type="text" class= "cohort_card_input" value="" placeholder="" style="padding-left: 8px;">
+                      <input type="text" class= "cohort_card_input" value="" placeholder="" style="padding-left: 8px;">
                       <span style="margin-left: 2%">
-                        <i class="fas fa-play-circle 5x" style="margin-top: 1% !important"></i>
+                        <i class="fas fa-play-circle 5x" style="margin-top: 1% !important;color: #0063c3"></i>
                       </span>
                     </div>
                     <br/>
-                    <span class="Overall"> Overall</span>
-                  <span class="rwd_style">RWD</span>
+                    <span class="Overall" style="border: solid 1px #7070709c;font-size: 14px;"> On statin</span>
+                  <span class="rwd_style" style="margin-left: 54%">RWD</span>
                   <span class="proportional_style">Proportional Estimates</span>
                   <div class="col-md-9 col-md-offset-2 cohort_card">
-                      <input type="text" class= "cohort_card_big_input" value="" placeholder="MI - > 20 & on Staints , UA - > 20 & on Staints , IS - > 20 & on Staints">
-                      <input type="text" class= "cohort_card_input" value="" placeholder="">
-                      <input type="text" class= "cohort_card_input" value="" placeholder="">
+                      <input type="text" class= "cohort_card_big_input" value="" placeholder="MI - > 20 & on Staints , UA - > 20 & on Staints , IS - > 20 & on Staints" style="padding-left: 15px;">
+                      <input type="text" class= "cohort_card_input" value="" placeholder="" style="padding-left: 8px;">
+                      <input type="text" class= "cohort_card_input" value="" placeholder="" style="padding-left: 8px;">
                       <span style="margin-left: 2%">
-                        <i class="fas fa-play-circle 5x" style="margin-top: 1% !important"></i>
+                        <i class="fas fa-play-circle 5x" style="margin-top: 1% !important;color: #0063c3"></i>
                       </span>
                     </div>
                     <br>
