@@ -239,11 +239,11 @@
                     </div>
                     <div class="sel-cohort-cards-list" id="showListOfCohortsCards">
                       <!-- <div id="showListOfCohortsCards" class="masonry-grid hide"></div> -->
-                    <svg class="flowchart-temporary-link-layer" style="display: none;"><line x1="0" y1="0" x2="0" y2="0" stroke-dasharray="6,6" stroke-width="4" stroke="black" fill="none"></line></svg>
-                    <div id="overlay" style="padding: 109px; display: none;">
-                      <i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom load_run" style="margin-left: 40%; color: red"></i>
-                      <span class="sr-only">Loading...</span>
-                    </div>
+                      <svg class="flowchart-temporary-link-layer" style="display: none;"><line x1="0" y1="0" x2="0" y2="0" stroke-dasharray="6,6" stroke-width="4" stroke="black" fill="none"></line></svg>
+                      <div id="overlay" style="padding: 109px; display: none;">
+                        <i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom load_run" style="margin-left: 40%; color: red"></i>
+                        <span class="sr-only">Loading...</span>
+                      </div>
                     </div>
                   </div>
                   <div class="cohort-graph-area sc_two_page" style="display: none;">
@@ -256,11 +256,14 @@
                         <button type="button" name="summary" class="btn btn-sm sub-cohort-result-btn">Results</button>
                       </div>
                     </div>
-                    <div class="sel-cohort-cards-list flowchart-container" id="showListOfCohortsCards">
+                    <div class="sel-cohort-cards-list" id="showListOfCohortsCards1">
                       <!-- <div id="showListOfCohortsCards" class="masonry-grid hide"></div> -->
-                    <svg class="flowchart-temporary-link-layer" style="display: none;"><line x1="0" y1="0" x2="0" y2="0" stroke-dasharray="6,6" stroke-width="4" stroke="black" fill="none"></line></svg>
-
-                    <svg class="flowchart-links-layer"></svg><div class="flowchart-operators-layer unselectable"></div><svg class="flowchart-temporary-link-layer"><line x1="0" y1="0" x2="0" y2="0" stroke-dasharray="6,6" stroke-width="4" stroke="black" fill="none"></line></svg></div>
+                      <svg class="flowchart-temporary-link-layer" style="display: none;"><line x1="0" y1="0" x2="0" y2="0" stroke-dasharray="6,6" stroke-width="4" stroke="black" fill="none"></line></svg>
+                      <div id="overlay" style="padding: 109px; display: none;">
+                        <i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom load_run" style="margin-left: 40%; color: red"></i>
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1186,22 +1189,18 @@
     <!-- modal body -->
 
     <div class="modal fade" id="diagnosis_model" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" style="margin-right: 5px !important;">&times;</button>
-          <h4 class="modal-title" style="color: blue">Diagnosis Map</h4>
-        </div>
-        <div class="modal-body" style="padding-top: 35px;">
-
-
-          <div class="row" style="padding-bottom: 30px;">
-            <div class="col-lg-6" style="padding-left: 50px;">
-                Therapy Area
-                <!-- <input style="margin-left: 50px;border-radius: 5px;border-color: #00000096;border-width: thin;" type="text" name=""> -->
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" style="margin-right: 5px !important;">&times;</button>
+            <h4 class="modal-title" style="color: blue">Diagnosis Map</h4>
+          </div>
+          <div class="modal-body" style="padding-top: 35px;">
+            <div class="row" style="padding-bottom: 30px;">
+              <div class="col-lg-6" style="padding-left: 50px;">
+                  Therapy Area
                 <div style="margin-top: -6%;">
-                  <!--<select id="therapy" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 27px;width: 52%;">-->
-          <select class="form-control" name="select1" id="select1" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
+                  <select class="form-control" name="select1" id="select1" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
                     <option value="1">Oncology</option>
                     <option value="2">Gastroenterology</option>
                     <option value="3">Hepatology (Liver, Pancreatic, Gall Bladder)</option>
@@ -1210,19 +1209,17 @@
                     <option value="6">Neurology</option>
                   </select>
                 </div>
-            </div>
-            <div class="col-lg-6">
+              </div>
+              <div class="col-lg-6">
                 Name
                 <input style="margin-left: 86px;border-radius: 5px;border-color: #00000096;border-width: thin;width: 52%;" type="text" name="">
+              </div>
             </div>
-          </div>
-          <div class="row" style="padding-bottom: 30px;">
-            <div class="col-lg-6" style="padding-left: 50px;">
+            <div class="row" style="padding-bottom: 30px;">
+              <div class="col-lg-6" style="padding-left: 50px;">
                 Sub-Therapy Area
-                <!-- <input type="text" style="margin-left: 18px;border-radius: 5px;border-color: #00000096;border-width: thin;" name=""> -->
                 <div style="margin-top: -6%;">
-                <!--  <select id="therapy" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 27px;width: 52%;">-->
-          <select class="form-control" name="select2" id="select2" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
+                  <select class="form-control" name="select2" id="select2" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
                     <option value="1">Colon & rectal cancer (CRC)</option>
                     <option value="1">Lung cancer (NSCLC)</option>
                     <option value="1">Skin cancer (Melanoma)</option>
@@ -1286,105 +1283,83 @@
                     <option value="6">Neuromuscular diseases</option>
                     <option value="6">Stroke</option>
                     <option value="6">Traumatic brain injuries</option>
-
                   </select>
                 </div>
-            </div>
-            <div class="col-lg-6">
+              </div>
+              <div class="col-lg-6">
                 Description 
-                <input type="text" style="margin-left: 50px;border-radius: 5px;border-color: #00000096;border-width: thin;width:52%" name="">
+              <input type="text" style="margin-left: 50px;border-radius: 5px;border-color: #00000096;border-width: thin;width:52%" name="">
+              </div>
             </div>
-          </div>
-      
-         <div class="row">
-          
-          <div class="col-lg-6">
-           <p style="margin-left: 10px;margin-top: 9px;">Search codes</p>
-           <div class="first-box" style="margin-left: 10px;overflow-y: scroll;">
-             <div style="border-bottom: 1px solid #00000045;background-color:#2196f347">
-               <div class="search-container">
-                   <!-- <input style="margin-top: 4px;margin-bottom: 4px;padding-left: 5px;width: 92%;border-radius: 5px;border-color: #00000096;height:29px;border-width: thin;margin-left:14px" type="text" name="search" class="fa fa-search"> -->
-                   <input id="myInput" type="text" style="margin-top: 4px;margin-bottom: 4px;padding-left: 5px;width: 90%;border-radius: 5px;border-color: #00000096;height:29px;border-width: thin;margin-left:20px" name="search" class="fa fa-search">
-                  <i style="margin-left: -24px;" class="fa fa-search"></i>
-               </div>
-             </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <p style="margin-left: 10px;margin-top: 9px;">Search codes</p>
+                <div class="first-box" style="margin-left: 10px;overflow-y: scroll;">
+                  <div style="border-bottom: 1px solid #00000045;background-color:#2196f347">
+                    <div class="search-container">
+                      <input id="myInput" type="text" style="margin-top: 4px;margin-bottom: 4px;padding-left: 5px;width: 90%;border-radius: 5px;border-color: #00000096;height:29px;border-width: thin;margin-left:20px" name="search" class="fa fa-search">
+                      <i style="margin-left: -24px;" class="fa fa-search"></i>
+                    </div>
+                  </div>
                   <div>
-                   <ul id="myList" style="padding-left: 0px;">
+                    <ul id="myList" style="padding-left: 0px;">
                     <div id="search_list" style="margin-left: 5px;"></div>
-                   </ul>
+                    </ul>
                   </div>
-           </div>
-          </div>
-        
-
-        <div class="col-lg-6">
-          <!-- <i style="font-size:20px" class="fa">&#xf093;</i -->
-          <button type="button" id="myBtn" style="color: #3275fbl;background-color:#cbe0fb;margin-left: 285px;" class="btn btn-default">Upload</button>
-
-          <!-- The Modal2 -->
-          <div id="mod2" class="mod">
-
-            <!-- Modal2 content -->
-            <div class="mod-content">
-              <button type="button" class="close" data-dismiss="mod">&times;</button>
-              <p style="padding-left: 20px;"><b>Progress Update File Upload</b></p>
-              <p style="font-size: 14px;color: #00000061;margin-bottom: 2px;">Select file:</p>
-              <div style="height: 32px;border: 1px solid #00000061;border-radius: 5px;">
-              <input style="padding-left: 10px;padding-top: 4px;" type="file" id="fileUpload"/><br><br>
+                </div>
               </div>
-<!--               <button id="upload" data-dismiss="mod" value="Upload" style="width: 94px;background-color: #00BCD4;border-width: 0px;color: 2px solid white;margin-top: 25px;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;" class="btn btn-default">Upload</button> -->
-
-              <input type="button" id="upload" class="cls" value="Upload" style="width: 94px;background-color: #00BCD4;border-width: 0px;color: 2px solid white;margin-top: 25px;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;"/>&nbsp;&nbsp;
-              <!-- data-dismiss="modal" -->
-              <u style="color: #00bcd4">Download Template</u>
+              <div class="col-lg-6">
+                <button type="button" id="myBtn" style="color: #3275fbl;background-color:#cbe0fb;margin-left: 285px;" class="btn btn-default">Upload</button>
+                <div id="mod2" class="mod">
+                  <div class="mod-content">
+                    <button type="button" class="close" data-dismiss="mod">&times;</button>
+                    <p style="padding-left: 20px;"><b>Progress Update File Upload</b></p>
+                    <p style="font-size: 14px;color: #00000061;margin-bottom: 2px;">Select file:</p>
+                    <div style="height: 32px;border: 1px solid #00000061;border-radius: 5px;">
+                      <input style="padding-left: 10px;padding-top: 4px;" type="file" id="fileUpload"/><br><br>
+                    </div>
+                    <input type="button" id="upload" class="cls" value="Upload" style="width: 94px;background-color: #00BCD4;border-width: 0px;color: 2px solid white;margin-top: 25px;color: white;font-weight: bold;border-radius: 12px;height: 36px;font-size: 16px;"/>&nbsp;&nbsp;
+                    <u style="color: #00bcd4">Download Template</u>
+                  </div>
+                </div>
+                <div class="second-box" style="overflow-y: scroll;margin-left: -15px;margin-top: 5px;">
+                  <div>
+                    <p style="color: black;background-color: #2196f347;height:35px;border-bottom: 1px solid #00000096">Selected Codes<span style="float: right;padding-right: 10px;">Total selected: 0</span></p>
+                  </div>
+                  <div>
+                    <ul id="myList" style="padding-left: 0px !important">
+                      <div id="dvCSV"></div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- <input type="file" id="fileUpload" onchange="this.form.submit()" /> -->
-            <!-- <input type="file" id="fileUpload" style="margin-left: 225px;margin-top: -18px;" />
-            <input type="button" id="upload" value="Upload" style="margin-left: 226px;" /> -->
-
-
-            <div class="second-box" style="overflow-y: scroll;margin-left: -15px;margin-top: 5px;">
-              <div>
-                <p style="color: black;background-color: #2196f347;height:35px;border-bottom: 1px solid #00000096">Selected Codes<span style="float: right;padding-right: 10px;">Total selected: 0</span></p>
-              </div>
-              <div>
-                   <ul id="myList" style="padding-left: 0px !important">
-                    <div id="dvCSV"></div>
-                   </ul>
-                  </div>
-            </div>
+          <div style="padding-bottom: 20px;padding-left: 403px;">
+            <button type="button" style=" color: white;background-color: blue;" class="btn btn-default" data-dismiss="modal">Submit</button>
+          </div>
         </div>
-         
-      </div>
-
-      </div>
-      <div style="padding-bottom: 20px;padding-left: 403px;">
-        <button type="button" style=" color: white;background-color: blue;" class="btn btn-default" data-dismiss="modal">Submit</button>
       </div>
     </div>
-  </div>
-</div>
 
 
- <div id="mod3" class="mod">
-  <div class="literature_model">
-    <button type="button" class="literatur_close" data-dismiss="mod3">&times;</button>
-    <p style="color:#0063c3;">Enter Literature Value</p>
-    <hr>
-    <div class="literatur_form_group">
-      <span class="literatur-form-label">Name</span>
-      <input type="text" name="" class="literatur_form_control form-control">
-    </div>
-    <div class="literatur_form_group">
-      <span class="literatur-form-label">Reference Source</span>
-      <textarea name="" class="literatur_form_control form-control1"></textarea> 
-    </div>
-    <div class="literatur_form_group">
-      <span class="literatur-form-label">Page #</span>
-      <input type="text" name="" class="literatur_form_control form-control">
-    </div>
+    <div id="mod3" class="mod">
+      <div class="literature_model">
+        <button type="button" class="literatur_close" data-dismiss="mod3">&times;</button>
+        <p style="color:#0063c3;">Enter Literature Value</p>
+        <hr>
+        <div class="literatur_form_group">
+          <span class="literatur-form-label">Name</span>
+          <input type="text" name="" class="literatur_form_control form-control">
+        </div>
+        <div class="literatur_form_group">
+          <span class="literatur-form-label">Reference Source</span>
+          <textarea name="" class="literatur_form_control form-control1"></textarea> 
+        </div>
+        <div class="literatur_form_group">
+          <span class="literatur-form-label">Page #</span>
+          <input type="text" name="" class="literatur_form_control form-control">
+        </div>
     <div class="literatur_form_group">
       <span class="literatur-form-label">Literature Value</span>
       <input type="text" name="" id="literatur_value" class="literatur_form_control form-control">

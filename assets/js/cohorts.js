@@ -318,11 +318,13 @@ $(document).ready(function(){
   $(document).on('click', '#subCohorts_2', function(){
     $('.sc_two_one').css({'display': 'none'});
     $('.sc_two_page').css({'display': 'block'});
+    nantha_function('#showListOfCohortsCards1');
   });
 
   $(document).on('click', '#subCohorts_1', function(){
     $('.sc_two_page').css({'display': 'none'});
     $('.sc_two_one').css({'display': 'block'});
+    nantha_function('#showListOfCohortsCards')
   });
 
   $(document).on('click', '.flowchart-operator', function (e){
@@ -471,6 +473,8 @@ function setCohortValue() {
       $(this).parent().find('.footer_text').html('18,639');
     } else if ($(this).text().trim() === 'Disease State'){
       $(this).parent().find('.footer_text').html('23,167');
+    } else {
+      $(this).parent().find('.footer_text').html('000');
     }
   })
 }
@@ -484,3 +488,117 @@ $(document).on('click', '#project_data', function(){
   $("#rwd_select").hide();
   $("#project_data_select").show();
 })
+
+function nantha_function(val) {
+  initialFunction1 = function () {
+    var mainContentBlock = $('#main_content_block').height();
+    $('.cohorts-auto-height').css('height', mainContentBlock);
+  }
+
+  initialFunction1();
+
+  var $flowchart = $(val);
+  var $container = $flowchart;
+
+  // var cx = $flowchart.width() / 2;
+  // var cy = $flowchart.height() / 2;
+  var cx = $flowchart.width() / 2;
+  var cy = $flowchart.height() / 2;
+
+  var data = {
+    operators: {
+    },
+    // Initial links start here
+    links: {
+
+    }
+  };
+
+  // Apply the plugin on a standard, empty div...
+  $flowchart.flowchart({
+    data: data
+  });
+
+  var $draggableOperators = $('.draggable_operator');
+
+  function getOperatorData1($element) {
+    var nbInputs = parseInt($element.data('nb-inputs'));
+    var nbOutputs = parseInt($element.data('nb-outputs'));
+    var nbConstructorHeader = $element.data('nb-constructor-header');
+
+    //updateCohortEleAndTitle(nbConstructorHeader, $element.text());
+    var data = {
+      properties: {
+        title: $element.text(),
+        inputs: {},
+        outputs: {}
+      }
+    };
+
+    var i = 0;
+    for (i = 0; i < nbInputs; i++) {
+      data.properties.inputs['input_' + i] = {
+        // label: 'Input ' + (i + 1)
+        label: ' '
+      };
+    }
+    for (i = 0; i < nbOutputs; i++) {
+      data.properties.outputs['output_' + i] = {
+        // label: 'Output ' + (i + 1)
+        label: ' '
+      };
+    }
+
+    return data;
+  }
+
+  addConstructorTitle1 = function (title){
+    $('.cohort-active-card-content input').val(title);
+  }
+
+  var cohortCard = '';
+  $draggableOperators.draggable({
+      cursor: "move",
+      opacity: 0.7,
+
+      helper: 'clone',
+      appendTo: 'body',
+      zIndex: 1000,
+
+      helper: function(e) {
+        var $this = $(this);
+        var data = getOperatorData1($this);
+        return $flowchart.flowchart('getOperatorElement', data);
+        // cohortCard = $flowchart.flowchart('getOperatorElement', data);
+        // $(cohortCard)[0].children[1].children[1].children[0].value = $(this).data('nb-constructor-header');
+        // return cohortCard;
+      },
+      stop: function(e, ui) {
+          var $this = $(this);
+          var elOffset = ui.offset;
+          var containerOffset = $container.offset();
+          if (elOffset.left > containerOffset.left &&
+              elOffset.top > containerOffset.top &&
+              elOffset.left < containerOffset.left + $container.width() &&
+              elOffset.top < containerOffset.top + $container.height()) {
+
+              var flowchartOffset = $flowchart.offset();
+
+              var relativeLeft = elOffset.left - flowchartOffset.left;
+              var relativeTop = elOffset.top - flowchartOffset.top;
+
+              var positionRatio = $flowchart.flowchart('getPositionRatio');
+              relativeLeft /= positionRatio;
+              relativeTop /= positionRatio;
+
+              var data = getOperatorData1($this);
+              data.left = relativeLeft;
+              data.top = relativeTop;
+
+              $flowchart.flowchart('addOperator', data);
+              addConstructorTitle1($(this).data('nb-constructor-header'));
+          }
+      }
+  });
+
+}
