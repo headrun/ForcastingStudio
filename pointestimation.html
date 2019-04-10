@@ -68,7 +68,6 @@
   background-color: #ffffff;
       padding-left: 9px;
     margin-left: 13px;
-    padding-top: 6px;
 }
 .Path-32 {
   width: 15.9px;
@@ -157,6 +156,56 @@
 .box{
   margin-top: 18px;
 }
+.Go-to-Forecasting {
+  width: 76px;
+  height: 34px;
+  font-family: HelveticaNeue;
+  font-size: 13px;
+  color: #0063c3;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--cerulean);
+}
+.Rectangle-35 {
+  width: 74.1px;
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px 0 #bcbcbc;
+  background-color: #ffffff;
+}
+.Mask-Group-24 {
+  width: 16px;
+  height: 12px;
+  object-fit: contain;
+}
+.Back {
+  width: 42px;
+  height: 22px;
+  font-family: HelveticaNeue;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.28;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--cerulean);
+}
+.square-add-button{
+  width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    margin-top: -2px;
+    object-fit: contain;
+}
+
+.background_color{
+
+}
 </style>
 </head>
 
@@ -235,14 +284,14 @@
               </ul>
             </div>
             <div class="status-bar">
-              <div class="ellipse-common"></div>
-              <div class="ellipse-line-1-active-left"></div>
-              <div class="first-ellipse ellipse-active"></div>
-              <div class="ellipse-line-1"></div>
-              <div class="ellipse-common"></div>
-              <div class="ellipse-line-3"></div>
-              <div class="ellipse-common"></div>
-            </div>
+             <div class="ellipse-common"></div>
+             <div class="ellipse-line-1-active-left" style="background-image: linear-gradient(to right, #ffffff, white);"></div>
+             <div class="ellipse-common"></div>
+             <div class="ellipse-line-1" style="background-image: linear-gradient(to right, #ffffff, #0063c3); "></div>
+             <div class="first-ellipse ellipse-active"></div>
+             <div class="ellipse-line-3" style="background-image: linear-gradient(89deg, #0063c3, #ffffff);"></div>
+             <div class="ellipse-common"></div>
+           </div>
           </div>
           <div class="col-md-2">
             <div class="alert alert-danger hide" id="danger-alert">
@@ -262,7 +311,7 @@
             <div class="verstion-desc-text marg-top-15">V0 - Description Text</div>
             <div class="cohort-cambo">
               <div class="cohorts-list">
-                <button type="button" class="btn btn-sm btn-cohorts-list-active" id="cohort_1" onclick="updateCohortVersionData('Cohort 01', 'cohort_1')" name="button">Cohort 01</button>
+                <button type="button" class="btn btn-sm btn-cohorts-list-active" id="cohort_1" onclick="updateCohortVersionData('Cohort 01', 'cohort_1')" name="button">CHD with CV events</button>
               </div>
               <a href="#">
                 <img src="./assets/images/group-96.png"
@@ -272,19 +321,35 @@
               </a>
             </div>
             <div class="marg-top-10">
-              <button type="button" name="button" class="btn btn-lg btn-cohort-add">
-                <img src="./assets/images/square-add-button.png"
-                     srcset="./assets/images/square-add-button@2x.png 2x,
-                             ./assets/images/square-add-button@3x.png 3x"
-                     class="square-add-button"><span class="cohort-btn-text">Add</span>
+              <button type="button" name="button" style="font-style: 0px;height: 39px;" class="btn btn-cohort-add">
+                <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/787591FB-52D5-4A4A-A602-4F2C02110347.svg" style="margin-left: -6px;" class="square-add-button"><span class="cohort-btn-text">Back</span>
               </button>
-              <button type="button" name="button" class="btn btn-points-estimate pull-right" style="padding: 1px 5px !important;">
-                <span class="btn-points-estimate-text">Go to Point&nbsp;Estimate</span>
+              <button type="button" name="button" class="btn btn-sm btn-points-estimate pull-right" style="padding: 1px 5px !important;" onclick="location.href = 'projection_forecasting.html';">
+                <span class="Go-to-Forecasting">
+                  <span style="margin-left: -27px;color: #0063c3">Go to</span><br>
+                  <span style="color: #0063c3">Forcasting</span>
+                </span>
                 <img src="./assets/images/arrow-pointing-right-in-a-circle.png"
                      srcset="./assets/images/arrow-pointing-right-in-a-circle@2x.png 2x,
                              ./assets/images/arrow-pointing-right-in-a-circle@3x.png 3x"
-                     class="arrow-pointing-right-in-a-circle">
+                     class="arrow-pointing-right-in-a-circle" style="margin-top: -23px;width: 27px;height: 25px;">
               </button>
+              
+              <!-- <button type="button" class="Rectangle-35" style="border-width: 0px;">
+              <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/787591FB-52D5-4A4A-A602-4F2C02110347.svg" class="Mask-Group-24">
+              <span class="Back">Back</span>
+              </button>
+              <button type="button" name="button" class="btn btn-points-estimate pull-right" style="padding: 1px 5px !important;margin-top: -45px;">
+                <span class="Go-to-Forecasting">
+                  <span style="margin-left: -27px;">Go to</span><br>
+                  <span>Forcasting</span>
+                </span>
+                <img src="./assets/images/arrow-pointing-right-in-a-circle.png"
+                     srcset="./assets/images/arrow-pointing-right-in-a-circle@2x.png 2x,
+                             ./assets/images/arrow-pointing-right-in-a-circle@3x.png 3x"
+                     class="arrow-pointing-right-in-a-circle" style="margin-top: -23px;width: 27px;height: 27px;">
+              </button> -->
+            
             </div>
           </div>
 
@@ -294,17 +359,25 @@
             <div class="Work-space-01-BG" >
               <div class="Poin-Estimates-Prevalence">
                 <p style="padding-left: 12px;padding-top: 15px;">
-                    point estimation (Prevalence)
+                    Point estimation (Prevalence)
                 </p>
               </div>
-              <div class="row" style="margin-left: 0px;margin-top: 60px;">
+              <!-- <div class="row" style="margin-left: 0px;margin-top: 60px;">
                 <div class="Rectangle-29 col-lg-2" style="padding-left: 24px;color:  #00204a;">Overall</div>
                 <div class="Rectangle-29 col-lg-2">On Statin</div>
                 <div class="Rectangle-46 col-lg-1" style="margin-left: 13px;">
                   <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9E653F9A-C74B-4373-887B-EB21247E6EF4.svg" class="Path-32">
                 </div>
+              </div> -->
+              <div class="row" style="margin-left: 0px;margin-top: 60px;">
+                <button class="Rectangle-29 col-lg-2" id="butwrk1">Overall</button>
+                <button class="Rectangle-29 col-lg-2" id="butwrk2" style="background-color: #dddddd;color: #8b8b8b">On Statin</button>
+                <button class="Rectangle-46 col-lg-1" style="margin-left: 13px;padding-top: 0px;">
+                  <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9E653F9A-C74B-4373-887B-EB21247E6EF4.svg" class="Path-32">
+                </button>
               </div>
-              <div class="Workspace-Border">
+
+              <div class="Workspace-Border" id="workspace1">
                           <!----------------- <box1> ------------->
                 <div class="Rectangle-130 ">
                   CHD with CV events 
@@ -314,23 +387,39 @@
                 <div class="Rectangle-129" style="margin-bottom: 28px;">
                   <div class="row">
                     <div class="col-lg-6 Rectangle-106" style>MI-AII , UA-AII, IS-AII.</div>
-                    <div class="col-lg-3 Rectangle-28"></div>
-                    <div class="col-lg-3 Rectangle-28"></div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" name="">
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6 MI---All">MI-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-left: 22px;margin-top: 20px;" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-top: 20px;" name="">
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6 MI---All">UA-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-left: 22px;margin-top: 20px;" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-top: 20px;" name="">
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6 MI---All">ISS-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-left: 22px;margin-top: 20px;" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-top: 20px;" name="">
+                    </div>
                   </div>
                 </div>
                 <!------------------ <box2> ----------------------->
@@ -342,29 +431,90 @@
                 <div class="Rectangle-129" style="margin-bottom: 28px;">
                   <div class="row">
                     <div class="col-lg-6 Rectangle-106">SA-AII,TIA-AII,IS-AII,Revascularization-AII.</div>
-                    <div class="col-lg-3 Rectangle-28"></div>
-                    <div class="col-lg-3 Rectangle-28"></div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" name="">
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6 MI---All">SA-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-left: 22px;margin-top: 20px;" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-top: 20px;" name="">
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6 MI---All">TIA-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-left: 22px;margin-top: 20px;" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-top: 20px;" name="">
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-6 MI---All">IS-AII</div>
-                    <div class="col-lg-3 Rectangle-28 box" style="margin-left: 22px"></div>
-                    <div class="col-lg-3 Rectangle-28 box"></div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-left: 22px;margin-top: 20px;" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-top: 20px;" name="">
+                    </div>
                   </div>
                 </div>
 
-
-
               </div>
+                  <!----------- <onstatin data> ------------>
+              <div class="Workspace-Border" id="workspace2" style="display: none;">
+                <div class="Rectangle-130 ">
+                  CHD with CV events 
+                  <span style="padding-left: 300px;">RWD</span>
+                  <span style="padding-left: 105px;">Proportional-Estimates</span> 
+                </div>
+                <div class="Rectangle-129" style="margin-bottom: 28px;">
+                  <div class="row">
+                    <div class="col-lg-6 Rectangle-106" style>MI-AII , UA-AII, IS-AII.</div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" name="">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 MI---All">MI-AII</div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-left: 22px;margin-top: 20px;" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-top: 20px;" name="">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 MI---All">UA-AII</div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-left: 22px;margin-top: 20px;" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-top: 20px;" name="">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 MI---All">ISS-AII</div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-left: 22px;margin-top: 20px;" name="">
+                    </div>
+                    <div>
+                      <input type="text" class="col-lg-3 Rectangle-28" style="margin-top: 20px;" name="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--------------- <onstatin ends. ----------------->
             </div>
           </div>
 <!----------------------------------- <body ends> --------------------------->
@@ -466,3 +616,21 @@
 </html>
 
 <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+<script>
+  $(document).ready(function(){  
+    $("#workspace2").hide();
+    $("#butwrk1").click(function(){
+      $("#workspace2").hide();
+      $("#workspace1").show();
+      $(this).css({'background-color': '#d8e7f0'});
+      $('#butwrk2').css({'background-color': '#dddddd;'});
+    });
+
+    $("#butwrk2").click(function(){
+      $("#workspace1").hide();
+      $("#workspace2").show();
+      $(this).css({'background-color':'#d8e7f0'});
+      $('#butwrk1').css({'background-color': '#dddddd;'});
+    });
+  })
+</script>
