@@ -451,7 +451,7 @@ $(document).on('click', '.sub-cohort-run-btn', function() {
   $('.close-flowchart-cohort').css({'margin-top':'-107px'});
   
   $("#overlay").show();
-  
+  $(".load_run").show(); 
   setTimeout(function(){
     $("#overlay").hide();
     $(".load_run").hide();
