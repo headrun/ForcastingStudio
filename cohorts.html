@@ -1009,7 +1009,7 @@
                       </select>
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
-                      <input type="text" name="" class="project-form-input" name="">
+                      <input type="text" id="literature_text" name="literature" class="project-form-input">
                       <button class="result_click">
                         <img src="./assets/images/vintage-sandclock.png"
                           srcset="./assets/images/vintage-sandclock@2x.png 2x,
@@ -1036,18 +1036,20 @@
                     <div class="col-md-6">
                       <span style="font-size: 12px">MI and 20+ years</span>
                     </div>
-                    <div class="col-md-2" style="margin-left: -10%">
-                      <input type="text" name="" class="project-form-input" name="">
-                    </div>
-                    <div class="col-md-2" style="margin-left: 4%">
-                      <input type="text" name="" class="project-form-input" name="">
-                    </div>
-                    <div class="col-md-2" style="margin-left: 4%">
-                      <div style="width: 157%">  
-                        <button class="setting_button"><img src="./assets/images/mask_group_12.png"
-                     srcset="./assets/images/mask_group_12@2x.png 2x,
-                             ./assets/images/mask_group_12@3x.png 3x"></button>
-                        <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
+                    <div>
+                      <div class="col-md-2" style="margin-left: -10%">
+                        <input type="text" name="" class="project-form-input" name="">
+                      </div>
+                      <div class="col-md-2" style="margin-left: 4%">
+                        <input type="text" name="" id="select_literature_1" class="project-form-input literature_class" name="">
+                      </div>
+                      <div class="col-md-2" style="margin-left: 4%">
+                        <div style="width: 157%">  
+                          <button class="setting_button"><img src="./assets/images/mask_group_12.png"
+                       srcset="./assets/images/mask_group_12@2x.png 2x,
+                               ./assets/images/mask_group_12@3x.png 3x"></button>
+                          <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1057,18 +1059,20 @@
                     <div class="col-md-6">
                       <span style="font-size: 12px">MI and 20+ years and on Statin</span>
                     </div>
-                    <div class="col-md-2" style="margin-left: -10%">
-                      <input type="text" name="" class="project-form-input" name="">
-                    </div>
-                    <div class="col-md-2" style="margin-left: 4%">
-                      <input type="text" name="" class="project-form-input" name="">
-                    </div>
-                    <div class="col-md-2" style="margin-left: 4%">
-                      <div style="width: 157%">
-                        <button class="setting_button"><img src="./assets/images/mask_group_12.png"
-                     srcset="./assets/images/mask_group_12@2x.png 2x,
-                             ./assets/images/mask_group_12@3x.png 3x"></button>
-                        <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
+                    <div>
+                      <div class="col-md-2" style="margin-left: -10%">
+                        <input type="text" name="" class="project-form-input" name="">
+                      </div>
+                      <div class="col-md-2" style="margin-left: 4%">
+                        <input type="text" name="" id="select_literature_2" class="project-form-input literature_class" name="">
+                      </div>
+                      <div class="col-md-2" style="margin-left: 4%">
+                        <div style="width: 157%">
+                          <button class="setting_button"><img src="./assets/images/mask_group_12.png"
+                       srcset="./assets/images/mask_group_12@2x.png 2x,
+                               ./assets/images/mask_group_12@3x.png 3x"></button>
+                          <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1383,10 +1387,10 @@
     </div>
     <div class="literatur_form_group">
       <span class="literatur-form-label">Literature Value</span>
-      <input type="text" name="" class="literatur_form_control form-control">
+      <input type="text" name="" id="literatur_value" class="literatur_form_control form-control">
     </div>
     <div class="modal-footer" style="border-top: 0px solid #e5e5e5 !important;text-align: center;">
-      <button type="button" class="btn btn-default literatur_done" data-dismiss="mod3" style="width: 84px;height: 32px;  border-radius: 6px;  background-color:#0063c3;">
+      <button type="button" class="btn btn-default literatur_done literature_selection_1" data-dismiss="mod3" style="width: 84px;height: 32px;  border-radius: 6px;  background-color:#0063c3;">
       <span style="width: 44px;height: 22px;  font-family: HelveticaNeue;  font-size: 16px;  font-weight: 400;  font-style: normal;  font-stretch: normal;  line-height: 1.28;  letter-spacing: normal;  text-align: left;  color: #ffffff;">Done</span></button>
     </div>
 
@@ -1394,28 +1398,28 @@
 </div>
 
 <div id="mod4" class="mod">
-  <div class="literature_model" style="height: 100% !important">
+  <div class="literature_model">
     <button type="button" class="literatur_close" data-dismiss="mod3">&times;</button>
       <p style="color:#0063c3;">Add Section</p>
       <hr>
       <div style="padding-left: 78%; padding-bottom: 3%">
-        <button class="add_section">add section</button>
+        <button class="add_section">Select Section</button>
       </div>
       <div class="literatur_form_group">
         <div class="literatur_add_section1 form-control" style="border-radius: 4px 0px 0px 4px !important;">Section Number</div>
-        <div class="literatur_add_section1 form-control" style="border-radius:0px 4px 4px 0px !important;">Section Number</div>
+        <div class="literatur_add_section1 form-control" style="border-radius:0px 4px 4px 0px !important;">Section Name</div>
       </div>
       <div class="literatur_form_group">
-        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="checkbox" name="" style="float: left;"> 01</div>
-        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">Overall</div>
+        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="radio" name="literature_select" value="Section 01" style="float: left;"> 01</div>
+        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">Section 01</div>
       </div>
       <div class="literatur_form_group">
 
-        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="checkbox" name="" style="float: left;"> 02</div>
-        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">Overall</div>
+        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="radio" name="literature_select" value='Section 02' style="float: left;"> 02</div>
+        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">Section 02</div>
       </div>
       <div class="modal-footer" style="border-top: 0px solid #e5e5e5 !important;text-align: center;">
-      <button type="button" class="btn btn-default literatur_done" data-dismiss="mod3" style="width: 84px;height: 32px;  border-radius: 6px;  background-color:#0063c3;">
+      <button type="button" class="btn btn-default literature_selection_2" data-dismiss="mod4" style="width: 84px;height: 32px;  border-radius: 6px;  background-color:#0063c3;">
       <span style="width: 44px;height: 22px;  font-family: HelveticaNeue;  font-size: 16px;  font-weight: 400;  font-style: normal;  font-stretch: normal;  line-height: 1.28;  letter-spacing: normal;  text-align: left;  color: #ffffff;">Done</span></button>
     </div>
     </div>
@@ -1583,6 +1587,20 @@ $(".literatur_done").click(function(){
 });
 
 $(".setting_button").click(function(){
+  //debugger;
+  window.id = $(this).parent().parent().parent().find('.literature_class').attr('id')
   $('#mod4').show();
+});
+
+$(".literature_selection_1").click(function(){
+  var val = $("#literatur_value").val();
+  $("#literature_text").val(val);
+});
+
+$(".literature_selection_2").click(function(){
+  $('#mod4').hide();
+  console.log(window.id)
+  var val = $("input[name='literature_select']:checked").val();
+  $("#"+window.id).val(val);
 })
 </script>
