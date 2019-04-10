@@ -128,7 +128,7 @@
       <div class="row">
         <div class="project-setup-header">
           <div class="col-md-2">
-            <div class="sub-title">NSCLC - PD1 Uptake</div>
+            <div class="sub-title"></div>
           </div>
           <div class="col-md-8 text-center">
             <div class="project-stpes">
@@ -1010,9 +1010,11 @@
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
                       <input type="text" name="" class="project-form-input" name="">
-                      <img src="./assets/images/vintage-sandclock.png"
-                     srcset="./assets/images/vintage-sandclock@2x.png 2x,
-                             ./assets/images/vintage-sandclock@3x.png 3x" class="result_click"></button>
+                      <button class="result_click">
+                        <img src="./assets/images/vintage-sandclock.png"
+                          srcset="./assets/images/vintage-sandclock@2x.png 2x,
+                             ./assets/images/vintage-sandclock@3x.png 3x" class="result_click1"/>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1042,7 +1044,7 @@
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
                       <div style="width: 157%">  
-                        <button><img src="./assets/images/mask_group_12.png"
+                        <button class="setting_button"><img src="./assets/images/mask_group_12.png"
                      srcset="./assets/images/mask_group_12@2x.png 2x,
                              ./assets/images/mask_group_12@3x.png 3x"></button>
                         <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
@@ -1063,7 +1065,7 @@
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
                       <div style="width: 157%">
-                        <button><img src="./assets/images/mask_group_12.png"
+                        <button class="setting_button"><img src="./assets/images/mask_group_12.png"
                      srcset="./assets/images/mask_group_12@2x.png 2x,
                              ./assets/images/mask_group_12@3x.png 3x"></button>
                         <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
@@ -1361,6 +1363,64 @@
   </div>
 </div>
 
+
+ <div id="mod3" class="mod">
+  <div class="literature_model">
+    <button type="button" class="literatur_close" data-dismiss="mod3">&times;</button>
+    <p style="color:#0063c3;">Enter Literature Value</p>
+    <hr>
+    <div class="literatur_form_group">
+      <span class="literatur-form-label">Name</span>
+      <input type="text" name="" class="literatur_form_control form-control">
+    </div>
+    <div class="literatur_form_group">
+      <span class="literatur-form-label">Reference Source</span>
+      <textarea name="" class="literatur_form_control form-control1"></textarea> 
+    </div>
+    <div class="literatur_form_group">
+      <span class="literatur-form-label">Page #</span>
+      <input type="text" name="" class="literatur_form_control form-control">
+    </div>
+    <div class="literatur_form_group">
+      <span class="literatur-form-label">Literature Value</span>
+      <input type="text" name="" class="literatur_form_control form-control">
+    </div>
+    <div class="modal-footer" style="border-top: 0px solid #e5e5e5 !important;text-align: center;">
+      <button type="button" class="btn btn-default literatur_done" data-dismiss="mod3" style="width: 84px;height: 32px;  border-radius: 6px;  background-color:#0063c3;">
+      <span style="width: 44px;height: 22px;  font-family: HelveticaNeue;  font-size: 16px;  font-weight: 400;  font-style: normal;  font-stretch: normal;  line-height: 1.28;  letter-spacing: normal;  text-align: left;  color: #ffffff;">Done</span></button>
+    </div>
+
+  </div>
+</div>
+
+<div id="mod4" class="mod">
+  <div class="literature_model" style="height: 100% !important">
+    <button type="button" class="literatur_close" data-dismiss="mod3">&times;</button>
+      <p style="color:#0063c3;">Add Section</p>
+      <hr>
+      <div style="padding-left: 78%; padding-bottom: 3%">
+        <button class="add_section">add section</button>
+      </div>
+      <div class="literatur_form_group">
+        <div class="literatur_add_section1 form-control" style="border-radius: 4px 0px 0px 4px !important;">Section Number</div>
+        <div class="literatur_add_section1 form-control" style="border-radius:0px 4px 4px 0px !important;">Section Number</div>
+      </div>
+      <div class="literatur_form_group">
+        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="checkbox" name="" style="float: left;"> 01</div>
+        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">Overall</div>
+      </div>
+      <div class="literatur_form_group">
+
+        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="checkbox" name="" style="float: left;"> 02</div>
+        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">Overall</div>
+      </div>
+      <div class="modal-footer" style="border-top: 0px solid #e5e5e5 !important;text-align: center;">
+      <button type="button" class="btn btn-default literatur_done" data-dismiss="mod3" style="width: 84px;height: 32px;  border-radius: 6px;  background-color:#0063c3;">
+      <span style="width: 44px;height: 22px;  font-family: HelveticaNeue;  font-size: 16px;  font-weight: 400;  font-style: normal;  font-stretch: normal;  line-height: 1.28;  letter-spacing: normal;  text-align: left;  color: #ffffff;">Done</span></button>
+    </div>
+    </div>
+   </div>
+
   </body>
 </html>
 
@@ -1509,4 +1569,20 @@ $("#DiagnosisEndDate").datepicker({
         autoclose: true,
         todayHighlight: true
 }).datepicker('update', new Date());
+
+$(".result_click").click(function(){
+  $('#mod3').show();
+});
+
+$(".literatur_close").click(function(){
+  $('.mod').hide();
+});
+
+$(".literatur_done").click(function(){
+  $(".mod").hide();
+});
+
+$(".setting_button").click(function(){
+  $('#mod4').show();
+})
 </script>

@@ -846,8 +846,92 @@ option {
 }
 
 .result_click{
-  width: 10%;
+  width: 22%;
   position: absolute;
-  margin-top: -19%;
-  margin-left: 88%;
+  margin-top: -23%;
+  margin-left: 109%;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.setting_button {
+  border-radius: 1px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.literature_model {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 8px 18px 18px 18px;
+  border: 1px solid #888;
+  width: 36%;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.literatur_close{
+  margin-top: -4px;
+  margin-right: -9px;
+  opacity: 1 !important;
+  color: #aaaaaa;
+  float: right;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background-color: white;
+}
+
+.literatur_form_group {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  padding-left: 6%;
+  font-size: 12px;
+  font-weight: 100 !important;
+}
+
+.literatur_form_control {
+  width: 62% !important;
+  float: right;
+  margin-left: 10%;
+}
+
+.literatur-form-label {
+  width: 30%;
+  font-family: HelveticaNeue;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #606060;
+}
+
+.form-control1{
+  height: 70%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add_section {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.literatur_add_section1 {
+  width: 62% !important;
+  margin-left: 0%;
+  background: lightblue !important;
+  text-align: center;
+}
+
+.literatur_add_section{
+  width: 62% !important;
+  margin-left: 0%;
+  text-align: center;
 }

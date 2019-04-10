@@ -48,12 +48,13 @@
            background-color: #f8f8f8;
            margin-top: 13px;
            margin-left: 15px;
+           font-size: 12px;
         }
       .MI---All {
        /*width: 52px;*/
        height: 19px;
        font-family: HelveticaNeue;
-       font-size: 16px;
+       font-size: 12px;
        font-weight: 500;
        font-style: normal;
        font-stretch: normal;
@@ -127,7 +128,7 @@
                        ./assets/images/mask-group-4@3x.png 3x"
                class="avatar-icon">
           <div class="avatar-info">
-            Vinay
+            Ajay Chandhok
           </div>
           <div class="pull-right">
             <a href="#">
@@ -142,7 +143,7 @@
       <div class="row">
         <div class="project-setup-header">
           <div class="col-md-2">
-            <div class="sub-title">Repatha Level 3 - US</div>
+            <div class="sub-title"></div>
           </div>
           <div class="col-md-8 text-center">
             <div class="project-stpes">
@@ -209,25 +210,25 @@
               </button> -->
             </div>
           </div>
-          <div class="col-md-8" id="main_content_block">
+          <div class="col-md-10" id="main_content_block">
             <!-- Drag Graph start -->
-            <div class="padd-a-15 white-bg" style="height: auto;">
+            <div class="padd-a-15 white-bg" style="height: auto;width: 102%">
               <p>Forecasting (Year on Year Prevalence Change)</p>
               <div class="row">
                 <div class="col-md-6" style="margin-left: -8%;"></div>
                 <div class="col-md-2" style="text-align: center;font-size: 12px;">
-                  <span>Prevalence Estimates</span>
+                  <span>Prevalence <br/> Estimates</span>
                 </div>
                 <div class="col-md-2" style="text-align: center;font-size: 12px;">
-                  <span>Prevalence Change / Year</span>
+                  <span>Prevalence <br/>Change / Year</span>
                 </div>
                 <div class="col-md-2" style="text-align: center;font-size: 12px;">
-                  <span>Prevalence Increase Year</span>
+                  <span>Prevalence <br/> Increase Year</span>
                 </div>
               </div>
 
               <div class="row" id="row1">
-                <div class="col-md-12" style="margin-top: 1%;margin-left: 1.5%;  margin-right: 1.5%;width: 782px;height: 48px;border: solid 1px #707070; background-color: #d8e7f0;">
+                <div class="col-md-12" style="margin-top: 1%;margin-left: 1.5%;  margin-right: 1.5%;width: 97.1%;height: 48px;border: solid 1px #707070; background-color: #d8e7f0;">
                   <select class="form-control" id="dropdown" style="width: 244.9px;height: 30px;border-radius: 4px;border: solid 1px #707070;background-color: #f5f5f5;margin-top: 8px;">
                     <option value="1" style="width: 244.9px;height: 30px;border-radius: 4px;border: solid 1px #707070;background-color: #f5f5f5;margin-top: 8px;color: #bcbcbc !important;font-family:HelveticaNeue;font-size: 14px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.21;  letter-spacing: normal;  text-align: left;">Select</option>
                     <option value="2" style="width: 245px;height: 28px;border: solid 1px #707070;background-color: #d7e7ef;color: #606060!important;font-family: HelveticaNeue;  font-size: 12px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.25; letter-spacing: normal;  text-align: left;  color: #606060;">Overall</option>
@@ -244,7 +245,7 @@
                 <img src="./assets/images/group-96.png"
                 srcset="./assets/images/group-96@2x.png 2x,
                 ./assets/images/group-96@3x.png 3x"
-                class="close-cohort" style="    margin-top: -56px;float: right;    margin-right: 2px;object-fit: fill;position: relative;">
+                class="close-cohort" style="    margin-top: -56px;float: right;    margin-right: 5px;object-fit: fill;position: relative;">
               </a>
               </div>
               
@@ -253,7 +254,9 @@
                 $(document).ready(function () {
                   $("#cancelrow1").click(function(){
                   $("#row1").hide();
-                  $('.events_body').hide();
+                  $('#display').hide();
+                  $('#addbtn').hide();
+                  //$('.events_body').hide();
                 });
                 });
               </script>
@@ -276,22 +279,22 @@
 
               <!-- <div id="content1">Hello</div> -->
 
-              <div id="display" class="events_body" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black;margin-left: -3px;margin-right: 0px;padding-bottom: 10px;width: 782px;">
+              <div id="display" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black;margin-left: 1px;margin-right: 0px;padding-bottom: 10px;width: 100%;">
                 <div class="row" id="small1">
-                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 750px;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
+                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
                     <div class="MI---All col-md-3" style="">MI-AII</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 130px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 90px;" name="">
+                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
                     </div>
                     <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 30px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
                     </div>
                   </div>
                   <a href="#" id="cancel1">
@@ -306,20 +309,20 @@
                 </div>
 
                 <div class="row" id="small2">
-                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 750px;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
+                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
                     <div class="MI---All col-md-3">UA-AII</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 130px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 90px;" name="">
+                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
                     </div>
                     <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 30px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
                     </div>
                   </div>
                   <a href="#" id="cancel2">
@@ -333,20 +336,20 @@
                   </div>
                 </div>
                 <div class="row" id="small3">
-                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 750px;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
+                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
                     <div class="MI---All col-md-3">IS-AII</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 130px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 90px;" name="">
+                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
                     </div>
                     <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 30px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
                     </div>
                   </div>
                   <a href="#" id="cancel3">
@@ -360,20 +363,20 @@
                   </div>
                 </div>
                 <div class="row" id="sub">
-                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 750px;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
+                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
                     <div class="MI---All col-md-3">IS-AII</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 130px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 90px;" name="">
+                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
                     </div>
                     <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 30px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
                     </div>
                   </div>
                   <a href="#" id="cancel4">
@@ -420,7 +423,7 @@
 
               <div id="add">
                 <div class="row">
-                <div class="col-md-12" style="margin-top: 1%;margin-left: 1.5%;  margin-right: 1.5%;width: 782px;height: 48px;border: solid 1px #707070; background-color: #d8e7f0;">
+                <div class="col-md-12" style="margin-top: 1%;margin-left: 1.5%;  margin-right: 1.5%;width: 97.1%;height: 48px;border: solid 1px #707070; background-color: #d8e7f0;">
                   <select class="form-control" id="dropdown2" style="width: 244.9px;height: 30px;border-radius: 4px;border: solid 1px #707070;background-color: #f5f5f5;margin-top: 8px;">
                     <option value="1" style="width: 244.9px;height: 30px;border-radius: 4px;border: solid 1px #707070;background-color: #f5f5f5;margin-top: 8px;color: #bcbcbc !important;font-family:HelveticaNeue;font-size: 14px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.21;  letter-spacing: normal;  text-align: left;">Select</option>
                     <option value="2" style="width: 245px;height: 28px;border: solid 1px #707070;background-color: #d7e7ef;color: #606060!important;font-family: HelveticaNeue;  font-size: 12px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.25; letter-spacing: normal;  text-align: left;  color: #606060;">Overall</option>
@@ -467,22 +470,22 @@
 
               <!-- <div id="content1">Hello</div> -->
 
-              <div id="display2" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black;margin-left: -3px;margin-right: 0px;padding-bottom: 10px;width: 782px;">
+              <div id="display2" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black;margin-left: 1px;margin-right: 0px;padding-bottom: 10px;width: 100%;">
                 <div class="row" id="small21">
-                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 750px;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
+                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
                     <div class="MI---All col-md-3" style="">MI-AII</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 130px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 90px;" name="">
+                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
                     </div>
                     <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 30px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
                     </div>
                   </div>
                   <a href="#" id="cancel21">
@@ -497,20 +500,20 @@
                 </div>
 
                 <div class="row" id="small22">
-                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 750px;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
+                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
                     <div class="MI---All col-md-3">UA-AII</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 130px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 90px;" name="">
+                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
                     </div>
                     <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 30px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
                     </div>
                   </div>
                   <a href="#" id="cancel22">
@@ -524,20 +527,20 @@
                   </div>
                 </div>
                 <div class="row" id="small23">
-                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 750px;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
+                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
                     <div class="MI---All col-md-3">IS-AII</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 130px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 90px;" name="">
+                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
                     </div>
                     <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 30px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
                     </div>
                   </div>
                   <a href="#" id="cancel23">
@@ -551,20 +554,20 @@
                   </div>
                 </div>
                 <div class="row" id="sub2">
-                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 750px;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
+                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
                     <div class="MI---All col-md-3">IS-AII</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 130px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 90px;" name="">
+                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
                     </div>
                     <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 30px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
                     </div>
                   </div>
                   <a href="#" id="cancel24">
@@ -629,70 +632,8 @@
               <button class="Rectangle-140" id="addbtn" style="height: 33px;width: 135px;padding-top: 0px;padding-left: 5px;margin-left: 13px;padding-left: 8px;">
                  Add Cohort</button>
 
-              <!-- <div id="demo" style="margin-top: 42px;
-    margin-left: -12px;">
-              <div class="Rectangle-129">
-                <div class="Rectangle-140">
-                  <div class="row" style="margin-top: 6px;">
-                    <div class="MI---All col-lg-3">MI-AII</div>
-                    <div class="Rectangle-28 col-lg-3" style="margin-left: 131px;width: 125px;"></div>
-                    <div class="Rectangle-28 col-lg-2" style="width: 110px;
-    margin-left: 20px;"></div>
-                    <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
-                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
-                    </div>
-                    <div class="Rectangle-28 col-lg-3" style="width: 125px;
-    margin-left: 11px;"></div>
-                  </div>
-                </div>
-                <a href="#">
-                <img src="./assets/images/group-96.png"
-                srcset="./assets/images/group-96@2x.png 2x,
-                ./assets/images/group-96@3x.png 3x"
-                class="close-cohort" style="margin-top: -50px;float: right;">
-              </a>
+             
 
-                <div class="Rectangle-140">
-                  <div class="row" style="margin-top: 6px;">
-                    <div class="MI---All col-lg-3">UA-AII</div>
-                    <div class="Rectangle-28 col-lg-3" style="margin-left: 131px;width: 125px;"></div>
-                    <div class="Rectangle-28 col-lg-2" style="width: 110px;
-    margin-left: 20px;"></div>
-                    <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
-                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
-                    </div>
-                    <div class="Rectangle-28 col-lg-3" style="width: 125px;
-    margin-left: 11px;"></div>
-                  </div>
-                </div>
-                <a href="#">
-                <img src="./assets/images/group-96.png"
-                srcset="./assets/images/group-96@2x.png 2x,
-                ./assets/images/group-96@3x.png 3x"
-                class="close-cohort" style="margin-top: -50px;float: right;">
-              </a>
-
-                <div class="Rectangle-140">
-                  <div class="row" style="margin-top: 6px;">
-                    <div class="MI---All col-lg-3">IS-AII</div>
-                    <div class="Rectangle-28 col-lg-3" style="margin-left: 131px;width: 125px;"></div>
-                    <div class="Rectangle-28 col-lg-2" style="width: 110px;
-    margin-left: 20px;"></div>
-                    <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
-                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
-                    </div>
-                    <div class="Rectangle-28 col-lg-3" style="width: 125px;
-    margin-left: 11px;"></div>
-                  </div>
-                </div>
-                <a href="#">
-                <img src="./assets/images/group-96.png"
-                srcset="./assets/images/group-96@2x.png 2x,
-                ./assets/images/group-96@3x.png 3x"
-                class="close-cohort" style="margin-top: -50px;float: right;">
-              </a>
-            </div>
-          </div> -->
 
 
 
@@ -702,115 +643,12 @@
               </div>
 
             </div>
-          <div class="col-md-2 white-bg cohorts-auto-height">
-            <div class="sub-title-bg marg-top-6">
-              <div class="sub-title-cohorts text-center">Cohort Constructors</div>
-            </div>
-            <!-- Clinical parameters -->
-            <div class="panel-group marg-top-15" id="accordion" role="tablist" aria-multiselectable="true">
-              <div class="panel panel-default">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#ClinicalParameters" aria-expanded="true" aria-controls="ClinicalParameters">
-                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingOne">
-                      <h4 class="panel-title">Clinical Parameters</h4>
-                  </div>
-                </a>
-                <div id="ClinicalParameters" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                  <div class="panel-body">
-                    <!-- <button type="button" class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-inputs="1" data-nb-outputs="1" onclick="getCohortConstructElements('Clinical Parameters', 'Diagnosis', 'showDiagnosisPopover')" id="showDiagnosisPopover">
-                      <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
-                    </button> -->
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2">
-                      <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" onclick="getCohortConstructElements('Clinical Parameters', 'Procedures', 'showProceduresPopover')" id="showProceduresPopover">
-                      <div class="cohort-constuctor-elem-list-text">Procedures</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showTreatmentPopover">
-                      <div class="cohort-constuctor-elem-list-text">Treatment</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showClinicalNotesPopover">
-                      <div class="cohort-constuctor-elem-list-text">Clinical Notes</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showDiseaseStatePopover">
-                      <div class="cohort-constuctor-elem-list-text">Disease State</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Clinical Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showVitalsPopover">
-                      <div class="cohort-constuctor-elem-list-text">Vitals</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Demographics -->
-              <div class="panel panel-default">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Demographics" aria-expanded="false" aria-controls="Demographics">
-                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingDemographics">
-                      <h4 class="panel-title">Demographics</h4>
-                  </div>
-                </a>
-                <div id="Demographics" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDemographics">
-                  <div class="panel-body">
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showCurrentAgePopover">
-                      <div class="cohort-constuctor-elem-list-text">Current Age</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showGenderPopover">
-                      <div class="cohort-constuctor-elem-list-text">Gender</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showRacePopover">
-                      <div class="cohort-constuctor-elem-list-text">Race</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Demographics" data-nb-inputs="2" data-nb-outputs="2" id="showEthnicityPopover">
-                      <div class="cohort-constuctor-elem-list-text">Ethnicity</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Constraints -->
-              <div class="panel panel-default">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Constraints" aria-expanded="false" aria-controls="Constraints">
-                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingConstraints">
-                      <h4 class="panel-title">Constraints</h4>
-                  </div>
-                </a>
-                <div id="Constraints" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingConstraints">
-                  <div class="panel-body">
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constraints" data-nb-inputs="2" data-nb-outputs="2" id="showRelatedEventsPopover">
-                      <div class="cohort-constuctor-elem-list-text">Related Events</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Miscellaneous -->
-              <div class="panel panel-default">
-                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#Miscellaneous" aria-expanded="false" aria-controls="Miscellaneous">
-                  <div class="cohort-constuctor-elem-title panel-heading-" role="tab" id="headingMiscellaneous">
-                      <h4 class="panel-title">Miscellaneous</h4>
-                  </div>
-                </a>
-                <div id="Miscellaneous" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingMiscellaneous">
-                  <div class="panel-body">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
   </body>
 </html>
-<script type="text/javascript">
-$(document).ready(function(){
-    $("select.options").change(function(){
-        var selected = $(this).children("option:selected").val();
-        //alert("You have selected the country - " + selected);
-        if (selected=="#demo") {
-          // $("selected").click(function(){
-            $(selected).toggle();
-          //});
-        }
-    });
-});
 
-</script>
 
 <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
