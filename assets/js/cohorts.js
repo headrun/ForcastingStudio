@@ -2,6 +2,7 @@ var getCohortConstructElements, updateCohortEleAndTitle, updateCohortVersionData
 var selCohortCards = {};
 
 $(document).ready(function(){
+  window.sub_cohort = "1"
   window.cohort = "#showListOfCohortsCards";
   initialFunction = function () {
     var mainContentBlock = $('#main_content_block').height();
@@ -317,6 +318,7 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '#subCohorts_2', function(){
+    window.sub_cohort = 2
     $('.sc_two_one').css({'display': 'none'});
     $('.sc_two_page').css({'display': 'block'});
     dynamic_flow_chart('#showListOfCohortsCards1');
@@ -324,6 +326,7 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '#subCohorts_1', function(){
+    window.sub_cohort = 1
     $('.sc_two_page').css({'display': 'none'});
     $('.sc_two_one').css({'display': 'block'});
     dynamic_flow_chart('#showListOfCohortsCards');
@@ -395,7 +398,6 @@ $(document).ready(function(){
 
 function show_display(val, content_text='') {
   $('.cohort-display').hide()
-
   if(val=='Procedures') {
     updateCohortEleAndTitle('Constructor Parameters', 'Procedures',);
     $('#Procedures').show();
@@ -423,7 +425,8 @@ function show_display(val, content_text='') {
   }
   else if(val=='result') {
     updateCohortEleAndTitle('Myocardial Infraction', 'Result',);
-    $('#result').show()
+    $('#result').show();
+    set_result_value();
   }
 
   else if(val=='Disease State') {
@@ -473,20 +476,36 @@ $(document).on('click', '.sub-cohort-run-btn', function() {
 function setCohortValue() {
   val = $.trim($('.flowchart-operator-title').text())
   val1 = val.split('\n')[0];
-  $(window.cohort).find('.flowchart-operator-title').each(function(){
-    if ($(this).text().trim() === 'Diagnosis'){
-      $(this).parent().find('.footer_text').html('36,890');
-
-    } else if ($(this).text().trim() === 'Active Enrollment'){
-      $(this).parent().find('.footer_text').html('11,232');
-    } else if ($(this).text().trim() === 'Treatment'){
-      $(this).parent().find('.footer_text').html('18,639');
-    } else if ($(this).text().trim() === 'Disease State'){
-      $(this).parent().find('.footer_text').html('23,167');
-    } else {
-      $(this).parent().find('.footer_text').html('000');
-    }
-  })
+  if(window.sub_cohort =="1") {
+    $(window.cohort).find('.flowchart-operator-title').each(function(){
+      if ($(this).text().trim() === 'Diagnosis'){
+        $(this).parent().find('.footer_text').html('423,547');
+      } else if ($(this).text().trim() === 'Treatment'){
+        $(this).parent().find('.footer_text').html('2,741,948');
+      } else if ($(this).text().trim() === 'Related Events'){
+        $(this).parent().find('.footer_text').html('23,167');
+      } else if ($(this).text().trim() === 'Age') {
+        $(this).parent().find('.footer_text').html('315,183');
+      } else {
+        $(this).parent().find('.footer_text').html('000');
+      }
+    })
+  } else {
+    $(window.cohort).find('.flowchart-operator-title').each(function(){
+      if ($(this).text().trim() === 'Diagnosis'){
+        $(this).parent().find('.footer_text').html('36,551');
+      } else if ($(this).text().trim() === 'Treatment'){
+        $(this).parent().find('.footer_text').html('2,741,948');
+      } else if ($(this).text().trim() === 'Related Events'){
+        $(this).parent().find('.footer_text').html('16,689');
+      } else if ($(this).text().trim() === 'Age') {
+        $(this).parent().find('.footer_text').html('31,764');
+      } else {
+        $(this).parent().find('.footer_text').html('000');
+      }
+    })
+  }
+  
 }
 
 $(document).on('click','#rwd', function(){
@@ -609,4 +628,39 @@ function dynamic_flow_chart(val) {
           }
       }
   });
+}
+
+function set_result_value() {
+  if(window.sub_cohort=="1"){
+    $('#result_rwd_1').val('423,547');
+    $('#result_literature_1').val('7,600,000');
+    $('#result_rwd_2').val('315,183');
+    $('#result_literature_2').val('5,655,548');
+    var html = "<select>"+
+                  "<option>MI All</option>"+
+                  "<option>MI and 20+ years</option>"+
+                  "<option>Statin treated</option>"+
+                  "<option>MI and 20+ years and on Statin</option>"+
+                "</select>";
+    $("#result_select").html(html);
+
+    $("#seletion_name_1").html("MI and 20+ years");
+    $("#seletion_name_2").html("MI and 20+ years and on Statin");
+  } else {
+    updateCohortEleAndTitle('Unstable Angina', 'Result',);
+    $('#result_rwd_1').val('31,764');
+    $('#result_literature_1').val('285,991');
+    $("#result_rwd_2").val('16,689');
+    $('#result_literature_2').val('150,219');
+
+    var html = "<select>"+
+                  "<option>UA All</option>"+
+                  "<option>UA and 20+ years</option>"+
+                  "<option>UA and 20+ years and on statin</option>"+
+                "</select>";
+    $("#result_select").html(html);
+
+    $("#seletion_name_1").html("UA and 20+years");
+    $("#seletion_name_2").html("UA and 20+years and on statin");
+  }
 }

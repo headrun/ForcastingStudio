@@ -869,7 +869,7 @@
                   <input type="text" id="age_desc" name="description" class="project-form-control form-control" value="">
                 </div>
                 <div class="project-form-group">
-                  <span class="project-form-label">Age</span>
+                  <span class="project-form-label">Age @ event</span>
                   <div class="col-md-10">
                       <select class="project-form-input" name="" style="margin-left: 1%">
                         <option value="">Select</option>
@@ -996,10 +996,10 @@
                       <span ></span>
                     </div>
                     <div class="col-md-6">
-                      <span style="font-size: 12px">Based on Calculating proportional estimates</span>
+                      <span style="font-size: 12px">Base for calculating proportional estimates</span>
                     </div>
                     <div class="col-md-2" style="margin-left: -10%">
-                      <select class="project-form-input" name="">
+                      <select id="result_select" class="project-form-input" name="">
                         <option value="">Select</option>
                         <option>MI All</option>
                         <option>MI and 20+ years</option>
@@ -1008,7 +1008,7 @@
                       </select>
                     </div>
                     <div class="col-md-2" style="margin-left: 4%">
-                      <input type="text" id="literature_text" name="literature" class="project-form-input">
+                      <input type="text" class="center_align project-form-input" id="literature_text" name="literature" class="project-form-input">
                       <button class="result_click">
                         <img src="./assets/images/vintage-sandclock.png"
                           srcset="./assets/images/vintage-sandclock@2x.png 2x,
@@ -1026,28 +1026,28 @@
                     <div class="col-md-2" style="font-size: 12px; margin-left: -3%;">
                       <span >RWD</span>
                     </div>
-                    <div class="col-md-2" style="font-size: 12px">
-                      <span >Literature</span>
+                    <div class="col-md-2" style="font-size: 12px; text-align: center;">
+                      <span >Literature <br/> Estimation</span>
                     </div>
                     <div class="col-md-2" style="font-size: 12px; padding-left: 10%;">
                       <span >Section</span>
                     </div>
                     <div class="col-md-6">
-                      <span style="font-size: 12px">MI and 20+ years</span>
+                      <span style="font-size: 12px" id="seletion_name_1">MI and 20+ years</span>
                     </div>
                     <div>
                       <div class="col-md-2" style="margin-left: -10%">
-                        <input type="text" name="" class="project-form-input" name="">
+                        <input type="text" class="center_align project-form-input" id="result_rwd_1" name="" class="project-form-input" name="">
                       </div>
                       <div class="col-md-2" style="margin-left: 4%">
-                        <input type="text" name="" id="select_literature_1" class="project-form-input literature_class" name="">
+                        <input type="text" class="center_align project-form-input" id="result_literature_1" name="" class="project-form-input literature_class" name="">
                       </div>
                       <div class="col-md-2" style="margin-left: 4%">
                         <div style="width: 157%">  
                           <button class="setting_button"><img src="./assets/images/mask_group_12.png"
                        srcset="./assets/images/mask_group_12@2x.png 2x,
                                ./assets/images/mask_group_12@3x.png 3x"></button>
-                          <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
+                          <input type="text" class="section_value center_align" id="section_id_2" value="" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
                         </div>
                       </div>
                     </div>
@@ -1056,21 +1056,21 @@
                 <div style="padding: 2% 1% 5% 1%;">
                   <div style="padding-bottom: 2%">
                     <div class="col-md-6">
-                      <span style="font-size: 12px">MI and 20+ years and on Statin</span>
+                      <span style="font-size: 12px" id="seletion_name_2">MI and 20+ years and on Statin</span>
                     </div>
                     <div>
                       <div class="col-md-2" style="margin-left: -10%">
-                        <input type="text" name="" class="project-form-input" name="">
+                        <input type="text" class="center_align project-form-input" id='result_rwd_2' name="" class="project-form-input" name="">
                       </div>
                       <div class="col-md-2" style="margin-left: 4%">
-                        <input type="text" name="" id="select_literature_2" class="project-form-input literature_class" name="">
+                        <input type="text" class="center_align project-form-input" id="result_literature_2" name="" class="project-form-input literature_class" name="">
                       </div>
                       <div class="col-md-2" style="margin-left: 4%">
                         <div style="width: 157%">
                           <button class="setting_button"><img src="./assets/images/mask_group_12.png"
                        srcset="./assets/images/mask_group_12@2x.png 2x,
                                ./assets/images/mask_group_12@3x.png 3x"></button>
-                          <input type="text" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
+                          <input type="text" class="section_value center_align" id="section_id_1" value="" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
                         </div>
                       </div>
                     </div>
@@ -1115,17 +1115,18 @@
                     <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle marg-top-10" data-nb-constructor-header="Constructor Parameters" data-nb-inputs="2" data-nb-outputs="2">
                       <div class="cohort-constuctor-elem-list-text">Diagnosis</div>
                     </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Constructor Parameters" data-nb-inputs="2" data-nb-outputs="2" onclick="getCohortConstructElements('Constructor Parameters', 'Procedures', 'showProceduresPopover')" id="showProceduresPopover">
-                      <div class="cohort-constuctor-elem-list-text">Procedures</div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Constructor Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showDiseaseStatePopover">
+                      <div class="cohort-constuctor-elem-list-text">Disease State</div>
                     </div>
                     <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Constructor Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showTreatmentPopover">
                       <div class="cohort-constuctor-elem-list-text">Treatment</div>
                     </div>
+                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Constructor Parameters" data-nb-inputs="2" data-nb-outputs="2" onclick="getCohortConstructElements('Constructor Parameters', 'Procedures', 'showProceduresPopover')" id="showProceduresPopover">
+                      <div class="cohort-constuctor-elem-list-text">Procedures</div>
+                    </div>
+                    
                     <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Constructor Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showClinicalNotesPopover">
                       <div class="cohort-constuctor-elem-list-text">Clinical Notes</div>
-                    </div>
-                    <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Constructor Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showDiseaseStatePopover">
-                      <div class="cohort-constuctor-elem-list-text">Disease State</div>
                     </div>
                     <div class="cohort-constuctor-elem-list-btn draggable_operator ui-draggable ui-draggable-handle" data-nb-constructor-header="Constructor Parameters" data-nb-inputs="2" data-nb-outputs="2" id="showVitalsPopover">
                       <div class="cohort-constuctor-elem-list-text">Vitals</div>
@@ -1381,13 +1382,13 @@
         <div class="literatur_add_section1 form-control" style="border-radius:0px 4px 4px 0px !important;">Section Name</div>
       </div>
       <div class="literatur_form_group">
-        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="radio" name="literature_select" value="Section 01" style="float: left;"> 01</div>
-        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">Section 01</div>
+        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="radio" name="literature_select" value="Age > 20" style="float: left;"> 01</div>
+        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">Age > 20</div>
       </div>
       <div class="literatur_form_group">
 
-        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="radio" name="literature_select" value='Section 02' style="float: left;"> 02</div>
-        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">Section 02</div>
+        <div class="literatur_add_section form-control" style="border-radius: 4px 0px 0px 4px !important;"><input type="radio" name="literature_select" value='On Statin' style="float: left;"> 02</div>
+        <div class="literatur_add_section form-control" style="border-radius:0px 4px 4px 0px !important;">On Statin</div>
       </div>
       <div class="modal-footer" style="border-top: 0px solid #e5e5e5 !important;text-align: center;">
       <button type="button" class="btn btn-default literature_selection_2" data-dismiss="mod4" style="width: 84px;height: 32px;  border-radius: 6px;  background-color:#0063c3;">
@@ -1559,7 +1560,7 @@ $(".literatur_done").click(function(){
 
 $(".setting_button").click(function(){
   //debugger;
-  window.id = $(this).parent().parent().parent().find('.literature_class').attr('id')
+  window.id = $(this).parent().find(".section_value").attr("id")
   $('#mod4').show();
 });
 

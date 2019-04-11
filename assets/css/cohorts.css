@@ -937,3 +937,7 @@ option {
   margin-left: 0%;
   text-align: center;
 }
+
+.center_align {
+  text-align: center;
+}
