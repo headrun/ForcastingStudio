@@ -40,7 +40,7 @@
            background-color: #ffffff;
            margin-left: 11px;
         }
-      .Rectangle-140 {
+        .Rectangle-140 {
           width: 732px;
            height: 44px;
            border-radius: 4px;
@@ -50,7 +50,7 @@
            margin-left: 15px;
            font-size: 12px;
         }
-      .MI---All {
+        .MI---All {
        /*width: 52px;*/
        height: 19px;
        font-family: HelveticaNeue;
@@ -78,6 +78,40 @@
        object-fit: contain;
       }
 
+      input[type='text'] {
+        text-align: center;
+      }
+
+      .mod {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+
+      .literatur_form_control{
+        margin-left: -2% !important;
+      }
+
+      .year_range{
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 33%;
+        margin-left: -2%;
+      }
+
+      .years_input {
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        width: 19%;
+      }
       </style>
 
   </head>
@@ -233,10 +267,10 @@
                     <option value="1" style="width: 244.9px;height: 30px;border-radius: 4px;border: solid 1px #707070;background-color: #f5f5f5;margin-top: 8px;color: #bcbcbc !important;font-family:HelveticaNeue;font-size: 14px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.21;  letter-spacing: normal;  text-align: left;">Select</option>
                     <option value="2" style="width: 245px;height: 28px;border: solid 1px #707070;background-color: #d7e7ef;color: #606060!important;font-family: HelveticaNeue;  font-size: 12px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.25; letter-spacing: normal;  text-align: left;  color: #606060;">Overall</option>
                     <option value="3" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with CV events</option>
-                    <option value="4" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with out CV events</option>
+                    <!-- <option value="4" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with out CV events</option> -->
                     <option value="5" style="width: 245px;height: 28px;border: solid 1px #707070;background-color: #d7e7ef;color: #606060!important;font-family: HelveticaNeue;  font-size: 12px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.25; letter-spacing: normal;  text-align: left;">On Statins</option>
                     <option value="6" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with CV events</option>
-                    <option value="7" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with out CV events</option>
+                    <!-- <option value="7" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with out CV events</option> -->
                     
                   </select>
                   
@@ -249,52 +283,26 @@
               </a>
               </div>
               
-
-              <script type="text/javascript">
-                $(document).ready(function () {
-                  $("#cancelrow1").click(function(){
-                  $("#row1").hide();
-                  $('#display').hide();
-                  $('#addbtn').hide();
-                  //$('.events_body').hide();
-                });
-                });
-              </script>
-
-
-              <script type="text/javascript">
-                $(document).ready(function () {
-                  $('#display').hide();
-                  $('#addbtn').hide();
-                  $('#dropdown').change(function () {
-                    var selectedOption = $('#dropdown option:selected');
-                    if (selectedOption.val()=="6") {
-                      $('#display').show();
-                      $('#addbtn').show();
-                    }
-                    
-                  });
-                });
-              </script>
-
               <!-- <div id="content1">Hello</div> -->
 
               <div id="display" style="border-left: 1px solid black;border-right: 1px solid black;border-bottom: 1px solid black;margin-left: 1px;margin-right: 0px;padding-bottom: 10px;width: 100%;">
                 <div class="row" id="small1">
                   <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
-                    <div class="MI---All col-md-3" style="">MI-AII</div>
+                    <div class="MI---All col-md-3" style="">MI and 20+ years and on Statin</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
+                      <input type="text" id = "prevalence_value_1" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="" placeholder="5,655,548">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
-                    </div>
-                    <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
-                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
+                      <div>
+                        <input type="text" id="prevalence_year" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="1.06">
+                      </div>
+                      <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
+                        <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
+                      </div>
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
+                      <input type="text" id="increase_year" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="59,948" placeholder="">
                     </div>
                   </div>
                   <a href="#" id="cancel1">
@@ -311,18 +319,20 @@
                 <div class="row" id="small2">
                   <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
-                    <div class="MI---All col-md-3">UA-AII</div>
+                    <div class="MI---All col-md-3">UA and 20+ years and on Statin</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
+                      <input type="text" id="prevalence_value_2" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="" placeholder="150,219">
                     </div>
                     <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
-                    </div>
-                    <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
-                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
-                    </div>
+                      <div>
+                        <input type="text" id="prevalence_year" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="-6.67">
+                      </div>
+                      <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
+                        <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
+                      </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
+                      <input type="text" id="increase_year" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="-10,019" placeholder="">
+                    </div>
                     </div>
                   </div>
                   <a href="#" id="cancel2">
@@ -335,7 +345,7 @@
                   
                   </div>
                 </div>
-                <div class="row" id="small3">
+                <!-- <div class="row" id="small3">
                   <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
                     <div class="MI---All col-md-3">IS-AII</div>
@@ -361,11 +371,11 @@
 
                   
                   </div>
-                </div>
+                </div> -->
                 <div class="row" id="sub">
                   <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
-                    <div class="MI---All col-md-3">IS-AII</div>
+                    <div class="MI---All col-md-3"><input type="" class="form-control" name=""></div>
                     <div>
                       <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
                     </div>
@@ -428,10 +438,10 @@
                     <option value="1" style="width: 244.9px;height: 30px;border-radius: 4px;border: solid 1px #707070;background-color: #f5f5f5;margin-top: 8px;color: #bcbcbc !important;font-family:HelveticaNeue;font-size: 14px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.21;  letter-spacing: normal;  text-align: left;">Select</option>
                     <option value="2" style="width: 245px;height: 28px;border: solid 1px #707070;background-color: #d7e7ef;color: #606060!important;font-family: HelveticaNeue;  font-size: 12px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.25; letter-spacing: normal;  text-align: left;  color: #606060;">Overall</option>
                     <option value="3" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with CV events</option>
-                    <option value="4" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with out CV events</option>
+                    <!-- <option value="4" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with out CV events</option> -->
                     <option value="5" style="width: 245px;height: 28px;border: solid 1px #707070;background-color: #d7e7ef;color: #606060!important;font-family: HelveticaNeue;  font-size: 12px;  font-weight: bold;  font-style: normal;  font-stretch: normal;  line-height: 1.25; letter-spacing: normal;  text-align: left;">On Statins</option>
                     <option value="6" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with CV events</option>
-                    <option value="7" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with out CV events</option>
+                    <!-- <option value="7" style="width: 244.9px;  height: 140px;  border: solid 1px #707070;  background-color: #c8def4;font-family: HelveticaNeue;  font-size: 10px;  font-weight: 500;  font-style: normal;  font-stretch: normal;  line-height: 1.2;letter-spacing: normal;  text-align: left;  color: #606060;">CHD with out CV events</option> -->
                     
                   </select>
                   
@@ -474,9 +484,10 @@
                 <div class="row" id="small21">
                   <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
-                    <div class="MI---All col-md-3" style="">MI-AII</div>
+                    <div class="MI---All col-md-3" style="">MI and 20+ years
+                     and on Statin</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="" placeholder="5,655,548">
                     </div>
                     <div>
                       <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
@@ -485,7 +496,7 @@
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="" placeholder="59,948">
                     </div>
                   </div>
                   <a href="#" id="cancel21">
@@ -502,9 +513,9 @@
                 <div class="row" id="small22">
                   <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
                     <div class="row" style="margin-top: 6px;">
-                    <div class="MI---All col-md-3">UA-AII</div>
+                    <div class="MI---All col-md-3">UA and 20+ years and on Statin</div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="" placeholder="150,219">
                     </div>
                     <div>
                       <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
@@ -513,7 +524,7 @@
                       <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
                     </div>
                     <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
+                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="" placeholder="-10,019">
                     </div>
                   </div>
                   <a href="#" id="cancel22">
@@ -522,35 +533,6 @@
                 ./assets/images/group-96@3x.png 3x"
                 class="close-cohort" style="margin-top: -44px;float: right;margin-right: -24px;">
               </a>
-
-                  
-                  </div>
-                </div>
-                <div class="row" id="small23">
-                  <div class="col-md-12" style="margin-top: 1%;margin-left: 30px;  margin-right: 1.5%;width: 94%;height: 48px;border: solid 1px #707070; background-color: #f8f8f8;border-radius: 4px;">
-                    <div class="row" style="margin-top: 6px;">
-                    <div class="MI---All col-md-3">IS-AII</div>
-                    <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 180px;width: 150px;" name="">
-                    </div>
-                    <div>
-                      <input type="text" class="col-md-2 Rectangle-28" style="margin-left: 30px;width: 120px;" name="">
-                    </div>
-                    <div class="col-lg-1 vintage-sandclock" style="margin-left: -11px;">
-                      <img src="https://cdn.zeplin.io/5c8f47891f1c5c24dd72a96b/assets/9BA09965-9F1D-4391-B9BA-C52596B10D8E.svg" class="vintage-sandclock">
-                    </div>
-                    <div>
-                      <input type="text" class="col-md-3 Rectangle-28" style="margin-left: 22px;width: 150px;" name="">
-                    </div>
-                  </div>
-                  <a href="#" id="cancel23">
-                <img src="./assets/images/group-96.png"
-                srcset="./assets/images/group-96@2x.png 2x,
-                ./assets/images/group-96@3x.png 3x"
-                class="close-cohort" style="margin-top: -44px;float: right;margin-right: -24px;">
-              </a>
-
-                  
                   </div>
                 </div>
                 <div class="row" id="sub2">
@@ -582,64 +564,11 @@
                 </div>
                 <button class="Rectangle-140" id="sub-btn2" style="height: 33px;width: 135px;padding-top: 0px;padding-left: 5px;">
                 Add Sub-Cohort              
-              </button>
-              <script type="text/javascript">
-                $(document).ready(function () {
-                $("#sub2").hide();
-                $("#sub-btn2").click(function(){
-                  $("#sub2").show();
-                });
-              });
-              </script>
-              <script type="text/javascript">
-                $(document).ready(function () {
-                $("#cancel21").click(function(){
-                  $("#small21").hide();
-                });
-                $("#cancel22").click(function(){
-                  $("#small22").hide();
-                });
-                $("#cancel23").click(function(){
-                  $("#small23").hide();
-                });
-                $("#cancel24").click(function(){
-                  $("#sub2").hide();
-                });
-              });
-              </script>
-
-                
+              </button>  
               </div>
-              <script type="text/javascript">
-                $(document).ready(function () {
-                  $("#add").hide();
-                  $("#addbtn").click(function(){
-                    $("#add").show();
-                  });
-                  });
-
-
-              </script>
-
-
-
               </div>
-
-
-
-
-
               <button class="Rectangle-140" id="addbtn" style="height: 33px;width: 135px;padding-top: 0px;padding-left: 5px;margin-left: 13px;padding-left: 8px;">
                  Add Cohort</button>
-
-             
-
-
-
-
-
-
-
               </div>
 
             </div>
@@ -647,8 +576,117 @@
         </div>
       </div>
     </div>
+
+    <div id="mod3" class="mod">
+      <div class="literature_model" style="width: 50% !important; height: 42% !important">
+        <button type="button" class="literatur_close" data-dismiss="mod3">&times;</button>
+        <p style="color:#0063c3;">Enter Literature Value</p>
+        <hr>
+        <div class="literatur_form_group">
+          <span class="literatur-form-label">Reference</span>
+          <input type="text" name="" class="literatur_form_control form-control">
+        </div>
+        <div class="literatur_form_group">
+          <span class="literatur-form-label">Year Range</span>
+          <input type="text" name="" class="year_range form-control">
+          <span style="margin-left: 3%; margin-right: 7px;">years</span>
+           <input type="text" name="" class="years_input form-control">
+        </div>
+        <div class="literatur_form_group">
+          <span class="literatur-form-label">Percentage</span>
+          <input type="text" name="" class="literatur_form_control form-control">
+        </div>
+    <div class="modal-footer" style="border-top: 0px solid #e5e5e5 !important;text-align: center;">
+      <button type="button" class="btn btn-default literatur_done literature_selection_1" data-dismiss="mod3" style="width: 84px;height: 32px;  border-radius: 6px;  background-color:#0063c3;">
+      <span style="width: 44px;height: 22px;  font-family: HelveticaNeue;  font-size: 16px;  font-weight: 400;  font-style: normal;  font-stretch: normal;  line-height: 1.28;  letter-spacing: normal;  text-align: left;  color: #ffffff;">Done</span></button>
+    </div>
+
+  </div>
+</div>
+
   </body>
 </html>
 
 
 <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#cancelrow1").click(function(){
+    $("#row1").hide();
+    $('#display').hide();
+    $('#addbtn').hide();
+    //$('.events_body').hide();
+  });
+  });
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('#display').hide();
+    $('#addbtn').hide();
+    $('#dropdown').change(function () {
+      var selectedOption = $('#dropdown option:selected');
+      if (selectedOption.val()=="6") {
+        $('#display').show();
+        $('#addbtn').show();
+      }
+      
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+  $("#sub2").hide();
+  $("#sub-btn2").click(function(){
+    $("#sub2").show();
+  });
+});
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+  $("#cancel21").click(function(){
+    $("#small21").hide();
+  });
+  $("#cancel22").click(function(){
+    $("#small22").hide();
+  });
+  $("#cancel23").click(function(){
+    $("#small23").hide();
+  });
+  $("#cancel24").click(function(){
+    $("#sub2").hide();
+  });
+});
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#add").hide();
+    $("#addbtn").click(function(){
+      $("#add").show();
+    });
+    });
+</script>
+
+<script type="text/javascript">
+  $("document").ready(function(){
+    $("#prevalence_value_1").val('5,655,548');
+    $("#prevalence_value_2").val('150,219');
+  })
+  $(".vintage-sandclock").click(function(){
+    $("#mod3").show();
+    window.that = $(this);
+  })
+
+  $(".literatur_done").click(function(){
+    $('#mod3').hide();
+    var val = $(window.that).parent().parent().find("#prevalence_year").attr("name")
+    $(window.that).parent().parent().find("#prevalence_year").val(val);
+    var val = $(window.that).parent().parent().find("#increase_year").attr("name")
+    $(window.that).parent().parent().find("#increase_year").val(val);
+  });
+
+  $(".literatur_close").click(function(){
+    $('#mod3').hide();
+  })
+</script>

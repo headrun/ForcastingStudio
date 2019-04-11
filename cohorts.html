@@ -814,7 +814,7 @@
                   </td>
                   <td class="cohort-right-element">Evant A</td>
                   <td class="cohort-left-element">
-                     <input type='text' class="form-control" name="" value="MI and 20+ years" style="background-color: #d7e7ef" />
+                     <input type='text' class="form-control" name="" id="event_a" value="MI and 20+ years" style="background-color: #d7e7ef" />
                   </td>
                 </tr>
                 <tr>
@@ -866,7 +866,7 @@
               <div class="col-md-9 col-md-offset-2">
                 <div class="project-form-group">
                   <span class="project-form-label">Description</span>
-                  <input type="text" id="age_desc" name="description" class="project-form-control form-control" value="">
+                  <input type="text" id="age_desc" name="description" class="project-form-control form-control" value="" onkeyup="changeDescription(this.value)" >
                 </div>
                 <div class="project-form-group">
                   <span class="project-form-label">Age @ event</span>
@@ -918,6 +918,10 @@
                   </select>
                   <select class="project-form-control form-control" name="" id="project_data_select" style="display: none;">
                     <option value="">Please select a function</option>
+                    <option>MI All</option>
+                    <option>MI and 20+ years</option>
+                    <option>Statin treated</option>
+                    <option>MI and 20+ years and on Statin</option>
                   </select>
                 </div>
                 <div class="project-form-group">
@@ -1040,7 +1044,7 @@
                         <input type="text" class="center_align project-form-input" id="result_rwd_1" name="" class="project-form-input" name="">
                       </div>
                       <div class="col-md-2" style="margin-left: 4%">
-                        <input type="text" class="center_align project-form-input" id="result_literature_1" name="" class="project-form-input literature_class" name="">
+                        <input type="text" class="center_align project-form-input result_literature" id="result_literature_1" name="" class="project-form-input literature_class" name="">
                       </div>
                       <div class="col-md-2" style="margin-left: 4%">
                         <div style="width: 157%">  
@@ -1063,7 +1067,7 @@
                         <input type="text" class="center_align project-form-input" id='result_rwd_2' name="" class="project-form-input" name="">
                       </div>
                       <div class="col-md-2" style="margin-left: 4%">
-                        <input type="text" class="center_align project-form-input" id="result_literature_2" name="" class="project-form-input literature_class" name="">
+                        <input type="text" class="center_align project-form-input result_literature" id="result_literature_2" name="" class="project-form-input literature_class" name="">
                       </div>
                       <div class="col-md-2" style="margin-left: 4%">
                         <div style="width: 157%">
@@ -1204,6 +1208,7 @@
                     <option value="4">Hematology</option>
                     <option value="5">Nephrology</option>
                     <option value="6">Neurology</option>
+                    <option value="">Cardiology/Vascular Diseases</option>
                   </select>
                 </div>
               </div>
@@ -1217,12 +1222,21 @@
                 Sub-Therapy Area
                 <div style="margin-top: -6%;">
                   <select class="form-control" name="select2" id="select2" style="margin-left: 38%;border-radius: 5px;border-color: #00000096;border-width: thin;height: 32px;width: 52%;padding: 2px;">
-                    <option value="1">Colon & rectal cancer (CRC)</option>
+                    <option value="1" selected>Colon & rectal cancer (CRC)</option>
                     <option value="1">Lung cancer (NSCLC)</option>
                     <option value="1">Skin cancer (Melanoma)</option>
                     <option value="1">Acute myeloid leukemia (AML - Solid)</option>
                     <option value="1">Myelodysplastic syndromes (MDS)</option>
                     <option value="1">Multiple myeloma (MM)</option>
+                    <option value="1">Congenital Heart Defects</option>
+                    <option value="1">Coronary Heart Disease</option>
+                    <option value="1">Deep Vein Thrombosis (DVT) /Thrombophlebitis</option>
+                    <option value="1">Endocarditis – inflammation </option>
+                    <option value="1">Fibromuscular Dysplasia (FMD)</option>
+                    <option value="1">Heart Attack (Myocardial Infarction)</option>
+                    <option value="1">Heart Failure</option>
+                    <option value="1">Heart Valve Diseases</option>
+                    <option value="1">Stroke / Brain Attack</option>
 
                     <option value="2">Crohn's Disease</option>
                     <option value="2">Diverticulosis</option>
@@ -1372,10 +1386,10 @@
 <div id="mod4" class="mod">
   <div class="literature_model">
     <button type="button" class="literatur_close" data-dismiss="mod3">&times;</button>
-      <p style="color:#0063c3;">Add Section</p>
+      <p style="color:#0063c3;">Select Section</p>
       <hr>
       <div style="padding-left: 78%; padding-bottom: 3%">
-        <button class="add_section">Select Section</button>
+        <button class="add_section">Add Section </button>
       </div>
       <div class="literatur_form_group">
         <div class="literatur_add_section1 form-control" style="border-radius: 4px 0px 0px 4px !important;">Section Number</div>
@@ -1559,20 +1573,30 @@ $(".literatur_done").click(function(){
 });
 
 $(".setting_button").click(function(){
-  //debugger;
   window.id = $(this).parent().find(".section_value").attr("id")
   $('#mod4').show();
+  window.that = $(this);
 });
 
 $(".literature_selection_1").click(function(){
   var val = $("#literatur_value").val();
   $("#literature_text").val(val);
+  $(this).closest('#mod3').find("input[type=text], textarea").val("");
 });
 
 $(".literature_selection_2").click(function(){
   $('#mod4').hide();
-  console.log(window.id)
   var val = $("input[name='literature_select']:checked").val();
   $("#"+window.id).val(val);
+  $(this).closest('#mod4').find("input[type=text], textarea").val("");
+});
+
+$(".literature_selection_2").click(function(){
+  $('#mod4').hide();
+  var val = $("input[name='literature_select']:checked").val();
+  $("#"+window.id).val(val);
+  $(this).closest('#mod4').find("input[type=text], textarea").val("");
+  val = $(window.that).parent().parent().parent().find(".result_literature").attr("name");
+  $(window.that).parent().parent().parent().find(".result_literature").val(val);
 })
 </script>

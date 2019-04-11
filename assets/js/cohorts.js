@@ -417,6 +417,11 @@ function show_display(val, content_text='') {
     updateCohortEleAndTitle('Constructor Parameters', 'Related Events',);
     $('#related_events').show();
     $('#related_desc').val(content_text);
+    if(window.sub_cohort=="1"){
+      $("#event_a").html('MI and 20+ years')
+    } else {
+      $("#event_a").html('UA and 20+ years')
+    }
   }
   else if(val=='Age') {
     updateCohortEleAndTitle('Constructor Parameters', 'Age',);
@@ -483,9 +488,9 @@ function setCohortValue() {
       } else if ($(this).text().trim() === 'Treatment'){
         $(this).parent().find('.footer_text').html('2,741,948');
       } else if ($(this).text().trim() === 'Related Events'){
-        $(this).parent().find('.footer_text').html('23,167');
-      } else if ($(this).text().trim() === 'Age') {
         $(this).parent().find('.footer_text').html('315,183');
+      } else if ($(this).text().trim() === 'Age') {
+        $(this).parent().find('.footer_text').html('423,547');
       } else {
         $(this).parent().find('.footer_text').html('000');
       }
@@ -633,9 +638,9 @@ function dynamic_flow_chart(val) {
 function set_result_value() {
   if(window.sub_cohort=="1"){
     $('#result_rwd_1').val('423,547');
-    $('#result_literature_1').val('7,600,000');
+    $('#result_literature_1').attr('name','7,600,000');
     $('#result_rwd_2').val('315,183');
-    $('#result_literature_2').val('5,655,548');
+    $('#result_literature_2').attr('name', '5,655,548');
     var html = "<select>"+
                   "<option>MI All</option>"+
                   "<option>MI and 20+ years</option>"+
@@ -649,9 +654,9 @@ function set_result_value() {
   } else {
     updateCohortEleAndTitle('Unstable Angina', 'Result',);
     $('#result_rwd_1').val('31,764');
-    $('#result_literature_1').val('285,991');
+    $('#result_literature_1').attr('name','285,991');
     $("#result_rwd_2").val('16,689');
-    $('#result_literature_2').val('150,219');
+    $('#result_literature_2').attr('name','150,219');
 
     var html = "<select>"+
                   "<option>UA All</option>"+
