@@ -320,12 +320,14 @@ $(document).ready(function(){
     $('.sc_two_one').css({'display': 'none'});
     $('.sc_two_page').css({'display': 'block'});
     dynamic_flow_chart('#showListOfCohortsCards1');
+    show_display('');
   });
 
   $(document).on('click', '#subCohorts_1', function(){
     $('.sc_two_page').css({'display': 'none'});
     $('.sc_two_one').css({'display': 'block'});
-    dynamic_flow_chart('#showListOfCohortsCards')
+    dynamic_flow_chart('#showListOfCohortsCards');
+    show_display('');
   });
 
   $(document).on('click', '.flowchart-operator', function (e){
@@ -362,7 +364,8 @@ $(document).ready(function(){
 
     var val =$(this).find('.flowchart-operator-title').text();
     val1 =$.trim(val);
-    show_display(val1);
+    var content_text = $(this).find('.find-cohort-content').text();
+    show_display(val1, content_text);
     
   })
 
@@ -390,28 +393,33 @@ $(document).ready(function(){
 
 })
 
-function show_display(val) {
+function show_display(val, content_text='') {
   $('.cohort-display').hide()
 
   if(val=='Procedures') {
     updateCohortEleAndTitle('Constructor Parameters', 'Procedures',);
-    $('#Procedures').show()
+    $('#Procedures').show();
+    $('#procedures_desc').val(content_text);
   }
   else if(val=='Diagnosis') {
     updateCohortEleAndTitle('Constructor Parameters', 'Diagnosis',);
     $('#Diagnosis').show()
+    $("#disgnosis_desc").val(content_text);
   }
   else if(val=='Treatment') {
     updateCohortEleAndTitle('Constructor Parameters', 'Treatment',);
-    $('#Treatment').show()
+    $('#Treatment').show();
+    $("#treatment_desc").val(content_text);
   }
   else if(val=='Related Events') {
     updateCohortEleAndTitle('Constructor Parameters', 'Related Events',);
-    $('#related_events').show()
+    $('#related_events').show();
+    $('#related_desc').val(content_text);
   }
   else if(val=='Age') {
     updateCohortEleAndTitle('Constructor Parameters', 'Age',);
-    $('#current_age').show()
+    $('#current_age').show();
+    $('#age_desc').val(content_text);
   }
   else if(val=='result') {
     updateCohortEleAndTitle('Myocardial Infraction', 'Result',);
@@ -420,24 +428,25 @@ function show_display(val) {
 
   else if(val=='Disease State') {
    updateCohortEleAndTitle('Constructor Parameters', 'Disease State',);
-   $('#Disease_State').show()
+   $('#Disease_State').show();
+   $('#disease_desc').val(content_text);
  }
 
  else if(val=='Data Source') {
   updateCohortEleAndTitle('Constructor Parameters', 'Data Source',);
-   $('#data_source').show()
+  $('#data_source').show();
+  $("#data_source_desc").val(content_text);
  }
 
  else if(val=='Active Enrollment') {
   updateCohortEleAndTitle('Constructor Parameters', 'Active Enrollment',);
-   $('#active_enrollment').show()
- }
-
- else {
+  $('#active_enrollment').show();
+  $('#enrollment_desc').val(content_text);
+ } else {
   $("#cohort_default").show();
  }
-
 }
+
 $(document).on('click', "#project_data",function(){
     $("#selcect-drop-down").hide();
     $("#selcect-drop-down_1").hide();
