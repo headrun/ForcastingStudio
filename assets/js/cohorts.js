@@ -2,7 +2,7 @@ var getCohortConstructElements, updateCohortEleAndTitle, updateCohortVersionData
 var selCohortCards = {};
 
 $(document).ready(function(){
-
+  window.cohort = "#showListOfCohortsCards";
   initialFunction = function () {
     var mainContentBlock = $('#main_content_block').height();
     $('.cohorts-auto-height').css('height', mainContentBlock);
@@ -12,6 +12,7 @@ $(document).ready(function(){
 
   var $flowchart = $('#showListOfCohortsCards');
   var $container = $flowchart;
+  window.container = $flowchart;
 
   // var cx = $flowchart.width() / 2;
   // var cy = $flowchart.height() / 2;
@@ -318,13 +319,13 @@ $(document).ready(function(){
   $(document).on('click', '#subCohorts_2', function(){
     $('.sc_two_one').css({'display': 'none'});
     $('.sc_two_page').css({'display': 'block'});
-    nantha_function('#showListOfCohortsCards1');
+    dynamic_flow_chart('#showListOfCohortsCards1');
   });
 
   $(document).on('click', '#subCohorts_1', function(){
     $('.sc_two_page').css({'display': 'none'});
     $('.sc_two_one').css({'display': 'block'});
-    nantha_function('#showListOfCohortsCards')
+    dynamic_flow_chart('#showListOfCohortsCards')
   });
 
   $(document).on('click', '.flowchart-operator', function (e){
@@ -367,7 +368,7 @@ $(document).ready(function(){
 
   $(document).on('click', '.close-flowchart-cohort', function(e){
     e.stopImmediatePropagation();
-    $flowchart.flowchart('deleteSelected');
+    window.container.flowchart('deleteSelected');
     $(this).closest('.flowchart-operator').remove();
     show_display('');
   });
@@ -463,7 +464,7 @@ $(document).on('click', '.sub-cohort-run-btn', function() {
 function setCohortValue() {
   val = $.trim($('.flowchart-operator-title').text())
   val1 = val.split('\n')[0];
-  $('.flowchart-operator-title').each(function(){
+  $(window.cohort).find('.flowchart-operator-title').each(function(){
     if ($(this).text().trim() === 'Diagnosis'){
       $(this).parent().find('.footer_text').html('36,890');
 
@@ -489,7 +490,9 @@ $(document).on('click', '#project_data', function(){
   $("#project_data_select").show();
 })
 
-function nantha_function(val) {
+function dynamic_flow_chart(val) {
+  window.cohort = val;
+
   initialFunction1 = function () {
     var mainContentBlock = $('#main_content_block').height();
     $('.cohorts-auto-height').css('height', mainContentBlock);
@@ -499,22 +502,19 @@ function nantha_function(val) {
 
   var $flowchart = $(val);
   var $container = $flowchart;
+  window.container = $flowchart;
 
-  // var cx = $flowchart.width() / 2;
-  // var cy = $flowchart.height() / 2;
   var cx = $flowchart.width() / 2;
   var cy = $flowchart.height() / 2;
 
   var data = {
     operators: {
     },
-    // Initial links start here
     links: {
 
     }
   };
 
-  // Apply the plugin on a standard, empty div...
   $flowchart.flowchart({
     data: data
   });
@@ -600,5 +600,4 @@ function nantha_function(val) {
           }
       }
   });
-
 }
