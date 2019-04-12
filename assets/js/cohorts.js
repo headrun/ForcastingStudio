@@ -681,7 +681,7 @@ function set_result_value() {
                   "<option>UA and 20+ years</option>"+
                   "<option>UA and 20+ years and on statin</option>"+
                 "</select>";
-    $("#result_select").html(html);
+    $("#result_select1").html(html);
 
     $("#seletion_sub_1").html("UA and 20+years");
     $("#seletion_sub_2").html("UA and 20+years and on statin");
