@@ -321,6 +321,8 @@ $(document).ready(function(){
     window.sub_cohort = 2
     $('.sc_two_one').css({'display': 'none'});
     $('.sc_two_page').css({'display': 'block'});
+    $('.seletion_option').prop('selectedIndex',0);
+    $(".seletion_option").select2("");
     dynamic_flow_chart('#showListOfCohortsCards1');
     show_display('');
   });
@@ -329,6 +331,8 @@ $(document).ready(function(){
     window.sub_cohort = 1
     $('.sc_two_page').css({'display': 'none'});
     $('.sc_two_one').css({'display': 'block'});
+    $('.seletion_option').prop('selectedIndex',0);
+    $(".seletion_option").select2("");
     dynamic_flow_chart('#showListOfCohortsCards');
     show_display('');
   });

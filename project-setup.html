@@ -117,24 +117,18 @@
                       <span class="project-form-label">Therapy Area</span>
                       <select class="project-form-control form-control" name="therapy_area" id='therapy_area'>
                         <option>select</option>
-                        <option value="" selected="">Oncology</option>
-                        <option value="">Gastroenterology</option>
-                        <option value="">Hepatology(Liver, Pancreatic, Gall Bladder)</option>
-                        <option value="">Hematology</option>
-                        <option value="">Nephrology</option>
-                        <option value="">Neurology</option>
-                        <option value="">Cardiology/Vascular Diseases</option>
+                        <option value="1" selected="">Cardiology/Vascular Diseases</option>
+                        <option value="2">Oncology</option>
+                        <option value="3">Gastroenterology</option>
+                        <option value="4">Hepatology(Liver, Pancreatic, Gall Bladder)</option>
+                        <option value="5">Hematology</option>
+                        <option value="6">Nephrology</option>
+                        <option value="7">Neurology</option>
                       </select>
                     </div>
-                    <div class="project-form-group">
+                    <div class="project-form-group" >
                       <span class="project-form-label">Sub-Therapy Area</span>
-                      <select class="project-form-control form-control" name="project_group">
-                        <option>Colon & rectal cancer (CRC)</option>
-                        <option>Lung cancer (NSCLC)</option>
-                        <option>Skin cancer (Melanoma)</option>
-                        <option>Acute myeloid leukemia (AML - Solid)</option>
-                        <option>Myelodysplastic syndromes (MDS)</option>
-                        <option>Multiple myeloma (MM)</option>
+                      <select class="project-form-control form-control" name="project_group" id="sub-therapy">
                         <option>Congenital Heart Defects</option>
                         <option>Coronary Heart Disease</option>
                         <option>Deep Vein Thrombosis (DVT) /Thrombophlebitis</option>
@@ -143,7 +137,7 @@
                         <option>Heart Attack (Myocardial Infarction)</option>
                         <option>Heart Failure</option>
                         <option>Heart Valve Diseases</option>
-                        <option>Stroke / Brain Attack</option>
+                        <option>Stroke / Brain Attack</option>      
                       </select>
                     </div>
                     <div class="project-form-group">
@@ -217,3 +211,36 @@
   </body>
 </html>
 
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#therapy_area").change(function(){
+      var val = $('#therapy_area').val();
+      console.log(val);
+      if(val=='1'){
+        var html = "<select>"+
+                      "<option>Congenital Heart Defects</option>"+
+                        "<option>Coronary Heart Disease</option>"+
+                        "<option>Deep Vein Thrombosis (DVT) /Thrombophlebitis</option>"+
+                        "<option>Endocarditis – inflammation </option>"+
+                        "<option>Fibromuscular Dysplasia (FMD)</option>"+
+                        "<option>Heart Attack (Myocardial Infarction)</option>"+
+                        "<option>Heart Failure</option>"+
+                        "<option>Heart Valve Diseases</option>"+
+                        "<option>Stroke / Brain Attack</option>"+
+                    "</select>";
+        $("#sub-therapy").html(html);
+      }
+      if(val=='2') {
+        var html = "<select>"+
+                      "<option>Colon & rectal cancer (CRC)</option>"+
+                        "<option>Lung cancer (NSCLC)</option>"+
+                        "<option>Skin cancer (Melanoma)</option>"+
+                        "<option>Acute myeloid leukemia (AML - Solid)</option>"+
+                        "<option>Myelodysplastic syndromes (MDS)</option>"+
+                        "<option>Multiple myeloma (MM)</option>"+
+                    "</select>";
+        $("#sub-therapy").html(html);
+      }
+    })
+  })
+</script>
