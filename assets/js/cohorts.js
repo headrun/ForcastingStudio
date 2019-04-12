@@ -435,8 +435,13 @@ function show_display(val, content_text='') {
   }
   else if(val=='result') {
     updateCohortEleAndTitle('Myocardial Infraction', 'Result',);
-    $('#result').show();
-    set_result_value();
+    if(window.sub_cohort=="1"){
+      $('#result').show();
+      set_result_value();
+    } else {
+      $('#result1').show();
+      set_result_value();
+    }
   }
 
   else if(val=='Disease State') {
@@ -658,10 +663,10 @@ function set_result_value() {
     $("#seletion_name_2").html("MI and 20+ years and on Statin");
   } else {
     updateCohortEleAndTitle('Unstable Angina', 'Result',);
-    $('#result_rwd_1').val('31,764');
-    $('#result_literature_1').attr('name','285,991');
-    $("#result_rwd_2").val('16,689');
-    $('#result_literature_2').attr('name','150,219');
+    $('#result_rwd_sub1').val('31,764');
+    $('#result_literature_sub1').attr('name','285,991');
+    $("#result_rwd_sub2").val('16,689');
+    $('#result_literature_sub2').attr('name','150,219');
 
     var html = "<select>"+
                   "<option>UA All</option>"+
@@ -670,7 +675,27 @@ function set_result_value() {
                 "</select>";
     $("#result_select").html(html);
 
-    $("#seletion_name_1").html("UA and 20+years");
-    $("#seletion_name_2").html("UA and 20+years and on statin");
+    $("#seletion_sub_1").html("UA and 20+years");
+    $("#seletion_sub_2").html("UA and 20+years and on statin");
   }
 }
+
+$(document).on('click', ".literature_selection_1", function(){
+  $(".mod").hide();
+  var val = $("#literatur_value").val();
+  $(this).closest('#mod3').find("input[type=text], textarea").val("");
+  if(window.sub_cohort=='1'){  
+    $("#literature_text").val(val);
+    var result_1 = $('#result_literature_1').attr('name');
+    $('#result_literature_1').val(result_1);
+    var result_2 = $('#result_literature_2').attr('name');
+    $('#result_literature_2').val(result_2);
+  } else {
+    $("#literature_text1").val(val);
+    var result_1 = $('#result_literature_sub1').attr('name');
+    console.log(result_1);
+    $('#result_literature_sub1').val(result_1);
+    var result_2 = $('#result_literature_sub2').attr('name');
+    $('#result_literature_sub2').val(result_2);
+  }
+});

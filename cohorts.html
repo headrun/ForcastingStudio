@@ -929,13 +929,13 @@
                   <div class="project-form-control">
                     <div class="row col-md-6">
                       <div id="DatasourceStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
-                          <input class="form-control" type="text" name="start_date" placeholder="Start date"/>
+                          <input class="form-control" id="start_date" type="text" name="start_date" value="" placeholder="Start date"/>
                           <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class='input-group date end_date' id='DatasourceEndDate' style="margin-left: 18% !important">
-                        <input type='text' class="form-control" name="end_date" placeholder="End date"/>
+                        <input type='text' id="end_date" class="form-control" name="end_date" placeholder="End date"/>
                         <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -1022,7 +1022,7 @@
                   </div>
                 </div>
                 <hr>
-                <div style="padding: 2% 1% 5% 1%;">
+                <div style="padding: 2% 1% 5% 1%; margin-top: -2%">
                   <div style="padding-bottom: 2%">
                     <div class="col-md-6">
                       <span ></span>
@@ -1075,6 +1075,108 @@
                        srcset="./assets/images/mask_group_12@2x.png 2x,
                                ./assets/images/mask_group_12@3x.png 3x"></button>
                           <input type="text" class="section_value center_align" id="section_id_1" value="" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="padd-a-15 white-bg marg-top-15 cohort-display" id='result1' style="height: auto; display: none">
+              <div class="data-source-params-title"><span class="cohort-element">Data Source</span> - <span class="cohort-title">Constructor Parameters</span></div>
+              <hr>
+              <div style="padding: 0% 2% 2% 2%;">
+                <div style="background: lightblue;padding: 2% 1% 5% 1%;">
+                  <div style="padding-bottom: 2%">
+                    <div class="col-md-6">
+                      <span ></span>
+                    </div>
+                    <div class="col-md-2" style="font-size: 12px; margin-left: -3%;">
+                      <span >RWD</span>
+                    </div>
+                    <div class="col-md-2" style="font-size: 12px">
+                      <span >Literature</span>
+                    </div>
+                    <div class="col-md-2">
+                      <span ></span>
+                    </div>
+                    <div class="col-md-6">
+                      <span style="font-size: 12px">Base for calculating proportional estimates</span>
+                    </div>
+                    <div class="col-md-2" style="margin-left: -10%">
+                      <select id="result_select" class="project-form-input seletion_option" name="">
+                        <option value="">Select</option>
+                        <option>MI All</option>
+                        <option>MI and 20+ years</option>
+                        <option>Statin treated</option>
+                        <option>MI and 20+ years and on Statin</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2" style="margin-left: 4%">
+                      <input type="text" class="center_align project-form-input" id="literature_text1" name="literature" class="project-form-input">
+                      <button class="result_click">
+                        <img src="./assets/images/vintage-sandclock.png"
+                          srcset="./assets/images/vintage-sandclock@2x.png 2x,
+                             ./assets/images/vintage-sandclock@3x.png 3x" class="result_click1"/>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div style="padding: 2% 1% 5% 1%; margin-top: -2%">
+                  <div style="padding-bottom: 2%">
+                    <div class="col-md-6">
+                      <span ></span>
+                    </div>
+                    <div class="col-md-2" style="font-size: 12px; margin-left: -3%;">
+                      <span >RWD</span>
+                    </div>
+                    <div class="col-md-2" style="font-size: 12px; text-align: center;">
+                      <span >Literature <br/> Estimation</span>
+                    </div>
+                    <div class="col-md-2" style="font-size: 12px; padding-left: 10%;">
+                      <span >Section</span>
+                    </div>
+                    <div class="col-md-6">
+                      <span style="font-size: 12px" id="seletion_sub_1">MI and 20+ years</span>
+                    </div>
+                    <div>
+                      <div class="col-md-2" style="margin-left: -10%">
+                        <input type="text" class="center_align project-form-input" id="result_rwd_sub1" name="" class="project-form-input" name="">
+                      </div>
+                      <div class="col-md-2" style="margin-left: 4%">
+                        <input type="text" class="center_align project-form-input result_literature" id="result_literature_sub1" name="" class="project-form-input literature_class" name="">
+                      </div>
+                      <div class="col-md-2" style="margin-left: 4%">
+                        <div style="width: 157%">  
+                          <button class="setting_button"><img src="./assets/images/mask_group_12.png"
+                       srcset="./assets/images/mask_group_12@2x.png 2x,
+                               ./assets/images/mask_group_12@3x.png 3x"></button>
+                          <input type="text" class="section_value center_align" id="section_id_sub1" value="" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding: 2% 1% 5% 1%;">
+                  <div style="padding-bottom: 2%">
+                    <div class="col-md-6">
+                      <span style="font-size: 12px" id="seletion_sub_2">MI and 20+ years and on Statin</span>
+                    </div>
+                    <div>
+                      <div class="col-md-2" style="margin-left: -10%">
+                        <input type="text" class="center_align project-form-input" id='result_rwd_sub2' name="" class="project-form-input" name="">
+                      </div>
+                      <div class="col-md-2" style="margin-left: 4%">
+                        <input type="text" class="center_align project-form-input result_literature" id="result_literature_sub2" name="" class="project-form-input literature_class" name="">
+                      </div>
+                      <div class="col-md-2" style="margin-left: 4%">
+                        <div style="width: 157%">
+                          <button class="setting_button"><img src="./assets/images/mask_group_12.png"
+                       srcset="./assets/images/mask_group_12@2x.png 2x,
+                               ./assets/images/mask_group_12@3x.png 3x"></button>
+                          <input type="text" class="section_value center_align" id="section_id_sub2" value="" name="" style="width: 74%; margin-left: 1%;border: 1px solid #ccc;">
                         </div>
                       </div>
                     </div>
@@ -1564,25 +1666,34 @@ $(".result_click").click(function(){
   $('#mod3').show();
 });
 
+$("#start_date").val('');
+$('#end_date').val('');
+
+$(".start_date > input[type='text']").val('');
+$(".end_date > input[type='text']").val('');
+
 $(".literatur_close").click(function(){
   $('.mod').hide();
 });
 
-$(".literatur_done").click(function(){
+/*$(".literatur_done").click(function(){
   $(".mod").hide();
 });
-
+*/
 $(".setting_button").click(function(){
   window.id = $(this).parent().find(".section_value").attr("id")
   $('#mod4').show();
-  window.that = $(this);
 });
 
-$(".literature_selection_1").click(function(){
+/*$(".literature_selection_1").click(function(){
   var val = $("#literatur_value").val();
   $("#literature_text").val(val);
   $(this).closest('#mod3').find("input[type=text], textarea").val("");
-});
+  var result_1 = $('#result_literature_1').attr('name');
+  $('#result_literature_1').val(result_1);
+  var result_2 = $('#result_literature_2').attr('name');
+  $('#result_literature_2').val(result_2);
+});*/
 
 $(".literature_selection_2").click(function(){
   $('#mod4').hide();
@@ -1596,7 +1707,5 @@ $(".literature_selection_2").click(function(){
   var val = $("input[name='literature_select']:checked").val();
   $("#"+window.id).val(val);
   $(this).closest('#mod4').find("input[type=text], textarea").val("");
-  val = $(window.that).parent().parent().parent().find(".result_literature").attr("name");
-  $(window.that).parent().parent().parent().find(".result_literature").val(val);
 })
 </script>
