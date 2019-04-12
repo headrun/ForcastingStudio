@@ -422,9 +422,10 @@ function show_display(val, content_text='') {
     $('#related_events').show();
     $('#related_desc').val(content_text);
     if(window.sub_cohort=="1"){
-      $("#event_a").html('MI and 20+ years')
+      $("#event_a").val('MI and 20+ years')
     } else {
-      $("#event_a").html('UA and 20+ years')
+      console.log("hello")
+      $("#event_a").val('UA and 20+ years')
     }
   }
   else if(val=='Age') {
@@ -496,7 +497,7 @@ function setCohortValue() {
       } else if ($(this).text().trim() === 'Age') {
         $(this).parent().find('.footer_text').html('423,547');
       } else {
-        $(this).parent().find('.footer_text').html('000');
+        $(this).parent().find('.footer_text').html('');
       }
     })
   } else {
@@ -510,7 +511,7 @@ function setCohortValue() {
       } else if ($(this).text().trim() === 'Age') {
         $(this).parent().find('.footer_text').html('31,764');
       } else {
-        $(this).parent().find('.footer_text').html('000');
+        $(this).parent().find('.footer_text').html('');
       }
     })
   }
