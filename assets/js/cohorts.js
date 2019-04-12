@@ -396,11 +396,19 @@ function show_display(val) {
   }
   else if(val=='Diagnosis') {
     updateCohortEleAndTitle('Constructor Parameters', 'Diagnosis',);
-    $('#Diagnosis').show()
+    $('#Diagnosis').show();
+    $(".modal-title").html('Diagnosis Map');
+    $("#search_list").html('');
+    $("#dvCSV").html('');
+    $("#diagnosis_model input[type='text']").val('');
   }
   else if(val=='Treatment') {
     updateCohortEleAndTitle('Constructor Parameters', 'Treatment',);
     $('#Treatment').show()
+    $(".modal-title").html('Treatment Map');
+    $("#search_list").html('');
+    $("#dvCSV").html('');
+    $("#diagnosis_model input[type='text']").val('');
   }
   else if(val=='Related Events') {
     updateCohortEleAndTitle('Constructor Parameters', 'Related Events',);
