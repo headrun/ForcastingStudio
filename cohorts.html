@@ -291,7 +291,7 @@
                   <span class="project-form-label">Procedures Map</span>
                   <div class="project-form-control">
                     <div class="project-form-label" style="width: 91%">
-                      <select class="form-control diagnosis_dropdown seletion_option" name="" style="width: 109% !important">
+                      <select class="form-control diagnosis_dropdown seletion_option1" name="" style="width: 109% !important">
                         <option value="">Please select</option>
                       </select>
                     </div>
@@ -541,7 +541,7 @@
                   <span class="project-form-label">Diagnosis Map</span>
                   <div class="project-form-control">
                     <div class="project-form-label" style="width: 91% !important">
-                      <select class="form-control diagnosis_dropdown seletion_option" name="" style="width: 109% !important">
+                      <select class="form-control diagnosis_dropdown seletion_option1" name="" style="width: 109% !important">
                         <option value="">Please select</option>
                         <option>Myocardial Infraction</option>
                         <option>UnstableAngina</option>
@@ -684,7 +684,7 @@
                   <span class="project-form-label">Treatment Map</span>
                   <div class="project-form-control">
                     <div class="project-form-label" style="width: 91%">
-                      <select class="form-control seletion_option" id="treatment_select" name="" style="width: 109% !important">
+                      <select class="form-control seletion_option1" id="treatment_select" name="" style="width: 109% !important">
                         <option value="">Please select</option>
                         <option>Statins</option>
                         <option>Colon & rectal cancer (CRC)</option>
@@ -774,13 +774,13 @@
                   <span class="project-form-label">Time Period</span>
                   <div class="project-form-control">
                     <div class="row col-md-6">
-                      <div id="datetimepickerStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
-                          <input class="form-control" type="text" name="start_date" placeholder="Start date"/>
+                      <div id="treatmentStartDate" class="input-group date start_date" data-date-format="mm-dd-yyyy">
+                          <input class="form-control" id="" type="text" name="start_date" placeholder="Start date"/>
                           <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                       </div>
                     </div>
                     <div class="col-md-6">
-                      <div class='input-group date end_date' id='datetimepickerEndDate' style="margin-left: 18% !important">
+                      <div class='input-group date end_date' id='treatmentEndDate' style="margin-left: 18% !important">
                         <input type='text' class="form-control" name="end_date" placeholder="End date"/>
                         <span class="input-group-addon">
                           <span class="glyphicon glyphicon-calendar"></span>
@@ -1640,72 +1640,80 @@ $("#upload").click(function(){
   $("#DatasourceStartDate").datepicker({
         autoclose: true,
         todayHighlight: true
-}).datepicker('update', new Date());
-$("#DatasourceEndDate").datepicker({
-        autoclose: true,
-        todayHighlight: true
-}).datepicker('update', new Date());
-$("#ProceduresStartDate").datepicker({
-        autoclose: true,
-        todayHighlight: true
-}).datepicker('update', new Date());
-$("#ProceduresEndDate").datepicker({
-        autoclose: true,
-        todayHighlight: true
-}).datepicker('update', new Date());
-$("#DiagnosisStartDate").datepicker({
-        autoclose: true,
-        todayHighlight: true
-}).datepicker('update', new Date());
-$("#DiagnosisEndDate").datepicker({
-        autoclose: true,
-        todayHighlight: true
-}).datepicker('update', new Date());
+  }).datepicker('update', new Date());
+  $("#DatasourceEndDate").datepicker({
+          autoclose: true,
+          todayHighlight: true
+  }).datepicker('update', new Date());
+  $("#ProceduresStartDate").datepicker({
+          autoclose: true,
+          todayHighlight: true
+  }).datepicker('update', new Date());
+  $("#ProceduresEndDate").datepicker({
+          autoclose: true,
+          todayHighlight: true
+  }).datepicker('update', new Date());
+  $("#DiagnosisStartDate").datepicker({
+          autoclose: true,
+          todayHighlight: true
+  }).datepicker('update', new Date());
+  $("#DiagnosisEndDate").datepicker({
+          autoclose: true,
+          todayHighlight: true
+  }).datepicker('update', new Date());
+  $("#treatmentStartDate").datepicker({
+          autoclose: true,
+          todayHighlight: true
+  }).datepicker('update', new Date());
+  $("#treatmentEndDate").datepicker({
+          autoclose: true,
+          todayHighlight: true
+  }).datepicker('update', new Date());
 
-$(".result_click").click(function(){
-  $('#mod3').show();
-});
+  $(".result_click").click(function(){
+    $('#mod3').show();
+  });
 
-$("#start_date").val('');
-$('#end_date').val('');
+  $("#start_date").val('');
+  $('#end_date').val('');
 
-$(".start_date > input[type='text']").val('');
-$(".end_date > input[type='text']").val('');
+  $(".start_date > input[type='text']").val('');
+  $(".end_date > input[type='text']").val('');
 
-$(".literatur_close").click(function(){
-  $('.mod').hide();
-});
+  $(".literatur_close").click(function(){
+    $('.mod').hide();
+  });
 
-/*$(".literatur_done").click(function(){
-  $(".mod").hide();
-});
-*/
-$(".setting_button").click(function(){
-  window.id = $(this).parent().find(".section_value").attr("id")
-  $('#mod4').show();
-});
+  /*$(".literatur_done").click(function(){
+    $(".mod").hide();
+  });
+  */
+  $(".setting_button").click(function(){
+    window.id = $(this).parent().find(".section_value").attr("id")
+    $('#mod4').show();
+  });
 
-/*$(".literature_selection_1").click(function(){
-  var val = $("#literatur_value").val();
-  $("#literature_text").val(val);
-  $(this).closest('#mod3').find("input[type=text], textarea").val("");
-  var result_1 = $('#result_literature_1').attr('name');
-  $('#result_literature_1').val(result_1);
-  var result_2 = $('#result_literature_2').attr('name');
-  $('#result_literature_2').val(result_2);
-});*/
+  /*$(".literature_selection_1").click(function(){
+    var val = $("#literatur_value").val();
+    $("#literature_text").val(val);
+    $(this).closest('#mod3').find("input[type=text], textarea").val("");
+    var result_1 = $('#result_literature_1').attr('name');
+    $('#result_literature_1').val(result_1);
+    var result_2 = $('#result_literature_2').attr('name');
+    $('#result_literature_2').val(result_2);
+  });*/
 
-$(".literature_selection_2").click(function(){
-  $('#mod4').hide();
-  var val = $("input[name='literature_select']:checked").val();
-  $("#"+window.id).val(val);
-  $(this).closest('#mod4').find("input[type=text], textarea").val("");
-});
+  $(".literature_selection_2").click(function(){
+    $('#mod4').hide();
+    var val = $("input[name='literature_select']:checked").val();
+    $("#"+window.id).val(val);
+    $(this).closest('#mod4').find("input[type=text], textarea").val("");
+  });
 
-$(".literature_selection_2").click(function(){
-  $('#mod4').hide();
-  var val = $("input[name='literature_select']:checked").val();
-  $("#"+window.id).val(val);
-  $(this).closest('#mod4').find("input[type=text], textarea").val("");
-})
+  $(".literature_selection_2").click(function(){
+    $('#mod4').hide();
+    var val = $("input[name='literature_select']:checked").val();
+    $("#"+window.id).val(val);
+    $(this).closest('#mod4').find("input[type=text], textarea").val("");
+  })
 </script>

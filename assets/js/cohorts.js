@@ -322,7 +322,8 @@ $(document).ready(function(){
     $('.sc_two_one').css({'display': 'none'});
     $('.sc_two_page').css({'display': 'block'});
     $('.seletion_option').prop('selectedIndex',0);
-    $(".seletion_option").select2("");
+    $('.seletion_option1').prop('selectedIndex',0);
+    $(".seletion_option1").select2("");
     dynamic_flow_chart('#showListOfCohortsCards1');
     show_display('');
   });
@@ -332,7 +333,8 @@ $(document).ready(function(){
     $('.sc_two_page').css({'display': 'none'});
     $('.sc_two_one').css({'display': 'block'});
     $('.seletion_option').prop('selectedIndex',0);
-    $(".seletion_option").select2("");
+    $('.seletion_option1').prop('selectedIndex',0);
+    $(".seletion_option1").select2("");
     dynamic_flow_chart('#showListOfCohortsCards');
     show_display('');
   });
